@@ -3,7 +3,11 @@
 namespace App\Providers;
 
 use App\Services\Frontend\FrontendContentService;
+use Illuminate\Database\Connection;
+use Illuminate\Database\Events\QueryExecuted;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -28,12 +32,38 @@ class AppServiceProvider extends ServiceProvider
         | Force HTTPS URL Generation in Production
         |--------------------------------------------------------------------------
         |
-        | This prevents Laravel from generating insecure http:// form actions,
-        | redirects, links, and asset URLs while deployed behind Railway.
+        | Railway serves the public app over HTTPS. This prevents Laravel from
+        | generating insecure http:// links, redirects, and form actions.
         |
         */
         if ($this->app->environment('production')) {
             URL::forceScheme('https');
+        }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Log Slow Database Requests in Production
+        |--------------------------------------------------------------------------
+        |
+        | If a single request spends more than 3 seconds in database queries,
+        | write a warning into Railway logs. This helps us identify the exact
+        | page and SQL query causing slowness or 500 timeout errors.
+        |
+        */
+        if ($this->app->environment('production')) {
+            DB::whenQueryingForLongerThan(
+                3000,
+                function (Connection $connection, QueryExecuted $event): void {
+                    Log::warning('SLOW_DATABASE_REQUEST', [
+                        'url' => request()->fullUrl(),
+                        'method' => request()->method(),
+                        'connection' => $connection->getName(),
+                        'sql' => $event->sql,
+                        'bindings' => $event->bindings,
+                        'query_time_ms' => $event->time,
+                    ]);
+                }
+            );
         }
 
         /*
