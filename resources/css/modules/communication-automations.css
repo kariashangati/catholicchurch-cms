@@ -1,0 +1,77 @@
+.communication-page .comm-hero {
+    background: linear-gradient(135deg, #6f2cff 0%, #9d4edd 45%, #3a86ff 100%);
+    border-radius: 26px;
+    padding: 28px 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 18px 44px rgba(82, 64, 255, 0.24);
+}
+
+.communication-page .comm-hero-kicker {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.16);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.communication-page .comm-hero-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.communication-page .comm-hero-text {
+    color: rgba(255,255,255,.88);
+    margin: 0;
+    max-width: 760px;
+}
+
+.communication-page .comm-panel {
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 15px 32px rgba(26, 35, 126, 0.08);
+}
+
+.communication-page .comm-primary-btn {
+    background: linear-gradient(135deg, #6f2cff, #3a86ff);
+    color: #fff;
+    border: 0;
+    border-radius: 14px;
+    padding: 11px 18px;
+    font-weight: 700;
+}
+
+.communication-page .comm-pill {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #f3f5ff;
+    color: #4c4ddc;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.communication-page .comm-status {
+    display: inline-flex;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.communication-page .comm-status.is-active {
+    background: rgba(25, 135, 84, 0.12);
+    color: #198754;
+}
+
+.communication-page .comm-status.is-muted {
+    background: rgba(108, 117, 125, 0.12);
+    color: #6c757d;
+}

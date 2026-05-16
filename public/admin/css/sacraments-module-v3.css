@@ -1,0 +1,550 @@
+.sacraments-v3 {
+    --sac-primary: #7c3aed;
+    --sac-primary-2: #9333ea;
+    --sac-blue: #2563eb;
+    --sac-green: #16a34a;
+    --sac-amber: #d97706;
+    --sac-teal: #0f766e;
+    --sac-red: #dc2626;
+}
+
+.sacraments-v3 .sacrament-hero {
+    position: relative;
+    border-radius: 30px;
+    padding: 2rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,.14), transparent 28%),
+        linear-gradient(135deg, #5b21b6 0%, #7c3aed 42%, #9333ea 100%);
+    box-shadow: 0 24px 60px rgba(124, 58, 237, .24);
+    color: #fff;
+}
+
+.sacraments-v3 .sacrament-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: .4;
+    pointer-events: none;
+}
+
+.sacraments-v3 .sacrament-hero > .row {
+    position: relative;
+    z-index: 1;
+}
+
+.sacraments-v3 .sacrament-hero-badge,
+.sacraments-v3 .sacrament-pill,
+.sacraments-v3 .sacrament-soft-badge,
+.sacraments-v3 .sacrament-chip {
+    border-radius: 999px;
+}
+
+.sacraments-v3 .sacrament-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .48rem .9rem;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: .8rem;
+    font-weight: 800;
+    backdrop-filter: blur(10px);
+}
+
+.sacraments-v3 .sacrament-title {
+    color: #fff;
+    font-size: clamp(2rem, 2.3vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+}
+
+.sacraments-v3 .sacrament-subtitle {
+    color: rgba(255,255,255,.9);
+    max-width: 760px;
+    font-size: 1rem;
+}
+
+.sacraments-v3 .sacrament-pill-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.sacraments-v3 .sacrament-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .68rem 1rem;
+    background: rgba(255,255,255,.14);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.sacraments-v3 .sacrament-pill-warning {
+    background: rgba(245, 158, 11, .18);
+}
+
+.sacraments-v3 .sacrament-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: .9rem;
+}
+
+.sacraments-v3 .sacrament-action-card {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    min-height: 68px;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(255,255,255,.13);
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(10px);
+    transition: all .24s ease;
+}
+
+.sacraments-v3 .sacrament-action-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.18);
+    color: #fff;
+}
+
+.sacraments-v3 .sacrament-action-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.16);
+}
+
+.sacraments-v3 .sacrament-panel,
+.sacraments-v3 .sacrament-stat-card,
+.sacraments-v3 .sacrament-table-card,
+.sacraments-v3 .sacrament-alert-card,
+.sacraments-v3 .sacrament-filter-card {
+    border-radius: 24px;
+    border: 1px solid rgba(226,232,240,.9);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: 0 12px 34px rgba(15,23,42,.06);
+}
+
+.sacraments-v3 .sacrament-stat-card {
+    position: relative;
+    height: 100%;
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.sacraments-v3 .sacrament-stat-card:hover,
+.sacraments-v3 .sacrament-panel:hover,
+.sacraments-v3 .sacrament-table-card:hover,
+.sacraments-v3 .sacrament-alert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(15,23,42,.08);
+}
+
+.sacraments-v3 .sacrament-stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    border-radius: 24px 0 0 24px;
+    background: var(--accent, var(--sac-primary));
+}
+
+.sacraments-v3 .tone-primary { --accent: var(--sac-primary); }
+.sacraments-v3 .tone-blue { --accent: var(--sac-blue); }
+.sacraments-v3 .tone-green { --accent: var(--sac-green); }
+.sacraments-v3 .tone-amber { --accent: var(--sac-amber); }
+.sacraments-v3 .tone-teal { --accent: var(--sac-teal); }
+.sacraments-v3 .tone-danger { --accent: var(--sac-red); }
+
+.sacraments-v3 .sacrament-stat-icon,
+.sacraments-v3 .sacrament-panel-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent, var(--sac-primary)), rgba(124, 58, 237, .8));
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(124, 58, 237, .2);
+}
+
+.sacraments-v3 .sacrament-stat-top,
+.sacraments-v3 .sacrament-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sacraments-v3 .sacrament-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: .42rem .82rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    font-size: .76rem;
+    font-weight: 700;
+}
+
+.sacraments-v3 .sacrament-stat-label,
+.sacraments-v3 .sacrament-kpi-label {
+    color: #64748b;
+    font-size: .88rem;
+    font-weight: 700;
+    margin-bottom: .35rem;
+}
+
+.sacraments-v3 .sacrament-stat-value,
+.sacraments-v3 .sacrament-kpi-value {
+    color: #0f172a;
+    font-size: clamp(1.6rem, 1.8vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+}
+
+.sacraments-v3 .sacrament-stat-meta {
+    color: #64748b;
+    font-size: .86rem;
+    margin-top: .4rem;
+}
+
+.sacraments-v3 .sacrament-panel-title {
+    color: #0f172a;
+    font-weight: 800;
+    margin-bottom: .15rem;
+}
+
+.sacraments-v3 .sacrament-panel-subtitle {
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.sacraments-v3 .chart-shell {
+    position: relative;
+    min-height: 320px;
+    padding-top: .5rem;
+}
+
+.sacraments-v3 .chart-shell-sm {
+    min-height: 260px;
+}
+
+.sacraments-v3 .sacrament-rate-grid,
+.sacraments-v3 .sacrament-summary-grid,
+.sacraments-v3 .sacrament-alert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.sacraments-v3 .sacrament-rate-item,
+.sacraments-v3 .sacrament-summary-item {
+    padding: 1rem;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.sacraments-v3 .sacrament-rate-item .progress {
+    height: 10px;
+    background: #ede9fe;
+    border-radius: 999px;
+}
+
+.sacraments-v3 .sacrament-rate-item .progress-bar {
+    background: linear-gradient(90deg, #2563eb, #16a34a, #7c3aed);
+}
+
+.sacraments-v3 .sacrament-rate-label {
+    color: #64748b;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.sacraments-v3 .sacrament-rate-value {
+    color: #0f172a;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.sacraments-v3 .sacrament-soft-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .42rem .82rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.sacraments-v3 .sacrament-soft-badge.success { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+.sacraments-v3 .sacrament-soft-badge.info { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
+.sacraments-v3 .sacrament-soft-badge.warning { background: #fef3c7; color: #b45309; border-color: #fde68a; }
+.sacraments-v3 .sacrament-soft-badge.danger { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
+
+.sacraments-v3 .sacrament-table-card .table {
+    margin-bottom: 0;
+}
+
+.sacraments-v3 .sacrament-table-card thead th,
+.sacraments-v3 table.dataTable thead th {
+    border-bottom: 1px solid #e2e8f0 !important;
+    color: #475569;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-weight: 800;
+}
+
+.sacraments-v3 .table > :not(caption) > * > * {
+    padding: .9rem 1rem;
+}
+
+.sacraments-v3 .sacrament-row-title {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.sacraments-v3 .sacrament-row-title strong {
+    color: #0f172a;
+}
+
+.sacraments-v3 .sacrament-row-title small {
+    color: #64748b;
+}
+
+.sacraments-v3 .sacrament-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .05em;
+}
+
+.sacraments-v3 .sacrament-list-chip-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.sacraments-v3 .sacrament-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #64748b;
+}
+
+.sacraments-v3 .dataTables_wrapper .dataTables_filter input,
+.sacraments-v3 .dataTables_wrapper .dataTables_length select {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: .45rem .75rem;
+    background: #fff;
+}
+
+.sacraments-v3 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 12px !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    color: #334155 !important;
+}
+
+.sacraments-v3 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.sacraments-v3 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #ede9fe !important;
+    color: #6d28d9 !important;
+    border-color: #ddd6fe !important;
+}
+
+.sacraments-v3 .dataTables_wrapper .dataTables_info,
+.sacraments-v3 .dataTables_wrapper .dataTables_length,
+.sacraments-v3 .dataTables_wrapper .dataTables_filter {
+    color: #64748b;
+    font-size: .9rem;
+    margin-bottom: .85rem;
+}
+
+.sacraments-v3 .sacrament-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.sacraments-v3 .sacrament-detail-item {
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+}
+
+.sacraments-v3 .sacrament-detail-item span {
+    display: block;
+    color: #64748b;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: .35rem;
+}
+
+.sacraments-v3 .sacrament-highlight-note {
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eff6ff, #ecfeff);
+    border: 1px solid #dbeafe;
+}
+
+@media (max-width: 991.98px) {
+    .sacraments-v3 .sacrament-hero {
+        padding: 1.4rem;
+        border-radius: 24px;
+    }
+
+    .sacraments-v3 .sacrament-actions-grid,
+    .sacraments-v3 .sacrament-rate-grid,
+    .sacraments-v3 .sacrament-summary-grid,
+    .sacraments-v3 .sacrament-alert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sacraments-v3 .chart-shell,
+    .sacraments-v3 .chart-shell-sm {
+        min-height: 280px;
+    }
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* SACRAMENTS V3 */
+.admin-theme-light .sacraments-v3,
+html[data-admin-theme="light"] .sacraments-v3 {
+    color: #020617 !important;
+}
+
+.admin-theme-light .sacraments-v3 .sacrament-hero,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+.admin-theme-light .sacraments-v3 .sacrament-hero::before,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-hero::before { background-image: none !important; }
+.admin-theme-light .sacraments-v3 .sacrament-title,
+.admin-theme-light .sacraments-v3 .sacrament-subtitle,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-title,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-subtitle { color: #020617 !important; }
+.admin-theme-light .sacraments-v3 .sacrament-hero-badge,
+.admin-theme-light .sacraments-v3 .sacrament-pill,
+.admin-theme-light .sacraments-v3 .sacrament-action-card,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-hero-badge,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-pill,
+html[data-admin-theme="light"] .sacraments-v3 .sacrament-action-card {
+    background: #ffffff !important; color: #020617 !important; border-color: #dbe3ee !important;
+}
+
+.admin-theme-dark .sacraments-v3,
+html[data-admin-theme="dark"] .sacraments-v3 { color: #f8fafc !important; }
+.admin-theme-dark .sacraments-v3 .sacrament-hero,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    color: #f8fafc !important; border: 1px solid #334155 !important; box-shadow: 0 16px 42px rgba(0,0,0,.38) !important;
+}
+.admin-theme-dark .sacraments-v3 .sacrament-hero::before,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-hero::before { background-image: none !important; }
+.admin-theme-dark .sacraments-v3 .sacrament-title,
+.admin-theme-dark .sacraments-v3 .sacrament-subtitle,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-title,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-subtitle { color: #f8fafc !important; }
+.admin-theme-dark .sacraments-v3 .sacrament-hero-badge,
+.admin-theme-dark .sacraments-v3 .sacrament-pill,
+.admin-theme-dark .sacraments-v3 .sacrament-action-card,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-hero-badge,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-pill,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-action-card {
+    background: #111827 !important; color: #f8fafc !important; border-color: #334155 !important;
+}
+.admin-theme-dark .sacraments-v3 .sacrament-panel,
+.admin-theme-dark .sacraments-v3 .sacrament-stat-card,
+.admin-theme-dark .sacraments-v3 .sacrament-table-card,
+.admin-theme-dark .sacraments-v3 .sacrament-alert-card,
+.admin-theme-dark .sacraments-v3 .sacrament-filter-card,
+.admin-theme-dark .sacraments-v3 .sacrament-rate-item,
+.admin-theme-dark .sacraments-v3 .sacrament-summary-item,
+.admin-theme-dark .sacraments-v3 .sacrament-detail-item,
+.admin-theme-dark .sacraments-v3 .sacrament-highlight-note,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-panel,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-stat-card,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-table-card,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-alert-card,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-filter-card,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-rate-item,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-summary-item,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-detail-item,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-highlight-note {
+    background: #0f172a !important; color: #f8fafc !important; border-color: #334155 !important;
+}
+.admin-theme-dark .sacraments-v3 .sacrament-stat-value,
+.admin-theme-dark .sacraments-v3 .sacrament-kpi-value,
+.admin-theme-dark .sacraments-v3 .sacrament-panel-title,
+.admin-theme-dark .sacraments-v3 .sacrament-rate-value,
+.admin-theme-dark .sacraments-v3 .sacrament-row-title strong,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-stat-value,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-kpi-value,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-panel-title,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-rate-value,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-row-title strong { color: #f8fafc !important; }
+.admin-theme-dark .sacraments-v3 .sacrament-stat-label,
+.admin-theme-dark .sacraments-v3 .sacrament-kpi-label,
+.admin-theme-dark .sacraments-v3 .sacrament-stat-meta,
+.admin-theme-dark .sacraments-v3 .sacrament-panel-subtitle,
+.admin-theme-dark .sacraments-v3 .sacrament-rate-label,
+.admin-theme-dark .sacraments-v3 .sacrament-row-title small,
+.admin-theme-dark .sacraments-v3 .sacrament-empty,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-stat-label,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-kpi-label,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-stat-meta,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-panel-subtitle,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-rate-label,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-row-title small,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-empty { color: #cbd5e1 !important; }
+.admin-theme-dark .sacraments-v3 .sacrament-table-card thead th,
+.admin-theme-dark .sacraments-v3 table.dataTable thead th,
+html[data-admin-theme="dark"] .sacraments-v3 .sacrament-table-card thead th,
+html[data-admin-theme="dark"] .sacraments-v3 table.dataTable thead th { background: #111827 !important; color: #cbd5e1 !important; border-color: #334155 !important; }
+.admin-theme-dark .sacraments-v3 .table > :not(caption) > * > *,
+html[data-admin-theme="dark"] .sacraments-v3 .table > :not(caption) > * > * { color: #f8fafc !important; border-color: #334155 !important; }
+

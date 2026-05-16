@@ -1,0 +1,53 @@
+.leadership-soft-card,
+.leadership-stat-card {
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+    border-radius: 1rem;
+}
+
+.leadership-table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* LEADERSHIP MODULE */
+.admin-theme-light .leadership-soft-card,
+.admin-theme-light .leadership-stat-card,
+html[data-admin-theme="light"] .leadership-soft-card,
+html[data-admin-theme="light"] .leadership-stat-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .leadership-soft-card,
+.admin-theme-dark .leadership-stat-card,
+html[data-admin-theme="dark"] .leadership-soft-card,
+html[data-admin-theme="dark"] .leadership-stat-card {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 14px 34px rgba(0,0,0,.28) !important;
+}
+
+.admin-theme-dark .leadership-table thead th,
+html[data-admin-theme="dark"] .leadership-table thead th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .leadership-table tbody td,
+html[data-admin-theme="dark"] .leadership-table tbody td {
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+

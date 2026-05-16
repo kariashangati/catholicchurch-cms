@@ -1,0 +1,83 @@
+.kanda-report-v3 {
+    --db-primary: #7c3aed;
+    --db-success: #16a34a;
+    --db-info: #0284c7;
+    --db-warning: #f59e0b;
+    --db-danger: #ef4444;
+    --db-muted: #64748b;
+    --db-text: #0f172a;
+    --db-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --db-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+.kanda-report-v3 .card { border-radius: 24px; box-shadow: var(--db-shadow-soft); overflow: hidden; }
+.kanda-report-v3 .dashboard-hero {
+    position: relative; border-radius: 30px; padding: 2rem; overflow: hidden;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 24%), radial-gradient(circle at bottom left, rgba(255,255,255,0.12), transparent 28%), linear-gradient(135deg, #5b21b6 0%, #7c3aed 45%, #9333ea 100%);
+    color: #fff; box-shadow: 0 24px 60px rgba(124, 58, 237, 0.28);
+}
+.kanda-report-v3 .hero-pattern { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 24px 24px; opacity: .35; pointer-events: none; }
+.kanda-report-v3 .dashboard-hero-badge, .kanda-report-v3 .hero-pill, .kanda-report-v3 .stat-chip, .kanda-report-v3 .finance-chip { border-radius: 999px; }
+.kanda-report-v3 .dashboard-hero-badge { display:inline-flex; align-items:center; padding:.45rem .9rem; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.2); color:#fff; font-size:.82rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; backdrop-filter:blur(10px); }
+.kanda-report-v3 .dashboard-title { font-size: clamp(1.9rem, 2.3vw, 2.7rem); font-weight: 800; letter-spacing: -.03em; color:#fff; }
+.kanda-report-v3 .dashboard-subtitle { color: rgba(255,255,255,.88); font-size: 1rem; }
+.kanda-report-v3 .hero-meta-wrap { display:flex; flex-wrap:wrap; gap:.75rem; }
+.kanda-report-v3 .hero-pill { display:inline-flex; align-items:center; padding:.68rem 1rem; background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.18); font-weight:600; backdrop-filter:blur(10px); }
+.kanda-report-v3 .hero-pill-warning { background: rgba(245, 158, 11, .18); }
+.kanda-report-v3 .hero-actions-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:.85rem; }
+.kanda-report-v3 .hero-action-btn { display:flex; align-items:center; gap:.85rem; padding:.95rem 1rem; border-radius:18px; background:rgba(255,255,255,.13); color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.18); transition:all .25s ease; backdrop-filter:blur(10px); min-height:64px; }
+.kanda-report-v3 .hero-action-btn:hover { transform:translateY(-2px); background:rgba(255,255,255,.18); color:#fff; }
+.kanda-report-v3 .hero-action-icon { width:42px; height:42px; border-radius:14px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,.16); }
+.kanda-report-v3 .hero-action-text { font-weight:700; }
+.kanda-report-v3 .filter-panel, .kanda-report-v3 .stat-card, .kanda-report-v3 .finance-card, .kanda-report-v3 .analytics-panel, .kanda-report-v3 .dashboard-side-panel, .kanda-report-v3 .table-panel { background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%); border:1px solid rgba(226,232,240,.9); }
+.kanda-report-v3 .stat-card,.kanda-report-v3 .finance-card,.kanda-report-v3 .analytics-panel,.kanda-report-v3 .dashboard-side-panel{transition:transform .22s ease,box-shadow .22s ease;}
+.kanda-report-v3 .stat-card:hover,.kanda-report-v3 .finance-card:hover,.kanda-report-v3 .analytics-panel:hover,.kanda-report-v3 .dashboard-side-panel:hover{transform:translateY(-4px);box-shadow:var(--db-shadow);}
+.kanda-report-v3 .stat-card::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;border-radius:24px 0 0 24px;background:var(--accent,var(--db-primary));}
+.kanda-report-v3 .stat-card-primary{--accent:#7c3aed}.kanda-report-v3 .stat-card-success{--accent:#16a34a}.kanda-report-v3 .stat-card-info{--accent:#0284c7}.kanda-report-v3 .stat-card-secondary{--accent:#475569}.kanda-report-v3 .stat-card-dark{--accent:#0f172a}
+.kanda-report-v3 .finance-card-primary{--accent:#7c3aed}.kanda-report-v3 .finance-card-success{--accent:#16a34a}.kanda-report-v3 .finance-card-warning{--accent:#f59e0b}.kanda-report-v3 .finance-card-info{--accent:#0284c7}.kanda-report-v3 .finance-card-secondary{--accent:#475569}.kanda-report-v3 .finance-card-dark{--accent:#0f172a}
+.kanda-report-v3 .stat-top-row,.kanda-report-v3 .finance-card-top,.kanda-report-v3 .panel-head{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.kanda-report-v3 .stat-top-row,.kanda-report-v3 .finance-card-top{margin-bottom:1rem}
+.kanda-report-v3 .stat-icon,.kanda-report-v3 .finance-card-icon,.kanda-report-v3 .panel-icon{width:54px;height:54px;border-radius:18px;display:inline-flex;align-items:center;justify-content:center;font-size:1.12rem;color:#fff;background:linear-gradient(135deg,var(--accent,#7c3aed),rgba(124,58,237,.78));box-shadow:0 12px 24px rgba(124,58,237,.2)}
+.kanda-report-v3 .stat-chip,.kanda-report-v3 .finance-chip{display:inline-flex;align-items:center;padding:.42rem .82rem;background:#f1f5f9;color:#334155;font-size:.78rem;font-weight:700;border:1px solid #e2e8f0}
+.kanda-report-v3 .stat-label,.kanda-report-v3 .finance-card-title{font-size:.88rem;font-weight:700;color:#475569;margin-bottom:.5rem}
+.kanda-report-v3 .stat-number,.kanda-report-v3 .finance-card-value{font-size:clamp(1.45rem,1.9vw,2.15rem);font-weight:800;line-height:1.05;color:var(--db-text);letter-spacing:-.03em}
+.kanda-report-v3 .stat-meta,.kanda-report-v3 .finance-card-meta{font-size:.82rem;color:var(--db-muted);margin-top:.5rem}
+.kanda-report-v3 .section-title,.kanda-report-v3 .panel-title{font-size:1.05rem;font-weight:800;color:var(--db-text);margin-bottom:.2rem}
+.kanda-report-v3 .section-subtitle,.kanda-report-v3 .panel-subtitle{color:var(--db-muted);font-size:.88rem;margin:0}
+.kanda-report-v3 .chart-shell{position:relative;height:320px;padding:1rem;border-radius:22px;background:linear-gradient(180deg,rgba(248,250,252,.95),rgba(255,255,255,1));border:1px solid #edf2f7}
+.kanda-report-v3 .chart-shell-lg{height:360px}
+.kanda-report-v3 .dashboard-table-wrap{border-top:1px solid #eef2f7}
+.kanda-report-v3 .dashboard-table thead th{background:#f8fafc;color:#475569;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid #e2e8f0;white-space:nowrap}
+.kanda-report-v3 .dashboard-table td,.kanda-report-v3 .dashboard-table th{padding:1rem 1rem;vertical-align:middle}
+.kanda-report-v3 .dashboard-table tbody tr:hover{background:rgba(124,58,237,.025)}
+.kanda-report-v3 .name-main{font-weight:700;color:var(--db-text)}
+.kanda-report-v3 .name-sub{font-size:.82rem;color:var(--db-muted)}
+.kanda-report-v3 .btn-modern{border-radius:14px;padding:.55rem .95rem;font-weight:700}
+.kanda-report-v3 .btn-modern-primary{border-radius:14px;min-height:48px;font-weight:700;background:linear-gradient(135deg,#5b21b6 0%,#7c3aed 45%,#9333ea 100%);border:0;color:#fff;box-shadow:0 12px 24px rgba(124,58,237,.24)}
+.kanda-report-v3 .modern-input{min-height:54px;border-radius:16px;border:1px solid #dbe5f0;background:#fff;padding:.85rem 1rem;box-shadow:none}
+.kanda-report-v3 .feed-item{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px dashed #e2e8f0}
+.kanda-report-v3 .feed-item:last-child{border-bottom:0;padding-bottom:0}
+.kanda-report-v3 .feed-icon{width:46px;height:46px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.kanda-report-v3 .tone-info{background:linear-gradient(135deg,#0284c7,#0ea5e9)}.kanda-report-v3 .tone-success{background:linear-gradient(135deg,#15803d,#22c55e)}.kanda-report-v3 .tone-warning{background:linear-gradient(135deg,#d97706,#f59e0b)}.kanda-report-v3 .tone-primary{background:linear-gradient(135deg,#6d28d9,#9333ea)}.kanda-report-v3 .tone-danger{background:linear-gradient(135deg,#dc2626,#ef4444)}
+.kanda-report-v3 .feed-title{font-weight:700;color:var(--db-text);margin-bottom:.2rem}.kanda-report-v3 .feed-text,.kanda-report-v3 .feed-time{font-size:.88rem;color:var(--db-muted)}
+.kanda-report-v3 .empty-note{padding:1rem;border-radius:18px;background:#f8fafc;color:var(--db-muted);font-size:.9rem;border:1px dashed #dbe4ee}
+@media (max-width: 991.98px){.kanda-report-v3 .dashboard-hero{padding:1.5rem}.kanda-report-v3 .hero-actions-grid{grid-template-columns:1fr}.kanda-report-v3 .chart-shell,.kanda-report-v3 .chart-shell-lg{height:300px}}
+
+/* ==========================================================
+   LIGHT / DARK THEME OVERRIDES
+   Scope: this module only. Classic theme remains unchanged.
+   ========================================================== */
+/* THEME OVERRIDES: KANDA REPORT V3 */
+.admin-theme-light .kanda-report-v3, html[data-admin-theme="light"] .kanda-report-v3 { --db-text:#020617; --db-muted:#334155; --db-shadow:0 14px 34px rgba(15,23,42,.07); --db-shadow-soft:0 10px 26px rgba(15,23,42,.055); }
+.admin-theme-dark .kanda-report-v3, html[data-admin-theme="dark"] .kanda-report-v3 { --db-text:#f8fafc; --db-muted:#cbd5e1; --db-shadow:0 18px 45px rgba(0,0,0,.35); --db-shadow-soft:0 12px 30px rgba(0,0,0,.28); }
+.admin-theme-light .kanda-report-v3 .dashboard-hero, html[data-admin-theme="light"] .kanda-report-v3 .dashboard-hero { background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)!important; color:#020617!important; border:1px solid #e2e8f0!important; box-shadow:0 14px 34px rgba(15,23,42,.07)!important; }
+.admin-theme-dark .kanda-report-v3 .dashboard-hero, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-hero { background:linear-gradient(180deg,#0f172a 0%,#111827 100%)!important; color:#f8fafc!important; border:1px solid #334155!important; box-shadow:0 18px 45px rgba(0,0,0,.36)!important; }
+.admin-theme-light .kanda-report-v3 .hero-pattern, .admin-theme-dark .kanda-report-v3 .hero-pattern, html[data-admin-theme="light"] .kanda-report-v3 .hero-pattern, html[data-admin-theme="dark"] .kanda-report-v3 .hero-pattern { display:none!important; }
+.admin-theme-light .kanda-report-v3 .dashboard-title, .admin-theme-light .kanda-report-v3 .dashboard-subtitle, html[data-admin-theme="light"] .kanda-report-v3 .dashboard-title, html[data-admin-theme="light"] .kanda-report-v3 .dashboard-subtitle { color:#020617!important; }
+.admin-theme-dark .kanda-report-v3 .dashboard-title, .admin-theme-dark .kanda-report-v3 .dashboard-subtitle, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-title, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-subtitle { color:#f8fafc!important; }
+.admin-theme-light .kanda-report-v3 .dashboard-hero-badge, .admin-theme-light .kanda-report-v3 .hero-pill, .admin-theme-light .kanda-report-v3 .hero-action-btn, html[data-admin-theme="light"] .kanda-report-v3 .dashboard-hero-badge, html[data-admin-theme="light"] .kanda-report-v3 .hero-pill, html[data-admin-theme="light"] .kanda-report-v3 .hero-action-btn { background:#fff!important; color:#020617!important; border:1px solid #dbe3ee!important; box-shadow:0 8px 18px rgba(15,23,42,.06)!important; }
+.admin-theme-dark .kanda-report-v3 .dashboard-hero-badge, .admin-theme-dark .kanda-report-v3 .hero-pill, .admin-theme-dark .kanda-report-v3 .hero-action-btn, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-hero-badge, html[data-admin-theme="dark"] .kanda-report-v3 .hero-pill, html[data-admin-theme="dark"] .kanda-report-v3 .hero-action-btn { background:#111827!important; color:#f8fafc!important; border:1px solid #334155!important; box-shadow:none!important; }
+.admin-theme-light .kanda-report-v3 .filter-panel, .admin-theme-light .kanda-report-v3 .stat-card, .admin-theme-light .kanda-report-v3 .finance-card, .admin-theme-light .kanda-report-v3 .analytics-panel, .admin-theme-light .kanda-report-v3 .dashboard-side-panel, .admin-theme-light .kanda-report-v3 .table-panel, .admin-theme-light .kanda-report-v3 .chart-shell, .admin-theme-light .kanda-report-v3 .empty-note, html[data-admin-theme="light"] .kanda-report-v3 .filter-panel, html[data-admin-theme="light"] .kanda-report-v3 .stat-card, html[data-admin-theme="light"] .kanda-report-v3 .finance-card, html[data-admin-theme="light"] .kanda-report-v3 .analytics-panel, html[data-admin-theme="light"] .kanda-report-v3 .dashboard-side-panel, html[data-admin-theme="light"] .kanda-report-v3 .table-panel, html[data-admin-theme="light"] .kanda-report-v3 .chart-shell, html[data-admin-theme="light"] .kanda-report-v3 .empty-note { background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important; color:#020617!important; border-color:#e2e8f0!important; }
+.admin-theme-dark .kanda-report-v3 .filter-panel, .admin-theme-dark .kanda-report-v3 .stat-card, .admin-theme-dark .kanda-report-v3 .finance-card, .admin-theme-dark .kanda-report-v3 .analytics-panel, .admin-theme-dark .kanda-report-v3 .dashboard-side-panel, .admin-theme-dark .kanda-report-v3 .table-panel, .admin-theme-dark .kanda-report-v3 .chart-shell, .admin-theme-dark .kanda-report-v3 .empty-note, html[data-admin-theme="dark"] .kanda-report-v3 .filter-panel, html[data-admin-theme="dark"] .kanda-report-v3 .stat-card, html[data-admin-theme="dark"] .kanda-report-v3 .finance-card, html[data-admin-theme="dark"] .kanda-report-v3 .analytics-panel, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-side-panel, html[data-admin-theme="dark"] .kanda-report-v3 .table-panel, html[data-admin-theme="dark"] .kanda-report-v3 .chart-shell, html[data-admin-theme="dark"] .kanda-report-v3 .empty-note { background:#0f172a!important; color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-dark .kanda-report-v3 .modern-input, html[data-admin-theme="dark"] .kanda-report-v3 .modern-input { background:#020617!important; color:#f8fafc!important; border-color:#475569!important; }
+.admin-theme-dark .kanda-report-v3 .dashboard-table thead th, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-table thead th { background:#111827!important; color:#cbd5e1!important; border-color:#334155!important; }
+.admin-theme-dark .kanda-report-v3 .dashboard-table td, .admin-theme-dark .kanda-report-v3 .dashboard-table th, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-table td, html[data-admin-theme="dark"] .kanda-report-v3 .dashboard-table th { color:#f8fafc!important; border-color:#334155!important; }

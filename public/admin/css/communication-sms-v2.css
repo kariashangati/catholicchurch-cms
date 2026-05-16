@@ -1,0 +1,119 @@
+.communication-sms-v2 .sms-hero{background:linear-gradient(135deg,#6d28d9 0%,#7c3aed 50%,#a855f7 100%);border-radius:24px;overflow:hidden;color:#fff;padding:28px 24px;box-shadow:0 18px 45px rgba(124,58,237,.22)}
+.communication-sms-v2 .ui-page-title{font-size:clamp(1.8rem,3vw,2.7rem)}
+.communication-sms-v2 .ui-page-badge,.communication-sms-v2 .ui-meta-pill,.communication-sms-v2 .ui-hero-action{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);color:#fff}
+.communication-sms-v2 .ui-hero-action:hover{background:rgba(255,255,255,.24);color:#fff;transform:translateY(-1px)}
+.communication-sms-v2 .ui-actions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.communication-sms-v2 .sms-chart-shell{height:260px;position:relative}
+.communication-sms-v2 .sms-stat-list{display:grid;gap:12px}.communication-sms-v2 .sms-stat-list>div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #e5e7eb}.communication-sms-v2 .sms-stat-list>div:last-child{border-bottom:0}.communication-sms-v2 .sms-stat-list span{color:#64748b}.communication-sms-v2 .sms-stat-list strong{color:#0f172a}
+.communication-sms-v2 .sms-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.communication-sms-v2 .sms-preview-grid>div{border:1px solid #e5e7eb;border-radius:16px;padding:14px;background:#f8fafc}.communication-sms-v2 .sms-preview-grid span{display:block;color:#64748b;text-transform:uppercase;font-size:.72rem;font-weight:700;letter-spacing:.04em}.communication-sms-v2 .sms-preview-grid strong{font-size:1.35rem;color:#0f172a}
+.communication-sms-v2 .sms-char-line{display:flex;gap:16px;flex-wrap:wrap;color:#64748b;font-size:.9rem}.communication-sms-v2 .sms-message-box{min-height:190px}.communication-sms-v2 .sms-balance-note{border-radius:14px;padding:12px;background:#f8fafc;color:#475569}.communication-sms-v2 .sms-balance-note.good{background:#dcfce7;color:#166534}.communication-sms-v2 .sms-balance-note.bad{background:#fee2e2;color:#991b1b}
+.communication-sms-v2 .sms-target-field{display:none}.communication-sms-v2 .sms-target-field.is-visible{display:block}.communication-sms-v2 .sms-pagination nav{display:flex;justify-content:flex-end}.communication-sms-v2 .pagination{gap:6px}.communication-sms-v2 .page-link{border-radius:10px!important;padding:.45rem .75rem;color:#6d28d9}.communication-sms-v2 .page-item.active .page-link{background:#7c3aed;border-color:#7c3aed;color:#fff}
+@media(max-width:992px){.communication-sms-v2 .ui-actions-grid{grid-template-columns:1fr}.communication-sms-v2 .sms-chart-shell{height:220px}}
+
+/* ==========================================================
+   THEME OVERRIDES: COMMUNICATION SMS V2
+   Appended safely for admin_theme light/dark support.
+   ========================================================== */
+
+.admin-theme-light .communication-sms-v2 .sms-hero,
+html[data-admin-theme="light"] .communication-sms-v2 .sms-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-hero,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .communication-sms-v2 .ui-page-title,
+.admin-theme-light .communication-sms-v2 .ui-page-badge,
+.admin-theme-light .communication-sms-v2 .ui-meta-pill,
+.admin-theme-light .communication-sms-v2 .ui-hero-action,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-page-title,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-page-badge,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-meta-pill,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-hero-action {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .ui-page-title,
+.admin-theme-dark .communication-sms-v2 .ui-page-badge,
+.admin-theme-dark .communication-sms-v2 .ui-meta-pill,
+.admin-theme-dark .communication-sms-v2 .ui-hero-action,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-page-title,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-page-badge,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-meta-pill,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-hero-action {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .communication-sms-v2 .ui-page-badge,
+.admin-theme-light .communication-sms-v2 .ui-meta-pill,
+.admin-theme-light .communication-sms-v2 .ui-hero-action,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-page-badge,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-meta-pill,
+html[data-admin-theme="light"] .communication-sms-v2 .ui-hero-action {
+    background: #ffffff !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .ui-page-badge,
+.admin-theme-dark .communication-sms-v2 .ui-meta-pill,
+.admin-theme-dark .communication-sms-v2 .ui-hero-action,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-page-badge,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-meta-pill,
+html[data-admin-theme="dark"] .communication-sms-v2 .ui-hero-action {
+    background: #111827 !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-stat-list > div,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-stat-list > div {
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-stat-list span,
+.admin-theme-dark .communication-sms-v2 .sms-char-line,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-stat-list span,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-char-line {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-stat-list strong,
+.admin-theme-dark .communication-sms-v2 .sms-preview-grid strong,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-stat-list strong,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-preview-grid strong {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-preview-grid > div,
+.admin-theme-dark .communication-sms-v2 .sms-balance-note,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-preview-grid > div,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-balance-note {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .communication-sms-v2 .sms-preview-grid span,
+html[data-admin-theme="dark"] .communication-sms-v2 .sms-preview-grid span {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-light .communication-sms-v2 .sms-preview-grid > div,
+.admin-theme-light .communication-sms-v2 .sms-balance-note,
+html[data-admin-theme="light"] .communication-sms-v2 .sms-preview-grid > div,
+html[data-admin-theme="light"] .communication-sms-v2 .sms-balance-note {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+

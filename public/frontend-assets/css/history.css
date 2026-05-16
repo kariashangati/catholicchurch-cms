@@ -1,0 +1,343 @@
+/* =========================================
+   HISTORY PAGE — PREMIUM LIGHT SYSTEM
+========================================= */
+
+:root {
+  --history-shell: 1180px;
+  --history-text: #0f172a;
+  --history-muted: #64748b;
+
+  --history-primary: #4f46e5;
+  --history-accent: #0ea5e9;
+
+  --history-border: rgba(15, 23, 42, 0.06);
+
+  --history-radius-xl: 28px;
+  --history-radius-lg: 22px;
+  --history-radius-md: 18px;
+
+  --history-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  --history-shadow-soft: 0 12px 28px rgba(15, 23, 42, 0.05);
+
+  --history-bg:
+    radial-gradient(circle at top left, rgba(79,70,229,0.05), transparent 25%),
+    radial-gradient(circle at top right, rgba(14,165,233,0.05), transparent 20%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+
+  --history-top-offset: 120px;
+}
+
+/* =========================================
+   BASE
+========================================= */
+
+.history-page,
+.history-single {
+  background: var(--history-bg);
+  padding-top: var(--history-top-offset);
+  padding-bottom: 60px;
+}
+
+.home-shell {
+  width: min(var(--history-shell), calc(100% - 32px));
+  margin-inline: auto;
+}
+
+/* =========================================
+   HERO (INDEX)
+========================================= */
+
+.history-hero {
+  padding-bottom: 30px;
+}
+
+.history-hero-inner {
+  background: rgba(255,255,255,0.9);
+  border-radius: var(--history-radius-xl);
+  border: 1px solid var(--history-border);
+  padding: 40px;
+  box-shadow: var(--history-shadow);
+}
+
+.history-kicker {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--history-primary);
+  text-transform: uppercase;
+}
+
+.history-hero h1 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  margin-bottom: 10px;
+  letter-spacing: -0.04em;
+}
+
+.history-hero p {
+  color: var(--history-muted);
+  max-width: 60ch;
+  line-height: 1.8;
+}
+
+.history-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.stat-chip {
+  background: white;
+  border: 1px solid var(--history-border);
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: var(--history-shadow-soft);
+}
+
+.stat-chip strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.stat-chip span {
+  font-size: 0.75rem;
+  color: var(--history-muted);
+}
+
+/* =========================================
+   FEATURED
+========================================= */
+
+.history-featured {
+  padding: 10px 0 30px;
+}
+
+.featured-history-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  overflow: hidden;
+  border-radius: var(--history-radius-xl);
+  background: white;
+  border: 1px solid var(--history-border);
+  box-shadow: var(--history-shadow);
+  transition: 0.3s;
+}
+
+.featured-history-card:hover {
+  transform: translateY(-4px);
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 30px;
+}
+
+.featured-content h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.featured-content p {
+  color: var(--history-muted);
+  line-height: 1.7;
+}
+
+.read-more {
+  margin-top: 14px;
+  display: inline-flex;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--history-primary);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.history-grid {
+  padding-top: 10px;
+}
+
+.grid-header {
+  margin-bottom: 20px;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.history-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--history-border);
+  box-shadow: var(--history-shadow-soft);
+  transition: 0.3s;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-body h4 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+.card-body p {
+  color: var(--history-muted);
+  font-size: 0.9rem;
+}
+
+.date {
+  font-size: 0.75rem;
+  color: var(--history-muted);
+}
+
+.card-link {
+  display: inline-flex;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--history-primary);
+}
+
+/* =========================================
+   SINGLE PAGE
+========================================= */
+
+.history-single-hero {
+  padding-bottom: 20px;
+}
+
+.history-single-inner {
+  background: white;
+  border-radius: var(--history-radius-xl);
+  padding: 40px;
+  border: 1px solid var(--history-border);
+  box-shadow: var(--history-shadow);
+}
+
+.history-single-inner h1 {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  margin: 10px 0 20px;
+}
+
+.history-hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* CONTENT */
+.history-content {
+  padding: 30px 0;
+}
+
+.content-wrapper {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid var(--history-border);
+  box-shadow: var(--history-shadow);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.content-wrapper p {
+  margin-bottom: 16px;
+}
+
+.content-wrapper img {
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 20px 0;
+}
+
+/* =========================================
+   RELATED
+========================================= */
+
+.history-related {
+  padding-top: 20px;
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge-featured {
+  background: rgba(79,70,229,0.1);
+  color: var(--history-primary);
+}
+
+.badge-date {
+  background: rgba(14,165,233,0.1);
+  color: #0369a1;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: var(--history-muted);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .grid-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-history-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .history-hero-inner,
+  .history-single-inner,
+  .content-wrapper {
+    padding: 20px;
+  }
+
+  .history-hero h1 {
+    font-size: 2rem;
+  }
+}

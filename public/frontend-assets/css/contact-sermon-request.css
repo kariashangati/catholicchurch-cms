@@ -1,0 +1,162 @@
+/* Contact page sermon request switcher */
+.contact-form-box-enhanced {
+    position: relative;
+}
+
+.contact-form-headline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-form-help {
+    margin: .35rem 0 0;
+    color: #64748b;
+    font-size: .88rem;
+    line-height: 1.55;
+    max-width: 34rem;
+}
+
+.contact-action-switch {
+    display: inline-flex;
+    gap: .4rem;
+    padding: .35rem;
+    border-radius: 999px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.contact-switch-btn {
+    border: 0;
+    border-radius: 999px;
+    padding: .6rem .9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: transparent;
+    color: #475569;
+    font-size: .82rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .18s ease;
+    white-space: nowrap;
+}
+
+.contact-switch-btn:hover {
+    color: #111827;
+    background: rgba(255,255,255,.72);
+}
+
+.contact-switch-btn.is-active {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    box-shadow: 0 10px 22px rgba(79,70,229,.24);
+}
+
+.contact-live-form.d-none {
+    display: none !important;
+}
+
+.sermon-request-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: .85rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(37,99,235,.08));
+    border: 1px solid rgba(124,58,237,.16);
+    margin-bottom: 1rem;
+}
+
+.sermon-request-banner > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    flex-shrink: 0;
+}
+
+.sermon-request-banner strong,
+.sermon-request-banner small {
+    display: block;
+}
+
+.sermon-request-banner strong {
+    color: #0f172a;
+    font-size: .98rem;
+    margin-bottom: .2rem;
+}
+
+.sermon-request-banner small {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.sermon-request-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .75rem;
+    margin-top: .5rem;
+}
+
+.btn-sermon-secondary {
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #334155;
+    border-radius: 999px;
+    padding: .75rem 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .18s ease;
+}
+
+.btn-sermon-secondary:hover {
+    background: #f8fafc;
+    color: #111827;
+}
+
+@media (max-width: 991.98px) {
+    .contact-form-headline {
+        flex-direction: column;
+    }
+
+    .contact-action-switch {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 18px;
+    }
+
+    .contact-switch-btn {
+        justify-content: center;
+        border-radius: 14px;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-action-switch {
+        grid-template-columns: 1fr;
+    }
+
+    .sermon-request-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .sermon-request-actions .btn-primary,
+    .sermon-request-actions .btn-sermon-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}

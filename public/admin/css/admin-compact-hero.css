@@ -1,0 +1,190 @@
+/* ==========================================================
+   ADMIN COMPACT HERO OVERRIDE
+   Load this after all admin/page CSS files.
+   Purpose: reduce hero height without touching tables/cards/status.
+   ========================================================== */
+
+.admin-body .ui-page-hero,
+.admin-body .dashboard-hero,
+.admin-body .cms-hero,
+.admin-body .cms-hero-dashboard,
+.admin-body .cms-hero-homepage,
+.admin-body .cms-hero-content,
+.admin-body .finance-hero,
+.admin-body .kanda-v3 .dashboard-hero,
+.admin-body .kanda-report-v3 .dashboard-hero,
+.admin-body .familia-dashboard-hero,
+.admin-body .members-hero,
+.admin-body .members-show-hero,
+.admin-body .apg-hero,
+.admin-body .apg-show-hero,
+.admin-body .access-hero,
+.admin-body .access-page-hero,
+.admin-body .access-form-hero,
+.admin-body .profile-hero,
+.admin-body .audit-hero-standard,
+.admin-body .audit-hero,
+.admin-body .audit-page-hero,
+.admin-body .login-page-hero,
+.admin-body .cc-hero,
+.admin-body .cc-subhero,
+.admin-body .communication-hero,
+.admin-body .communication-sms-v2 .sms-hero,
+.admin-body .teaching-hero,
+.admin-body .sacrament-hero,
+.admin-body .syscfg-hero,
+.admin-body .receipt-hero,
+.admin-body .jumuiya-hero {
+    padding: 1rem 1.25rem !important;
+    min-height: auto !important;
+    border-radius: 22px !important;
+}
+
+/* Titles */
+.admin-body .ui-page-title,
+.admin-body .dashboard-title,
+.admin-body .cms-hero-title,
+.admin-body .finance-hero-title,
+.admin-body .access-hero-title,
+.admin-body .access-page-hero-title,
+.admin-body .audit-hero-title,
+.admin-body .audit-page-hero-title,
+.admin-body .login-page-hero-title,
+.admin-body .cc-hero__title,
+.admin-body .cc-subhero__title,
+.admin-body .communication-hero h1,
+.admin-body .communication-hero h2,
+.admin-body .communication-sms-v2 .sms-hero h1,
+.admin-body .communication-sms-v2 .sms-hero h2,
+.admin-body .teaching-hero h1,
+.admin-body .teaching-hero h2,
+.admin-body .sacrament-title,
+.admin-body .syscfg-hero-title,
+.admin-body .receipt-hero__title,
+.admin-body .jumuiya-module-v3 .ui-page-hero-title,
+.admin-body .jumuiya-module-v3 .admin-ui-title {
+    font-size: clamp(1.25rem, 1.65vw, 1.65rem) !important;
+    line-height: 1.15 !important;
+    margin-top: .35rem !important;
+    margin-bottom: .25rem !important;
+}
+
+/* Subtitles */
+.admin-body .ui-page-subtitle,
+.admin-body .dashboard-subtitle,
+.admin-body .cms-hero-subtitle,
+.admin-body .finance-hero-subtitle,
+.admin-body .access-hero-subtitle,
+.admin-body .access-page-hero-subtitle,
+.admin-body .audit-hero-subtitle,
+.admin-body .audit-page-hero-subtitle,
+.admin-body .login-page-hero-subtitle,
+.admin-body .cc-hero__text,
+.admin-body .cc-subhero__text,
+.admin-body .communication-hero p,
+.admin-body .communication-sms-v2 .sms-hero p,
+.admin-body .teaching-hero p,
+.admin-body .sacrament-subtitle,
+.admin-body .syscfg-hero-subtitle,
+.admin-body .receipt-hero__subtitle {
+    font-size: .82rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: .35rem !important;
+}
+
+/* Badges and pills inside hero only */
+.admin-body .ui-page-hero .ui-page-badge,
+.admin-body .ui-page-hero .ui-meta-pill,
+.admin-body .dashboard-hero .dashboard-hero-badge,
+.admin-body .dashboard-hero .hero-pill,
+.admin-body .cms-hero .cms-hero-badge,
+.admin-body .cms-hero .cms-hero-pill,
+.admin-body .access-hero .access-hero-badge,
+.admin-body .audit-hero .audit-hero-badge,
+.admin-body .teaching-hero .teaching-chip,
+.admin-body .sacrament-hero .sacrament-hero-badge,
+.admin-body .sacrament-hero .sacrament-pill,
+.admin-body .syscfg-hero .syscfg-hero-badge,
+.admin-body .syscfg-hero .syscfg-hero-pill,
+.admin-body .receipt-hero .receipt-eyebrow,
+.admin-body .jumuiya-module-v3 .ui-page-hero .ui-hero-pill,
+.admin-body .jumuiya-module-v3 .ui-page-hero .admin-ui-pill {
+    padding: .32rem .68rem !important;
+    font-size: .72rem !important;
+    line-height: 1.1 !important;
+}
+
+/* Hero action buttons/cards only */
+.admin-body .ui-page-hero .ui-hero-action,
+.admin-body .dashboard-hero .hero-action-btn,
+.admin-body .cms-hero .btn,
+.admin-body .access-hero .btn,
+.admin-body .audit-hero .btn,
+.admin-body .cc-hero .cc-action-card,
+.admin-body .communication-hero .btn,
+.admin-body .communication-sms-v2 .sms-hero .ui-hero-action,
+.admin-body .teaching-hero .teaching-action-card,
+.admin-body .sacrament-hero .sacrament-action-card,
+.admin-body .syscfg-hero .btn,
+.admin-body .receipt-hero .btn,
+.admin-body .jumuiya-module-v3 .ui-page-hero .ui-hero-action-btn,
+.admin-body .jumuiya-module-v3 .ui-page-hero .jumuiya-hero-action {
+    padding: .45rem .75rem !important;
+    min-height: 34px !important;
+    border-radius: 12px !important;
+    font-size: .78rem !important;
+}
+
+/* Icons inside hero actions */
+.admin-body .ui-page-hero .ui-hero-action-icon,
+.admin-body .dashboard-hero .hero-action-icon,
+.admin-body .cc-hero .cc-action-card i,
+.admin-body .teaching-hero .teaching-action-icon,
+.admin-body .sacrament-hero .sacrament-action-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 10px !important;
+}
+
+/* Reduce spacing in hero rows/grids */
+.admin-body .ui-page-hero .row,
+.admin-body .dashboard-hero .row,
+.admin-body .cms-hero .row,
+.admin-body .teaching-hero .row,
+.admin-body .sacrament-hero .row,
+.admin-body .syscfg-hero .row,
+.admin-body .receipt-hero__content {
+    row-gap: .6rem !important;
+}
+
+.admin-body .ui-actions-grid,
+.admin-body .hero-actions-grid,
+.admin-body .sacrament-actions-grid,
+.admin-body .cc-hero__actions,
+.admin-body .teaching-quick-grid {
+    gap: .55rem !important;
+}
+
+/* Hero filter/date boxes */
+.admin-body .ui-page-hero .ui-filter-card,
+.admin-body .dashboard-hero .ui-filter-card,
+.admin-body .cms-hero .ui-filter-card,
+.admin-body .finance-hero .ui-filter-card,
+.admin-body .sacrament-hero .ui-filter-card {
+    padding: .7rem !important;
+    border-radius: 16px !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .admin-body .ui-page-hero,
+    .admin-body .dashboard-hero,
+    .admin-body .cms-hero,
+    .admin-body .teaching-hero,
+    .admin-body .sacrament-hero,
+    .admin-body .syscfg-hero,
+    .admin-body .receipt-hero {
+        padding: .85rem !important;
+        border-radius: 18px !important;
+    }
+}

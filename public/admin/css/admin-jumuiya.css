@@ -1,0 +1,73 @@
+.jumuiya-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: #fff;
+}
+
+.jumuiya-thumb-placeholder {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 900;
+    border: 1px solid #e7dcff;
+}
+
+.jumuiya-name-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.jumuiya-modal-preview {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.jumuiya-modal-preview-wrap {
+    display: none;
+}
+/* ==========================================================
+   THEME OVERRIDE: JUMUIYA MODULE
+   Appended safely for avatar/thumbnail surfaces.
+   ========================================================== */
+
+.admin-theme-light .jumuiya-thumb,
+.admin-theme-light .jumuiya-modal-preview,
+html[data-admin-theme="light"] .jumuiya-thumb,
+html[data-admin-theme="light"] .jumuiya-modal-preview {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .jumuiya-thumb,
+.admin-theme-dark .jumuiya-modal-preview,
+html[data-admin-theme="dark"] .jumuiya-thumb,
+html[data-admin-theme="dark"] .jumuiya-modal-preview {
+    background: #0f172a !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-light .jumuiya-thumb-placeholder,
+html[data-admin-theme="light"] .jumuiya-thumb-placeholder {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border-color: #dbeafe !important;
+}
+
+.admin-theme-dark .jumuiya-thumb-placeholder,
+html[data-admin-theme="dark"] .jumuiya-thumb-placeholder {
+    background: #111827 !important;
+    color: #c4b5fd !important;
+    border-color: #334155 !important;
+}

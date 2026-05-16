@@ -1,0 +1,44 @@
+.project-finance-v4 .ui-chart-shell canvas { min-height: 280px; }
+.project-finance-v4 .ui-page-hero .ui-hero-action { cursor: pointer; }
+.project-finance-v4 .dataTables_wrapper .dataTables_filter input,
+.project-finance-v4 .dataTables_wrapper .dataTables_length select {
+    border-radius: 12px;
+    border: 1px solid #dbe3ee;
+    min-height: 38px;
+    padding: .35rem .75rem;
+}
+.project-finance-v4 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 10px !important;
+    margin: 0 .15rem;
+}
+.project-finance-v4 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.project-finance-v4 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+.project-finance-v4 .ui-inline-badge { text-transform: capitalize; }
+.project-finance-v4 .modal textarea.form-control { min-height: 120px; }
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* PROJECT FINANCE V4 */
+.admin-theme-dark .project-finance-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .project-finance-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .project-finance-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .project-finance-v4 .dataTables_wrapper .dataTables_length select {
+    background: #020617 !important; color: #f8fafc !important; border-color: #475569 !important;
+}
+.admin-theme-dark .project-finance-v4 .ui-chart-shell,
+html[data-admin-theme="dark"] .project-finance-v4 .ui-chart-shell {
+    background: #0f172a !important; border-color: #334155 !important;
+}
+.admin-theme-light .project-finance-v4 .ui-chart-shell,
+html[data-admin-theme="light"] .project-finance-v4 .ui-chart-shell {
+    background: #ffffff !important; border-color: #e2e8f0 !important;
+}
+

@@ -1,0 +1,1360 @@
+/* ChurchCMS Unified Admin UI v4
+   Reusable shared UI layer derived from dashboard-v3.css.
+   Use this file across blades for hero sections, KPI cards, panels,
+   filters, quick links, tables, badges, empty states, charts and modals. */
+
+:root {
+    --ui-primary: #7c3aed;
+    --ui-primary-2: #9333ea;
+    --ui-primary-3: #5b21b6;
+    --ui-secondary: #0f172a;
+    --ui-success: #16a34a;
+    --ui-info: #0284c7;
+    --ui-warning: #f59e0b;
+    --ui-danger: #ef4444;
+    --ui-muted: #64748b;
+    --ui-text: #0f172a;
+    --ui-soft: #f8fafc;
+    --ui-surface: #ffffff;
+    --ui-surface-2: #fbfdff;
+    --ui-border: #e2e8f0;
+    --ui-border-strong: #cbd5e1;
+    --ui-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --ui-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+    --ui-shadow-hero: 0 24px 60px rgba(124, 58, 237, 0.24);
+    --ui-radius-xl: 30px;
+    --ui-radius-lg: 24px;
+    --ui-radius-md: 18px;
+    --ui-radius-sm: 14px;
+    --ui-transition: all .24s ease;
+}
+
+.admin-ui-v4 {
+    color: var(--ui-text);
+}
+
+.admin-ui-v4 a {
+    text-decoration: none;
+}
+
+.admin-ui-v4 .card {
+    border-radius: var(--ui-radius-lg);
+    box-shadow: var(--ui-shadow-soft);
+    overflow: hidden;
+}
+
+/* --------------------------------
+   HERO
+--------------------------------- */
+.admin-ui-v4 .ui-page-hero {
+    position: relative;
+    border-radius: var(--ui-radius-xl);
+    padding: 2rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,.12), transparent 28%),
+        linear-gradient(135deg, var(--ui-primary-3) 0%, var(--ui-primary) 45%, var(--ui-primary-2) 100%);
+    color: #fff;
+    box-shadow: var(--ui-shadow-hero);
+}
+
+.admin-ui-v4 .ui-hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: .35;
+    pointer-events: none;
+}
+
+.admin-ui-v4 .ui-page-badge,
+.admin-ui-v4 .ui-meta-pill,
+.admin-ui-v4 .ui-chip,
+.admin-ui-v4 .ui-soft-badge,
+.admin-ui-v4 .ui-section-badge,
+.admin-ui-v4 .ui-status-pill,
+.admin-ui-v4 .ui-inline-badge {
+    border-radius: 999px;
+}
+
+.admin-ui-v4 .ui-page-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .9rem;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+}
+
+.admin-ui-v4 .ui-page-title {
+    font-size: clamp(1.95rem, 2.3vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.admin-ui-v4 .ui-page-subtitle {
+    color: rgba(255,255,255,.9);
+    font-size: 1rem;
+    max-width: 760px;
+    margin-bottom: 0;
+}
+
+.admin-ui-v4 .ui-meta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.admin-ui-v4 .ui-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .68rem 1rem;
+    background: rgba(255,255,255,.14);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.admin-ui-v4 .ui-meta-pill-warning {
+    background: rgba(245, 158, 11, .18);
+}
+
+.admin-ui-v4 .ui-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: .85rem;
+}
+
+.admin-ui-v4 .ui-hero-action,
+.admin-ui-v4 .ui-quick-link {
+    transition: var(--ui-transition);
+}
+
+.admin-ui-v4 .ui-hero-action {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: .95rem 1rem;
+    border-radius: 18px;
+    background: rgba(255,255,255,.13);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(10px);
+    min-height: 64px;
+}
+
+.admin-ui-v4 .ui-hero-action:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.18);
+    color: #fff;
+}
+
+.admin-ui-v4 .ui-hero-action-icon,
+.admin-ui-v4 .ui-stat-icon,
+.admin-ui-v4 .ui-panel-icon,
+.admin-ui-v4 .ui-quick-link-icon,
+.admin-ui-v4 .ui-mini-icon,
+.admin-ui-v4 .ui-feed-icon,
+.admin-ui-v4 .ui-attention-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-ui-v4 .ui-hero-action-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.16);
+    font-size: 1rem;
+}
+
+.admin-ui-v4 .ui-hero-action-text {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-ui-v4 .ui-hero-action-text small {
+    display: block;
+    margin-top: .15rem;
+    color: rgba(255,255,255,.78);
+    font-size: .76rem;
+    font-weight: 600;
+}
+
+/* --------------------------------
+   SURFACES / PANELS / CARDS
+--------------------------------- */
+.admin-ui-v4 .ui-surface-card,
+.admin-ui-v4 .ui-stat-card,
+.admin-ui-v4 .ui-panel,
+.admin-ui-v4 .ui-filter-card,
+.admin-ui-v4 .ui-table-card,
+.admin-ui-v4 .ui-modal-card,
+.admin-ui-v4 .ui-mini-card,
+.admin-ui-v4 .ui-finance-card,
+.admin-ui-v4 .ui-side-card {
+    background: linear-gradient(180deg, var(--ui-surface) 0%, var(--ui-surface-2) 100%);
+    border: 1px solid rgba(226, 232, 240, .9);
+}
+
+.admin-ui-v4 .ui-stat-card,
+.admin-ui-v4 .ui-panel,
+.admin-ui-v4 .ui-filter-card,
+.admin-ui-v4 .ui-table-card,
+.admin-ui-v4 .ui-mini-card,
+.admin-ui-v4 .ui-finance-card,
+.admin-ui-v4 .ui-side-card {
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.admin-ui-v4 .ui-stat-card:hover,
+.admin-ui-v4 .ui-panel:hover,
+.admin-ui-v4 .ui-filter-card:hover,
+.admin-ui-v4 .ui-table-card:hover,
+.admin-ui-v4 .ui-mini-card:hover,
+.admin-ui-v4 .ui-finance-card:hover,
+.admin-ui-v4 .ui-side-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ui-shadow);
+}
+
+.admin-ui-v4 .ui-stat-card,
+.admin-ui-v4 .ui-panel,
+.admin-ui-v4 .ui-filter-card,
+.admin-ui-v4 .ui-table-card,
+.admin-ui-v4 .ui-mini-card,
+.admin-ui-v4 .ui-finance-card,
+.admin-ui-v4 .ui-side-card {
+    border-radius: var(--ui-radius-lg);
+}
+
+.admin-ui-v4 .ui-stat-card {
+    position: relative;
+    height: 100%;
+}
+
+.admin-ui-v4 .ui-stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    border-radius: 24px 0 0 24px;
+    background: var(--accent, var(--ui-primary));
+}
+
+.admin-ui-v4 .ui-tone-primary { --accent: var(--ui-primary); }
+.admin-ui-v4 .ui-tone-success { --accent: var(--ui-success); }
+.admin-ui-v4 .ui-tone-info { --accent: var(--ui-info); }
+.admin-ui-v4 .ui-tone-warning { --accent: var(--ui-warning); }
+.admin-ui-v4 .ui-tone-danger { --accent: var(--ui-danger); }
+.admin-ui-v4 .ui-tone-secondary { --accent: #475569; }
+.admin-ui-v4 .ui-tone-dark { --accent: var(--ui-secondary); }
+
+.admin-ui-v4 .ui-stat-top,
+.admin-ui-v4 .ui-finance-top,
+.admin-ui-v4 .ui-panel-head,
+.admin-ui-v4 .ui-section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.admin-ui-v4 .ui-stat-top,
+.admin-ui-v4 .ui-finance-top {
+    margin-bottom: 1rem;
+}
+
+.admin-ui-v4 .ui-panel-head,
+.admin-ui-v4 .ui-section-heading {
+    margin-bottom: 1rem;
+}
+
+.admin-ui-v4 .ui-stat-icon,
+.admin-ui-v4 .ui-panel-icon,
+.admin-ui-v4 .ui-finance-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.14), rgba(124, 58, 237, 0.04));
+    color: var(--accent, var(--ui-primary));
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.admin-ui-v4 .ui-finance-icon {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent, #7c3aed), rgba(124, 58, 237, .78));
+    box-shadow: 0 12px 24px rgba(124, 58, 237, .2);
+}
+
+.admin-ui-v4 .ui-mini-card {
+    height: 100%;
+}
+
+.admin-ui-v4 .ui-mini-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.admin-ui-v4 .ui-mini-tone-primary { background: linear-gradient(135deg, #6d28d9, #9333ea); }
+.admin-ui-v4 .ui-mini-tone-success { background: linear-gradient(135deg, #15803d, #22c55e); }
+.admin-ui-v4 .ui-mini-tone-warning { background: linear-gradient(135deg, #d97706, #f59e0b); }
+.admin-ui-v4 .ui-mini-tone-info { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+.admin-ui-v4 .ui-mini-tone-danger { background: linear-gradient(135deg, #dc2626, #ef4444); }
+.admin-ui-v4 .ui-mini-tone-secondary { background: linear-gradient(135deg, #334155, #64748b); }
+
+/* --------------------------------
+   TYPOGRAPHY / BADGES
+--------------------------------- */
+.admin-ui-v4 .ui-chip {
+    padding: .35rem .8rem;
+    background: #f1f5f9;
+    color: var(--ui-muted);
+    border: 1px solid var(--ui-border);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.admin-ui-v4 .ui-soft-badge,
+.admin-ui-v4 .ui-section-badge,
+.admin-ui-v4 .ui-inline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .45rem .8rem;
+    background: rgba(124, 58, 237, .08);
+    color: var(--ui-primary);
+    border: 1px solid rgba(124, 58, 237, .12);
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.admin-ui-v4 .ui-inline-badge {
+    padding: .34rem .72rem;
+    font-size: .75rem;
+}
+
+.admin-ui-v4 .ui-stat-label,
+.admin-ui-v4 .ui-data-label,
+.admin-ui-v4 .ui-finance-label,
+.admin-ui-v4 .ui-mini-label {
+    font-size: .88rem;
+    color: var(--ui-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.admin-ui-v4 .ui-stat-value,
+.admin-ui-v4 .ui-finance-value,
+.admin-ui-v4 .ui-mini-value {
+    font-size: clamp(1.8rem, 2.1vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--ui-secondary);
+    margin: .35rem 0;
+}
+
+.admin-ui-v4 .ui-finance-value {
+    font-size: clamp(1.45rem, 1.9vw, 2.15rem);
+}
+
+.admin-ui-v4 .ui-mini-value {
+    font-size: clamp(1.45rem, 1.7vw, 2rem);
+}
+
+.admin-ui-v4 .ui-stat-meta,
+.admin-ui-v4 .ui-helper-text,
+.admin-ui-v4 .ui-panel-subtitle,
+.admin-ui-v4 .ui-section-subtitle,
+.admin-ui-v4 .ui-finance-meta,
+.admin-ui-v4 .ui-mini-note {
+    color: var(--ui-muted);
+}
+
+.admin-ui-v4 .ui-section-title,
+.admin-ui-v4 .ui-panel-title {
+    font-weight: 800;
+    color: var(--ui-secondary);
+    margin-bottom: .25rem;
+}
+
+.admin-ui-v4 .ui-panel-title {
+    font-size: 1.05rem;
+}
+
+.admin-ui-v4 .ui-section-title {
+    font-size: 1.2rem;
+}
+
+/* --------------------------------
+   CHARTS
+--------------------------------- */
+.admin-ui-v4 .ui-chart-shell {
+    position: relative;
+    min-height: 280px;
+    padding: 1rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(248,250,252,.95), rgba(255,255,255,1));
+    border: 1px solid #edf2f7;
+}
+
+.admin-ui-v4 .ui-chart-shell-sm {
+    min-height: 240px;
+}
+
+.admin-ui-v4 .ui-chart-shell-lg {
+    min-height: 360px;
+}
+
+.admin-ui-v4 .ui-chart-shell canvas,
+.admin-ui-v4 .ui-chart-shell-sm canvas,
+.admin-ui-v4 .ui-chart-shell-lg canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* --------------------------------
+   FILTERS / FORMS / BUTTONS
+--------------------------------- */
+.admin-ui-v4 .ui-filter-card .form-label,
+.admin-ui-v4 .ui-modal-card .form-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--ui-muted);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.admin-ui-v4 .ui-filter-card .form-control,
+.admin-ui-v4 .ui-filter-card .form-select,
+.admin-ui-v4 .ui-modal-card .form-control,
+.admin-ui-v4 .ui-modal-card .form-select,
+.admin-ui-v4 .ui-modal-card textarea,
+.admin-ui-v4 .ui-input {
+    border-radius: 14px;
+    border-color: var(--ui-border);
+    min-height: 46px;
+    box-shadow: none;
+}
+
+.admin-ui-v4 .ui-filter-card textarea,
+.admin-ui-v4 .ui-modal-card textarea {
+    min-height: 120px;
+}
+
+.admin-ui-v4 .ui-filter-card .form-control:focus,
+.admin-ui-v4 .ui-filter-card .form-select:focus,
+.admin-ui-v4 .ui-modal-card .form-control:focus,
+.admin-ui-v4 .ui-modal-card .form-select:focus,
+.admin-ui-v4 .ui-modal-card textarea:focus,
+.admin-ui-v4 .ui-input:focus {
+    border-color: rgba(124, 58, 237, .45);
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, .1);
+}
+
+.admin-ui-v4 .ui-btn-primary,
+.admin-ui-v4 .ui-btn-secondary,
+.admin-ui-v4 .ui-btn-light,
+.admin-ui-v4 .ui-btn-danger {
+    border-radius: 14px;
+    padding: .78rem 1rem;
+    font-weight: 700;
+    transition: var(--ui-transition);
+}
+
+.admin-ui-v4 .ui-btn-primary {
+    background: linear-gradient(135deg, var(--ui-primary) 0%, var(--ui-primary-2) 100%);
+    border: none;
+    color: #fff;
+    box-shadow: 0 10px 22px rgba(124, 58, 237, .18);
+}
+
+.admin-ui-v4 .ui-btn-primary:hover,
+.admin-ui-v4 .ui-btn-primary:focus {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.admin-ui-v4 .ui-btn-secondary {
+    background: var(--ui-secondary);
+    border: none;
+    color: #fff;
+}
+
+.admin-ui-v4 .ui-btn-secondary:hover,
+.admin-ui-v4 .ui-btn-danger:hover,
+.admin-ui-v4 .ui-btn-light:hover {
+    transform: translateY(-1px);
+}
+
+.admin-ui-v4 .ui-btn-light {
+    background: #f8fafc;
+    border: 1px solid var(--ui-border);
+    color: var(--ui-secondary);
+}
+
+.admin-ui-v4 .ui-btn-danger {
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    border: none;
+    color: #fff;
+}
+
+/* --------------------------------
+   QUICK LINKS / ALERTS / EMPTY STATES
+--------------------------------- */
+.admin-ui-v4 .ui-quick-link,
+.admin-ui-v4 .ui-alert-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: 1rem 1.05rem;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid var(--ui-border);
+    margin-bottom: .75rem;
+    color: var(--ui-secondary);
+}
+
+.admin-ui-v4 .ui-quick-link:hover,
+.admin-ui-v4 .ui-alert-link:hover {
+    transform: translateX(2px);
+    color: var(--ui-primary);
+    border-color: rgba(124, 58, 237, .22);
+}
+
+.admin-ui-v4 .ui-quick-link-left {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.admin-ui-v4 .ui-quick-link-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: rgba(124, 58, 237, .08);
+    color: var(--ui-primary);
+}
+
+.admin-ui-v4 .ui-quick-link-label,
+.admin-ui-v4 .ui-alert-label {
+    font-weight: 700;
+}
+
+.admin-ui-v4 .ui-alert-badge {
+    min-width: 40px;
+    height: 34px;
+    padding: 0 .9rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 8px 18px rgba(245, 158, 11, .22);
+}
+
+.admin-ui-v4 .ui-empty-state {
+    border: 1px dashed var(--ui-border-strong);
+    background: linear-gradient(180deg, #fafcff 0%, #f8fafc 100%);
+    border-radius: 18px;
+    padding: 1.2rem;
+    text-align: center;
+    color: var(--ui-muted);
+}
+
+.admin-ui-v4 .ui-empty-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto .8rem;
+    border-radius: 18px;
+    background: rgba(124, 58, 237, .08);
+    color: var(--ui-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* --------------------------------
+   META / HEALTH / FEED / LIST CARDS
+--------------------------------- */
+.admin-ui-v4 .ui-meta-grid,
+.admin-ui-v4 .ui-health-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: .9rem;
+}
+
+.admin-ui-v4 .ui-health-grid.ui-health-grid-3 {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.admin-ui-v4 .ui-meta-card,
+.admin-ui-v4 .ui-health-item {
+    padding: 1rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    border: 1px solid #edf2f7;
+}
+
+.admin-ui-v4 .ui-meta-label,
+.admin-ui-v4 .ui-health-item span {
+    display: block;
+    font-size: .78rem;
+    color: var(--ui-muted);
+    font-weight: 700;
+    margin-bottom: .45rem;
+}
+
+.admin-ui-v4 .ui-meta-value,
+.admin-ui-v4 .ui-health-item strong {
+    font-weight: 800;
+    color: var(--ui-text);
+    font-size: 1.05rem;
+}
+
+.admin-ui-v4 .ui-note-box {
+    padding: 1rem 1.1rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(124,58,237,.08), rgba(14,165,233,.08));
+    border: 1px solid rgba(124,58,237,.1);
+}
+
+.admin-ui-v4 .ui-note-title {
+    font-weight: 800;
+    margin-bottom: .3rem;
+    color: #4c1d95;
+}
+
+.admin-ui-v4 .ui-note-text {
+    color: #64748b;
+    font-size: .88rem;
+}
+
+.admin-ui-v4 .ui-feed-item {
+    display: flex;
+    gap: .9rem;
+    padding: .9rem 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.admin-ui-v4 .ui-feed-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.admin-ui-v4 .ui-feed-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.admin-ui-v4 .ui-feed-title {
+    font-weight: 700;
+    color: var(--ui-text);
+    margin-bottom: .2rem;
+}
+
+.admin-ui-v4 .ui-feed-text {
+    font-size: .88rem;
+    color: var(--ui-muted);
+}
+
+.admin-ui-v4 .ui-feed-time {
+    font-size: .78rem;
+    color: #94a3b8;
+    margin-top: .25rem;
+}
+
+.admin-ui-v4 .ui-schedule-card {
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid #edf2f7;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    margin-bottom: .85rem;
+}
+
+.admin-ui-v4 .ui-schedule-card:last-child {
+    margin-bottom: 0;
+}
+
+.admin-ui-v4 .ui-attention-item {
+    display: flex;
+    gap: .85rem;
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid #edf2f7;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    margin-bottom: .85rem;
+}
+
+.admin-ui-v4 .ui-attention-item:last-child {
+    margin-bottom: 0;
+}
+
+.admin-ui-v4 .ui-attention-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.admin-ui-v4 .ui-attention-label {
+    font-weight: 800;
+    color: var(--ui-text);
+    margin-bottom: .15rem;
+}
+
+.admin-ui-v4 .ui-attention-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--ui-text);
+    margin-bottom: .2rem;
+}
+
+.admin-ui-v4 .ui-attention-copy small {
+    color: var(--ui-muted);
+    font-size: .8rem;
+}
+
+/* --------------------------------
+   TABLES
+--------------------------------- */
+.admin-ui-v4 .ui-table-card .table {
+    margin-bottom: 0;
+}
+
+.admin-ui-v4 .ui-table-card .table thead th {
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ui-muted);
+    border-bottom-width: 1px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    white-space: nowrap;
+    background: #f8fafc;
+}
+
+.admin-ui-v4 .ui-table-card .table tbody td {
+    vertical-align: middle;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.admin-ui-v4 .ui-table-card .table tbody tr:hover {
+    background: rgba(124, 58, 237, .02);
+}
+
+.admin-ui-v4 .ui-avatar-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(124,58,237,.14), rgba(147,51,234,.22));
+    color: var(--ui-primary);
+    font-weight: 800;
+}
+
+.admin-ui-v4 .ui-status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    padding: .35rem .75rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: .76rem;
+    font-weight: 800;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.admin-ui-v4 .ui-status-approved,
+.admin-ui-v4 .ui-status-completed,
+.admin-ui-v4 .ui-status-active,
+.admin-ui-v4 .ui-status-success {
+    background: rgba(22,163,74,.10);
+    border-color: rgba(22,163,74,.18);
+    color: #15803d;
+}
+
+.admin-ui-v4 .ui-status-pending,
+.admin-ui-v4 .ui-status-warning {
+    background: rgba(245,158,11,.12);
+    border-color: rgba(245,158,11,.22);
+    color: #b45309;
+}
+
+.admin-ui-v4 .ui-status-rejected,
+.admin-ui-v4 .ui-status-cancelled,
+.admin-ui-v4 .ui-status-inactive,
+.admin-ui-v4 .ui-status-danger {
+    background: rgba(239,68,68,.10);
+    border-color: rgba(239,68,68,.18);
+    color: #dc2626;
+}
+
+/* --------------------------------
+   MODALS
+--------------------------------- */
+.admin-ui-v4 .modal-content.ui-modal-card {
+    border-radius: 24px;
+    border: 1px solid rgba(226,232,240,.9);
+    box-shadow: var(--ui-shadow);
+}
+
+.admin-ui-v4 .ui-modal-header,
+.admin-ui-v4 .ui-modal-footer {
+    border-color: #edf2f7;
+}
+
+.admin-ui-v4 .ui-modal-title {
+    font-weight: 800;
+    color: var(--ui-secondary);
+}
+
+/* --------------------------------
+   UTILITIES
+--------------------------------- */
+.admin-ui-v4 .ui-text-muted { color: var(--ui-muted) !important; }
+.admin-ui-v4 .ui-text-primary { color: var(--ui-primary) !important; }
+.admin-ui-v4 .ui-text-success { color: var(--ui-success) !important; }
+.admin-ui-v4 .ui-text-warning { color: var(--ui-warning) !important; }
+.admin-ui-v4 .ui-text-danger { color: var(--ui-danger) !important; }
+
+.admin-ui-v4 .ui-bg-soft { background: var(--ui-soft) !important; }
+.admin-ui-v4 .ui-border-soft { border-color: var(--ui-border) !important; }
+.admin-ui-v4 .ui-shadow-soft { box-shadow: var(--ui-shadow-soft) !important; }
+.admin-ui-v4 .ui-shadow { box-shadow: var(--ui-shadow) !important; }
+
+/* --------------------------------
+   RESPONSIVE
+--------------------------------- */
+@media (max-width: 1199.98px) {
+    .admin-ui-v4 .ui-page-hero {
+        padding: 1.6rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .admin-ui-v4 .ui-page-hero {
+        padding: 1.35rem;
+        border-radius: 24px;
+    }
+
+    .admin-ui-v4 .ui-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-ui-v4 .ui-meta-grid,
+    .admin-ui-v4 .ui-health-grid,
+    .admin-ui-v4 .ui-health-grid.ui-health-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-ui-v4 .ui-chart-shell,
+    .admin-ui-v4 .ui-chart-shell-lg,
+    .admin-ui-v4 .ui-chart-shell-sm {
+        min-height: 240px;
+        padding: .85rem;
+    }
+}
+
+.cc-hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+}
+
+.cc-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.sidebar-scope-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 12px 14px;
+}
+
+.sidebar-scope-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.75;
+    margin-bottom: 4px;
+}
+
+.sidebar-scope-value {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.sidebar-user-scope {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.sidebar-brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.sidebar-brand-disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   THEME OVERRIDES: ADMIN UI V4 SHARED FOUNDATION
+   Safe scope: only .admin-ui-v4 and theme classes.
+   Classic theme stays unchanged.
+   ========================================================== */
+
+.admin-theme-light .admin-ui-v4,
+html[data-admin-theme="light"] .admin-ui-v4 {
+    --ui-primary: #2563eb;
+    --ui-primary-2: #1d4ed8;
+    --ui-primary-3: #1e40af;
+    --ui-secondary: #020617;
+    --ui-muted: #475569;
+    --ui-text: #020617;
+    --ui-soft: #f8fafc;
+    --ui-surface: #ffffff;
+    --ui-surface-2: #fbfdff;
+    --ui-border: #e2e8f0;
+    --ui-border-strong: #cbd5e1;
+    --ui-shadow: 0 18px 45px rgba(15, 23, 42, .07);
+    --ui-shadow-soft: 0 10px 30px rgba(15, 23, 42, .055);
+    --ui-shadow-hero: 0 14px 34px rgba(15, 23, 42, .07);
+    color: #020617 !important;
+}
+
+.admin-theme-dark .admin-ui-v4,
+html[data-admin-theme="dark"] .admin-ui-v4 {
+    --ui-primary: #a78bfa;
+    --ui-primary-2: #8b5cf6;
+    --ui-primary-3: #6d28d9;
+    --ui-secondary: #f8fafc;
+    --ui-muted: #cbd5e1;
+    --ui-text: #f8fafc;
+    --ui-soft: #020617;
+    --ui-surface: #0f172a;
+    --ui-surface-2: #111827;
+    --ui-border: #334155;
+    --ui-border-strong: #475569;
+    --ui-shadow: 0 18px 45px rgba(0, 0, 0, .38);
+    --ui-shadow-soft: 0 12px 30px rgba(0, 0, 0, .32);
+    --ui-shadow-hero: 0 18px 45px rgba(0, 0, 0, .35);
+    color: #f8fafc !important;
+}
+
+/* Hero: remove purple gradient and small grid pattern in light/dark theme modes */
+.admin-theme-light .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-page-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-page-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-hero-pattern,
+.admin-theme-dark .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-pattern {
+    background-image: none !important;
+    opacity: 0 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-title,
+.admin-theme-light .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-text,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-text small,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-page-title,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-page-subtitle,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-page-badge,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-meta-pill,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action:hover,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action-text,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action-text small {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-title,
+.admin-theme-dark .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-text,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-text small,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-page-title,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-page-subtitle,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-page-badge,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-meta-pill,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action:hover,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action-text,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action-text small {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-icon,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-page-badge,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-meta-pill,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-hero-action-icon {
+    background: #ffffff !important;
+    border-color: #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-icon,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-page-badge,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-meta-pill,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-hero-action-icon {
+    background: #111827 !important;
+    border-color: #334155 !important;
+    box-shadow: none !important;
+}
+
+/* Cards, panels, filters, charts, feeds */
+.admin-theme-light .admin-ui-v4 .ui-surface-card,
+.admin-theme-light .admin-ui-v4 .ui-stat-card,
+.admin-theme-light .admin-ui-v4 .ui-panel,
+.admin-theme-light .admin-ui-v4 .ui-filter-card,
+.admin-theme-light .admin-ui-v4 .ui-table-card,
+.admin-theme-light .admin-ui-v4 .ui-modal-card,
+.admin-theme-light .admin-ui-v4 .ui-mini-card,
+.admin-theme-light .admin-ui-v4 .ui-finance-card,
+.admin-theme-light .admin-ui-v4 .ui-side-card,
+.admin-theme-light .admin-ui-v4 .ui-chart-shell,
+.admin-theme-light .admin-ui-v4 .ui-meta-card,
+.admin-theme-light .admin-ui-v4 .ui-health-item,
+.admin-theme-light .admin-ui-v4 .ui-schedule-card,
+.admin-theme-light .admin-ui-v4 .ui-attention-item,
+.admin-theme-light .admin-ui-v4 .ui-empty-state,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-surface-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-stat-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-panel,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-filter-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-table-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-modal-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-mini-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-finance-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-side-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-chart-shell,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-meta-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-health-item,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-schedule-card,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-attention-item,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-empty-state {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-surface-card,
+.admin-theme-dark .admin-ui-v4 .ui-stat-card,
+.admin-theme-dark .admin-ui-v4 .ui-panel,
+.admin-theme-dark .admin-ui-v4 .ui-filter-card,
+.admin-theme-dark .admin-ui-v4 .ui-table-card,
+.admin-theme-dark .admin-ui-v4 .ui-modal-card,
+.admin-theme-dark .admin-ui-v4 .ui-mini-card,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card,
+.admin-theme-dark .admin-ui-v4 .ui-side-card,
+.admin-theme-dark .admin-ui-v4 .ui-chart-shell,
+.admin-theme-dark .admin-ui-v4 .ui-meta-card,
+.admin-theme-dark .admin-ui-v4 .ui-health-item,
+.admin-theme-dark .admin-ui-v4 .ui-schedule-card,
+.admin-theme-dark .admin-ui-v4 .ui-attention-item,
+.admin-theme-dark .admin-ui-v4 .ui-empty-state,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-surface-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-stat-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-filter-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-modal-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-side-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-chart-shell,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-meta-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-health-item,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-schedule-card,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-attention-item,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-empty-state {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-section-title,
+.admin-theme-dark .admin-ui-v4 .ui-panel-title,
+.admin-theme-dark .admin-ui-v4 .ui-stat-value,
+.admin-theme-dark .admin-ui-v4 .ui-finance-value,
+.admin-theme-dark .admin-ui-v4 .ui-mini-value,
+.admin-theme-dark .admin-ui-v4 .ui-meta-value,
+.admin-theme-dark .admin-ui-v4 .ui-health-item strong,
+.admin-theme-dark .admin-ui-v4 .ui-feed-title,
+.admin-theme-dark .admin-ui-v4 .ui-attention-label,
+.admin-theme-dark .admin-ui-v4 .ui-attention-value,
+.admin-theme-dark .admin-ui-v4 .ui-modal-title,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-section-title,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel-title,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-stat-value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-meta-value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-health-item strong,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-feed-title,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-attention-label,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-attention-value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-modal-title {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-stat-meta,
+.admin-theme-dark .admin-ui-v4 .ui-helper-text,
+.admin-theme-dark .admin-ui-v4 .ui-panel-subtitle,
+.admin-theme-dark .admin-ui-v4 .ui-section-subtitle,
+.admin-theme-dark .admin-ui-v4 .ui-finance-meta,
+.admin-theme-dark .admin-ui-v4 .ui-mini-note,
+.admin-theme-dark .admin-ui-v4 .ui-meta-label,
+.admin-theme-dark .admin-ui-v4 .ui-health-item span,
+.admin-theme-dark .admin-ui-v4 .ui-feed-text,
+.admin-theme-dark .admin-ui-v4 .ui-feed-time,
+.admin-theme-dark .admin-ui-v4 .ui-attention-copy small,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-stat-meta,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-helper-text,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel-subtitle,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-section-subtitle,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-meta,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-note,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-meta-label,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-health-item span,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-feed-text,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-feed-time,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-attention-copy small {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-chip,
+.admin-theme-dark .admin-ui-v4 .ui-soft-badge,
+.admin-theme-dark .admin-ui-v4 .ui-section-badge,
+.admin-theme-dark .admin-ui-v4 .ui-inline-badge,
+.admin-theme-dark .admin-ui-v4 .ui-quick-link,
+.admin-theme-dark .admin-ui-v4 .ui-alert-link,
+.admin-theme-dark .admin-ui-v4 .ui-note-box,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-chip,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-soft-badge,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-section-badge,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-inline-badge,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-quick-link,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-alert-link,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-note-box {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-quick-link,
+.admin-theme-light .admin-ui-v4 .ui-alert-link,
+.admin-theme-light .admin-ui-v4 .ui-note-box,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-quick-link,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-alert-link,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-note-box {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Forms and tables */
+.admin-theme-dark .admin-ui-v4 .form-control,
+.admin-theme-dark .admin-ui-v4 .form-select,
+.admin-theme-dark .admin-ui-v4 textarea,
+.admin-theme-dark .admin-ui-v4 .ui-input,
+html[data-admin-theme="dark"] .admin-ui-v4 .form-control,
+html[data-admin-theme="dark"] .admin-ui-v4 .form-select,
+html[data-admin-theme="dark"] .admin-ui-v4 textarea,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-input {
+    background-color: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .form-control::placeholder,
+.admin-theme-dark .admin-ui-v4 textarea::placeholder,
+html[data-admin-theme="dark"] .admin-ui-v4 .form-control::placeholder,
+html[data-admin-theme="dark"] .admin-ui-v4 textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-table-card .table thead th,
+.admin-theme-dark .admin-ui-v4 .ui-table-card .table tbody td,
+.admin-theme-dark .admin-ui-v4 .ui-table-card .table > :not(caption) > * > *,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .table thead th,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .table tbody td,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .table > :not(caption) > * > * {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-table-card .table thead th,
+.admin-theme-light .admin-ui-v4 .ui-table-card .table tbody td,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-table-card .table thead th,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-table-card .table tbody td {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+/* Keep status colors readable; do not force them to plain dark/white */
+.admin-theme-dark .admin-ui-v4 .ui-status-approved,
+.admin-theme-dark .admin-ui-v4 .ui-status-completed,
+.admin-theme-dark .admin-ui-v4 .ui-status-active,
+.admin-theme-dark .admin-ui-v4 .ui-status-success,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-approved,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-completed,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-active,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-success {
+    background: rgba(34,197,94,.16) !important;
+    border-color: rgba(34,197,94,.28) !important;
+    color: #86efac !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-status-pending,
+.admin-theme-dark .admin-ui-v4 .ui-status-warning,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-pending,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-warning {
+    background: rgba(245,158,11,.16) !important;
+    border-color: rgba(245,158,11,.28) !important;
+    color: #fbbf24 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-status-rejected,
+.admin-theme-dark .admin-ui-v4 .ui-status-cancelled,
+.admin-theme-dark .admin-ui-v4 .ui-status-inactive,
+.admin-theme-dark .admin-ui-v4 .ui-status-danger,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-rejected,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-cancelled,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-inactive,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-status-danger {
+    background: rgba(239,68,68,.16) !important;
+    border-color: rgba(239,68,68,.28) !important;
+    color: #fca5a5 !important;
+}
+
+/* Communication cards from this shared file */
+.admin-theme-dark .communication-dropdown-card,
+html[data-admin-theme="dark"] .communication-dropdown-card {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .communication-grid-item,
+html[data-admin-theme="dark"] .communication-grid-item {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .communication-grid-item:hover,
+html[data-admin-theme="dark"] .communication-grid-item:hover {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+/* Small custom cc components inside admin-ui-v4.css */
+.admin-theme-light .cc-hero,
+html[data-admin-theme="light"] .cc-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .cc-hero,
+html[data-admin-theme="dark"] .cc-hero {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-dark .cc-card,
+html[data-admin-theme="dark"] .cc-card {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+

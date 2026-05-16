@@ -1,0 +1,66 @@
+.project-finance-toolbar .btn {
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.project-finance-card,
+.project-finance-panel {
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.project-finance-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.project-finance-summary .summary-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.project-finance-summary .summary-label {
+    color: #64748b;
+    font-size: .82rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+.project-finance-summary .summary-value {
+    color: #0f172a;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* PROJECT FINANCE */
+.admin-theme-light .project-finance-card,
+.admin-theme-light .project-finance-panel,
+.admin-theme-light .project-finance-summary .summary-box,
+html[data-admin-theme="light"] .project-finance-card,
+html[data-admin-theme="light"] .project-finance-panel,
+html[data-admin-theme="light"] .project-finance-summary .summary-box {
+    background: #ffffff !important; color: #020617 !important; border-color: #e2e8f0 !important;
+}
+.admin-theme-dark .project-finance-card,
+.admin-theme-dark .project-finance-panel,
+.admin-theme-dark .project-finance-summary .summary-box,
+html[data-admin-theme="dark"] .project-finance-card,
+html[data-admin-theme="dark"] .project-finance-panel,
+html[data-admin-theme="dark"] .project-finance-summary .summary-box {
+    background: #0f172a !important; color: #f8fafc !important; border-color: #334155 !important; box-shadow: 0 14px 34px rgba(0,0,0,.28) !important;
+}
+.admin-theme-dark .project-finance-summary .summary-value,
+html[data-admin-theme="dark"] .project-finance-summary .summary-value { color: #f8fafc !important; }
+.admin-theme-dark .project-finance-summary .summary-label,
+html[data-admin-theme="dark"] .project-finance-summary .summary-label { color: #cbd5e1 !important; }
+

@@ -1,0 +1,36 @@
+.receipt-access-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+}
+
+.receipt-access-card.is-downloading {
+    opacity: .86;
+    transform: translateY(1px);
+    transition: all .2s ease;
+}
+
+.receipt-access-summary {
+    background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* RECEIPT ACCESS */
+.admin-theme-light .receipt-access-card,
+.admin-theme-light .receipt-access-summary,
+html[data-admin-theme="light"] .receipt-access-card,
+html[data-admin-theme="light"] .receipt-access-summary {
+    background: #ffffff !important; color: #020617 !important; border-color: #e2e8f0 !important;
+}
+.admin-theme-dark .receipt-access-card,
+.admin-theme-dark .receipt-access-summary,
+html[data-admin-theme="dark"] .receipt-access-card,
+html[data-admin-theme="dark"] .receipt-access-summary {
+    background: #0f172a !important; color: #f8fafc !important; border-color: #334155 !important; box-shadow: 0 14px 34px rgba(0,0,0,.28) !important;
+}
+

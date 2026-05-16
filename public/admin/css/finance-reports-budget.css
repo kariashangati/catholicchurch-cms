@@ -1,0 +1,21 @@
+/* FINANCE REPORTS + BUDGET */
+.finance-inline-stat{display:flex;justify-content:space-between;align-items:center;padding:.95rem 0;border-bottom:1px solid var(--border)}
+.budget-link-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:1.5rem;height:100%;box-shadow:0 12px 30px rgba(15,23,42,.04)}
+.finance-soft-card .card-header{background:#fff;border-bottom:1px solid var(--border)}
+.finance-stat-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:1.15rem 1.2rem;box-shadow:0 12px 28px rgba(15,23,42,.04)}
+.finance-stat-label{font-size:.82rem;color:var(--gray);font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.03em}
+.finance-stat-value{font-size:1.55rem;font-weight:800;color:var(--dark)}
+.finance-table thead th{background:rgba(138,70,255,.05);font-size:.82rem;font-weight:800;color:var(--dark);text-transform:uppercase;letter-spacing:.02em}
+
+/* ==========================================================
+   LIGHT / DARK THEME OVERRIDES
+   Scope: this module only. Classic theme remains unchanged.
+   ========================================================== */
+/* THEME OVERRIDES: FINANCE REPORTS BUDGET */
+.admin-theme-light .budget-link-card, .admin-theme-light .finance-stat-card, .admin-theme-light .finance-soft-card .card-header, html[data-admin-theme="light"] .budget-link-card, html[data-admin-theme="light"] .finance-stat-card, html[data-admin-theme="light"] .finance-soft-card .card-header { background:#fff!important; color:#020617!important; border-color:#e2e8f0!important; }
+.admin-theme-dark .budget-link-card, .admin-theme-dark .finance-stat-card, .admin-theme-dark .finance-soft-card .card-header, html[data-admin-theme="dark"] .budget-link-card, html[data-admin-theme="dark"] .finance-stat-card, html[data-admin-theme="dark"] .finance-soft-card .card-header { background:#0f172a!important; color:#f8fafc!important; border-color:#334155!important; box-shadow:0 12px 30px rgba(0,0,0,.28)!important; }
+.admin-theme-dark .finance-inline-stat, html[data-admin-theme="dark"] .finance-inline-stat { border-color:#334155!important; }
+.admin-theme-dark .finance-stat-label, html[data-admin-theme="dark"] .finance-stat-label { color:#cbd5e1!important; }
+.admin-theme-dark .finance-stat-value, html[data-admin-theme="dark"] .finance-stat-value { color:#f8fafc!important; }
+.admin-theme-dark .finance-table thead th, html[data-admin-theme="dark"] .finance-table thead th { background:#111827!important; color:#cbd5e1!important; border-color:#334155!important; }
+.admin-theme-dark .finance-table tbody td, html[data-admin-theme="dark"] .finance-table tbody td { color:#f8fafc!important; border-color:#334155!important; }

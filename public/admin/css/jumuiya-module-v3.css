@@ -1,0 +1,462 @@
+
+.jumuiya-module-v3 {
+    --jm-primary: #7c3aed;
+    --jm-primary-2: #9333ea;
+    --jm-primary-3: #5b21b6;
+    --jm-success: #16a34a;
+    --jm-info: #0284c7;
+    --jm-warning: #f59e0b;
+    --jm-danger: #ef4444;
+    --jm-dark: #0f172a;
+    --jm-muted: #64748b;
+    --jm-border: #e2e8f0;
+    --jm-surface: #ffffff;
+    --jm-soft: #f8fafc;
+    --jm-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --jm-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+    --jm-shadow-hero: 0 24px 60px rgba(124, 58, 237, 0.26);
+}
+
+.jumuiya-module-v3 .card,
+.jumuiya-module-v3 .dashboard-panel,
+.jumuiya-module-v3 .admin-ui-panel,
+.jumuiya-module-v3 .admin-ui-modal,
+.jumuiya-module-v3 .jumuiya-report-summary-card {
+    border: 1px solid rgba(226, 232, 240, .9);
+    border-radius: 28px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--jm-shadow-soft);
+    overflow: hidden;
+}
+
+.jumuiya-module-v3 .dashboard-panel,
+.jumuiya-module-v3 .ui-stat-card,
+.jumuiya-module-v3 .jumuiya-report-summary-card,
+.jumuiya-module-v3 .jumuiya-mini-stat,
+.jumuiya-module-v3 .jumuiya-detail-box,
+.jumuiya-module-v3 .admin-ui-table-tools,
+.jumuiya-module-v3 .kanda-recent-member,
+.jumuiya-module-v3 .mini-stat-box {
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.jumuiya-module-v3 .dashboard-panel:hover,
+.jumuiya-module-v3 .ui-stat-card:hover,
+.jumuiya-module-v3 .jumuiya-report-summary-card:hover,
+.jumuiya-module-v3 .jumuiya-mini-stat:hover,
+.jumuiya-module-v3 .jumuiya-detail-box:hover,
+.jumuiya-module-v3 .kanda-recent-member:hover,
+.jumuiya-module-v3 .mini-stat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--jm-shadow);
+}
+
+.jumuiya-module-v3 .ui-page-hero,
+.jumuiya-module-v3 .jumuiya-hero {
+    position: relative;
+    border-radius: 30px;
+    padding: 2rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.12), transparent 28%),
+        linear-gradient(135deg, var(--jm-primary-3) 0%, var(--jm-primary) 45%, var(--jm-primary-2) 100%);
+    color: #fff;
+    box-shadow: var(--jm-shadow-hero);
+}
+
+.jumuiya-module-v3 .ui-page-hero::before,
+.jumuiya-module-v3 .jumuiya-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: .34;
+    pointer-events: none;
+}
+
+.jumuiya-module-v3 .ui-page-hero > .row,
+.jumuiya-module-v3 .jumuiya-hero > .row { position: relative; z-index: 1; }
+
+.jumuiya-module-v3 .ui-page-hero-badge,
+.jumuiya-module-v3 .admin-ui-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+}
+
+.jumuiya-module-v3 .ui-page-hero-title,
+.jumuiya-module-v3 .admin-ui-title {
+    font-size: clamp(1.95rem, 2.4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: #fff;
+    margin-bottom: .45rem;
+}
+
+.jumuiya-module-v3 .ui-page-hero-subtitle,
+.jumuiya-module-v3 .admin-ui-subtitle {
+    color: rgba(255,255,255,.9);
+    font-size: 1rem;
+    max-width: 760px;
+}
+
+.jumuiya-module-v3 .ui-page-hero-pills,
+.jumuiya-module-v3 .admin-ui-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.jumuiya-module-v3 .ui-hero-pill,
+.jumuiya-module-v3 .admin-ui-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .68rem 1rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.14);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.jumuiya-module-v3 .ui-hero-action-btn,
+.jumuiya-module-v3 .jumuiya-hero-action,
+.jumuiya-module-v3 .btn-outline-light.btn-lg,
+.jumuiya-module-v3 .btn-light.btn-lg {
+    border-radius: 18px;
+    padding: .9rem 1rem;
+    font-weight: 700;
+    min-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+}
+
+.jumuiya-module-v3 .ui-hero-action-btn,
+.jumuiya-module-v3 .jumuiya-hero-action {
+    background: rgba(255,255,255,.13);
+    border: 1px solid rgba(255,255,255,.18);
+    color: #fff;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+
+.jumuiya-module-v3 .ui-hero-action-btn:hover,
+.jumuiya-module-v3 .jumuiya-hero-action:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.18);
+}
+
+.jumuiya-module-v3 .ui-stat-card {
+    position: relative;
+    height: 100%;
+    border-radius: 24px;
+    border: 1px solid rgba(226,232,240,.9);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--jm-shadow-soft);
+    padding: 1.35rem;
+}
+
+.jumuiya-module-v3 .ui-stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    border-radius: 24px 0 0 24px;
+    background: var(--accent, var(--jm-primary));
+}
+
+.jumuiya-module-v3 .ui-stat-card--primary { --accent: #7c3aed; }
+.jumuiya-module-v3 .ui-stat-card--success { --accent: #16a34a; }
+.jumuiya-module-v3 .ui-stat-card--info { --accent: #0ea5e9; }
+.jumuiya-module-v3 .ui-stat-card--warning { --accent: #f59e0b; }
+.jumuiya-module-v3 .ui-stat-card--danger { --accent: #ef4444; }
+.jumuiya-module-v3 .ui-stat-card--dark { --accent: #0f172a; }
+
+.jumuiya-module-v3 .ui-stat-card__icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.08rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent, #7c3aed), rgba(124,58,237,.78));
+    box-shadow: 0 12px 24px rgba(124, 58, 237, .2);
+    margin-bottom: 1rem;
+}
+
+.jumuiya-module-v3 .ui-stat-card__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: .42rem .82rem;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: .76rem;
+    font-weight: 800;
+    border: 1px solid #e2e8f0;
+    margin-bottom: .8rem;
+    text-transform: uppercase;
+}
+
+.jumuiya-module-v3 .ui-stat-card__label {
+    font-size: .9rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: .45rem;
+}
+
+.jumuiya-module-v3 .ui-stat-card__value {
+    font-size: clamp(1.45rem, 1.9vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--jm-dark);
+    letter-spacing: -.03em;
+}
+
+.jumuiya-module-v3 .ui-stat-card__meta {
+    font-size: .82rem;
+    color: var(--jm-muted);
+    margin-top: .5rem;
+}
+
+.jumuiya-module-v3 .dashboard-panel .card-header,
+.jumuiya-module-v3 .dashboard-panel .card-body,
+.jumuiya-module-v3 .dashboard-panel .card-footer,
+.jumuiya-module-v3 .jumuiya-report-summary-card,
+.jumuiya-module-v3 .mini-stat-box {
+    background: transparent;
+}
+
+.jumuiya-module-v3 .dashboard-panel .card-header h5,
+.jumuiya-module-v3 .dashboard-panel .fw-bold,
+.jumuiya-module-v3 .jumuiya-highlight-title,
+.jumuiya-module-v3 .kanda-recent-member-name {
+    color: var(--jm-dark) !important;
+    font-weight: 800 !important;
+}
+
+.jumuiya-module-v3 .dashboard-panel .text-muted,
+.jumuiya-module-v3 .kanda-recent-member-sub,
+.jumuiya-module-v3 .admin-ui-stat-foot,
+.jumuiya-module-v3 .jumuiya-detail-label,
+.jumuiya-module-v3 .jumuiya-highlight-label {
+    color: var(--jm-muted) !important;
+}
+
+.jumuiya-module-v3 .admin-table-search,
+.jumuiya-module-v3 .admin-table-length,
+.jumuiya-module-v3 .form-select,
+.jumuiya-module-v3 .form-control {
+    border-radius: 14px;
+    border-color: var(--jm-border);
+    min-height: 46px;
+    box-shadow: none;
+}
+
+.jumuiya-module-v3 .admin-table-search:focus,
+.jumuiya-module-v3 .admin-table-length:focus,
+.jumuiya-module-v3 .form-select:focus,
+.jumuiya-module-v3 .form-control:focus {
+    border-color: rgba(124, 58, 237, .45);
+    box-shadow: 0 0 0 .2rem rgba(124, 58, 237, .1);
+}
+
+.jumuiya-module-v3 .btn-primary {
+    background: linear-gradient(135deg, var(--jm-primary) 0%, var(--jm-primary-2) 100%);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(124, 58, 237, .18);
+    font-weight: 700;
+}
+
+.jumuiya-module-v3 .btn-outline-primary,
+.jumuiya-module-v3 .btn-outline-secondary,
+.jumuiya-module-v3 .btn-light {
+    border-radius: 14px;
+    font-weight: 700;
+}
+
+.jumuiya-module-v3 .table {
+    margin-bottom: 0;
+}
+
+.jumuiya-module-v3 .table thead th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.jumuiya-module-v3 .table td,
+.jumuiya-module-v3 .table th {
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    border-color: rgba(226,232,240,.9);
+}
+
+.jumuiya-module-v3 .table tbody tr:hover {
+    background: rgba(124,58,237,.025);
+}
+
+.jumuiya-module-v3 .admin-ui-table-tools,
+.jumuiya-module-v3 .jumuiya-mini-stat,
+.jumuiya-module-v3 .jumuiya-detail-box,
+.jumuiya-module-v3 .mini-stat-box,
+.jumuiya-module-v3 .kanda-recent-member {
+    border-radius: 20px;
+    border: 1px solid rgba(226,232,240,.9);
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    box-shadow: var(--jm-shadow-soft);
+}
+
+.jumuiya-module-v3 .jumuiya-mini-stat,
+.jumuiya-module-v3 .kanda-recent-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.05rem;
+}
+
+.jumuiya-module-v3 .mini-stat-box {
+    padding: 1rem 1.05rem;
+}
+
+.jumuiya-module-v3 .mini-stat-label {
+    font-size: .78rem;
+    color: var(--jm-muted);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: .35rem;
+}
+
+.jumuiya-module-v3 .mini-stat-value,
+.jumuiya-module-v3 .jumuiya-detail-value,
+.jumuiya-module-v3 .jumuiya-highlight-value {
+    font-weight: 800;
+    color: var(--jm-dark);
+    font-size: 1.35rem;
+}
+
+.jumuiya-module-v3 .jumuiya-thumb,
+.jumuiya-module-v3 .jumuiya-thumb-placeholder,
+.jumuiya-module-v3 .member-avatar-sm,
+.jumuiya-module-v3 .kanda-recent-member-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 10px 22px rgba(124,58,237,.2);
+}
+
+.jumuiya-module-v3 .kanda-recent-member {
+    justify-content: flex-start;
+}
+
+.jumuiya-module-v3 .kanda-recent-member-avatar {
+    flex-shrink: 0;
+}
+
+.jumuiya-module-v3 .kanda-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .4rem .85rem;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: .78rem;
+}
+
+.jumuiya-module-v3 .kanda-status-badge.active {
+    color: #047857;
+    background: rgba(16, 185, 129, 0.12);
+}
+
+.jumuiya-module-v3 .kanda-status-badge.inactive {
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.14);
+}
+
+.jumuiya-module-v3 .jumuiya-report-summary-card {
+    padding: 1.25rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.jumuiya-module-v3 .chart-shell,
+.jumuiya-module-v3 .ui-chart-shell {
+    position: relative;
+    height: 320px;
+    padding: 1rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(248,250,252,.95), rgba(255,255,255,1));
+    border: 1px solid #edf2f7;
+}
+
+.jumuiya-module-v3 .chart-shell-lg,
+.jumuiya-module-v3 .ui-chart-shell-lg { height: 360px; }
+
+@media (max-width: 991.98px) {
+    .jumuiya-module-v3 .ui-page-hero,
+    .jumuiya-module-v3 .jumuiya-hero { padding: 1.5rem; }
+    .jumuiya-module-v3 .chart-shell,
+    .jumuiya-module-v3 .chart-shell-lg,
+    .jumuiya-module-v3 .ui-chart-shell,
+    .jumuiya-module-v3 .ui-chart-shell-lg { height: 300px; }
+}
+
+@media (max-width: 767.98px) {
+    .jumuiya-module-v3 .ui-page-hero-title,
+    .jumuiya-module-v3 .admin-ui-title { font-size: 1.75rem; }
+}
+
+/* ==========================================================
+   LIGHT / DARK THEME OVERRIDES
+   Scope: this module only. Classic theme remains unchanged.
+   ========================================================== */
+/* THEME OVERRIDES: JUMUIYA MODULE V3 */
+.admin-theme-light .jumuiya-module-v3, html[data-admin-theme="light"] .jumuiya-module-v3 { --jm-dark:#020617; --jm-muted:#334155; --jm-border:#e2e8f0; --jm-surface:#fff; --jm-soft:#f8fafc; --jm-shadow:0 14px 34px rgba(15,23,42,.07); --jm-shadow-soft:0 10px 26px rgba(15,23,42,.055); }
+.admin-theme-dark .jumuiya-module-v3, html[data-admin-theme="dark"] .jumuiya-module-v3 { --jm-dark:#f8fafc; --jm-muted:#cbd5e1; --jm-border:#334155; --jm-surface:#0f172a; --jm-soft:#020617; --jm-shadow:0 18px 45px rgba(0,0,0,.35); --jm-shadow-soft:0 12px 30px rgba(0,0,0,.28); }
+.admin-theme-light .jumuiya-module-v3 .ui-page-hero, .admin-theme-light .jumuiya-module-v3 .jumuiya-hero, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-page-hero, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-hero { background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)!important; color:#020617!important; border:1px solid #e2e8f0!important; box-shadow:0 14px 34px rgba(15,23,42,.07)!important; }
+.admin-theme-dark .jumuiya-module-v3 .ui-page-hero, .admin-theme-dark .jumuiya-module-v3 .jumuiya-hero, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-page-hero, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-hero { background:linear-gradient(180deg,#0f172a 0%,#111827 100%)!important; color:#f8fafc!important; border:1px solid #334155!important; box-shadow:0 18px 45px rgba(0,0,0,.36)!important; }
+.admin-theme-light .jumuiya-module-v3 .ui-page-hero::before, .admin-theme-light .jumuiya-module-v3 .jumuiya-hero::before, .admin-theme-dark .jumuiya-module-v3 .ui-page-hero::before, .admin-theme-dark .jumuiya-module-v3 .jumuiya-hero::before, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-page-hero::before, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-hero::before, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-page-hero::before, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-hero::before { display:none!important; }
+.admin-theme-light .jumuiya-module-v3 .ui-page-hero-title, .admin-theme-light .jumuiya-module-v3 .admin-ui-title, .admin-theme-light .jumuiya-module-v3 .ui-page-hero-subtitle, .admin-theme-light .jumuiya-module-v3 .admin-ui-subtitle, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-page-hero-title, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-title, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-page-hero-subtitle, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-subtitle { color:#020617!important; }
+.admin-theme-dark .jumuiya-module-v3 .ui-page-hero-title, .admin-theme-dark .jumuiya-module-v3 .admin-ui-title, .admin-theme-dark .jumuiya-module-v3 .ui-page-hero-subtitle, .admin-theme-dark .jumuiya-module-v3 .admin-ui-subtitle, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-page-hero-title, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-title, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-page-hero-subtitle, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-subtitle { color:#f8fafc!important; }
+.admin-theme-light .jumuiya-module-v3 .ui-page-hero-badge, .admin-theme-light .jumuiya-module-v3 .admin-ui-badge, .admin-theme-light .jumuiya-module-v3 .ui-hero-pill, .admin-theme-light .jumuiya-module-v3 .admin-ui-pill, .admin-theme-light .jumuiya-module-v3 .ui-hero-action-btn, .admin-theme-light .jumuiya-module-v3 .jumuiya-hero-action, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-page-hero-badge, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-badge, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-hero-pill, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-pill, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-hero-action-btn, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-hero-action { background:#fff!important; color:#020617!important; border:1px solid #dbe3ee!important; box-shadow:0 8px 18px rgba(15,23,42,.06)!important; }
+.admin-theme-dark .jumuiya-module-v3 .ui-page-hero-badge, .admin-theme-dark .jumuiya-module-v3 .admin-ui-badge, .admin-theme-dark .jumuiya-module-v3 .ui-hero-pill, .admin-theme-dark .jumuiya-module-v3 .admin-ui-pill, .admin-theme-dark .jumuiya-module-v3 .ui-hero-action-btn, .admin-theme-dark .jumuiya-module-v3 .jumuiya-hero-action, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-page-hero-badge, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-badge, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-hero-pill, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-pill, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-hero-action-btn, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-hero-action { background:#111827!important; color:#f8fafc!important; border:1px solid #334155!important; box-shadow:none!important; }
+.admin-theme-light .jumuiya-module-v3 .card, .admin-theme-light .jumuiya-module-v3 .dashboard-panel, .admin-theme-light .jumuiya-module-v3 .admin-ui-panel, .admin-theme-light .jumuiya-module-v3 .admin-ui-modal, .admin-theme-light .jumuiya-module-v3 .jumuiya-report-summary-card, .admin-theme-light .jumuiya-module-v3 .ui-stat-card, .admin-theme-light .jumuiya-module-v3 .admin-ui-table-tools, .admin-theme-light .jumuiya-module-v3 .jumuiya-mini-stat, .admin-theme-light .jumuiya-module-v3 .jumuiya-detail-box, .admin-theme-light .jumuiya-module-v3 .mini-stat-box, .admin-theme-light .jumuiya-module-v3 .kanda-recent-member, .admin-theme-light .jumuiya-module-v3 .chart-shell, .admin-theme-light .jumuiya-module-v3 .ui-chart-shell, html[data-admin-theme="light"] .jumuiya-module-v3 .card, html[data-admin-theme="light"] .jumuiya-module-v3 .dashboard-panel, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-panel, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-modal, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-report-summary-card, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-stat-card, html[data-admin-theme="light"] .jumuiya-module-v3 .admin-ui-table-tools, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-mini-stat, html[data-admin-theme="light"] .jumuiya-module-v3 .jumuiya-detail-box, html[data-admin-theme="light"] .jumuiya-module-v3 .mini-stat-box, html[data-admin-theme="light"] .jumuiya-module-v3 .kanda-recent-member, html[data-admin-theme="light"] .jumuiya-module-v3 .chart-shell, html[data-admin-theme="light"] .jumuiya-module-v3 .ui-chart-shell { background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important; color:#020617!important; border-color:#e2e8f0!important; }
+.admin-theme-dark .jumuiya-module-v3 .card, .admin-theme-dark .jumuiya-module-v3 .dashboard-panel, .admin-theme-dark .jumuiya-module-v3 .admin-ui-panel, .admin-theme-dark .jumuiya-module-v3 .admin-ui-modal, .admin-theme-dark .jumuiya-module-v3 .jumuiya-report-summary-card, .admin-theme-dark .jumuiya-module-v3 .ui-stat-card, .admin-theme-dark .jumuiya-module-v3 .admin-ui-table-tools, .admin-theme-dark .jumuiya-module-v3 .jumuiya-mini-stat, .admin-theme-dark .jumuiya-module-v3 .jumuiya-detail-box, .admin-theme-dark .jumuiya-module-v3 .mini-stat-box, .admin-theme-dark .jumuiya-module-v3 .kanda-recent-member, .admin-theme-dark .jumuiya-module-v3 .chart-shell, .admin-theme-dark .jumuiya-module-v3 .ui-chart-shell, html[data-admin-theme="dark"] .jumuiya-module-v3 .card, html[data-admin-theme="dark"] .jumuiya-module-v3 .dashboard-panel, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-panel, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-modal, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-report-summary-card, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-stat-card, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-ui-table-tools, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-mini-stat, html[data-admin-theme="dark"] .jumuiya-module-v3 .jumuiya-detail-box, html[data-admin-theme="dark"] .jumuiya-module-v3 .mini-stat-box, html[data-admin-theme="dark"] .jumuiya-module-v3 .kanda-recent-member, html[data-admin-theme="dark"] .jumuiya-module-v3 .chart-shell, html[data-admin-theme="dark"] .jumuiya-module-v3 .ui-chart-shell { background:#0f172a!important; color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-dark .jumuiya-module-v3 .table thead th, html[data-admin-theme="dark"] .jumuiya-module-v3 .table thead th { background:#111827!important; color:#cbd5e1!important; border-color:#334155!important; }
+.admin-theme-dark .jumuiya-module-v3 .table td, .admin-theme-dark .jumuiya-module-v3 .table th, html[data-admin-theme="dark"] .jumuiya-module-v3 .table td, html[data-admin-theme="dark"] .jumuiya-module-v3 .table th { color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-dark .jumuiya-module-v3 .form-select, .admin-theme-dark .jumuiya-module-v3 .form-control, .admin-theme-dark .jumuiya-module-v3 .admin-table-search, .admin-theme-dark .jumuiya-module-v3 .admin-table-length, html[data-admin-theme="dark"] .jumuiya-module-v3 .form-select, html[data-admin-theme="dark"] .jumuiya-module-v3 .form-control, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-table-search, html[data-admin-theme="dark"] .jumuiya-module-v3 .admin-table-length { background:#020617!important; color:#f8fafc!important; border-color:#475569!important; }

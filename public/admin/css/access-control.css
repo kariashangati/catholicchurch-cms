@@ -1,0 +1,956 @@
+.access-shell,
+.access-page-shell,
+.access-form-shell,
+.profile-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.access-hero,
+.access-page-hero,
+.access-form-hero,
+.profile-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    color: #fff;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .18);
+}
+
+.access-hero {
+    padding: 2rem;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 38%, #1d4ed8 100%);
+}
+
+.access-page-hero {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #111827 0%, #1f2937 35%, #4338ca 100%);
+}
+
+.access-form-hero {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #0ea5e9 100%);
+}
+
+.profile-hero {
+    padding: 2rem;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 35%, #312e81 100%);
+}
+
+.access-hero::before,
+.access-page-hero::before,
+.access-form-hero::before,
+.profile-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: .25;
+    pointer-events: none;
+}
+
+.access-hero > *,
+.access-page-hero > *,
+.access-form-hero > *,
+.profile-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.access-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.14);
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.access-hero-title {
+    font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: .55rem;
+}
+
+.access-hero-subtitle,
+.access-page-hero-subtitle {
+    color: rgba(255,255,255,.82);
+    max-width: 820px;
+    margin-bottom: 0;
+}
+
+.access-page-hero-title {
+    font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+    font-weight: 800;
+    margin-bottom: .35rem;
+}
+
+.access-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem 1rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.12);
+    margin-right: .75rem;
+    margin-bottom: .75rem;
+}
+
+.access-kpi-card,
+.access-panel,
+.access-filter-card,
+.access-table-card,
+.access-form-card,
+.profile-card {
+    border: 0;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+    height: 100%;
+}
+
+.access-kpi-card .card-body,
+.access-panel .card-body,
+.access-filter-card .card-body,
+.access-table-card .card-body,
+.access-form-card .card-body,
+.profile-card .card-body {
+    padding: 1.35rem;
+}
+
+.access-kpi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .85rem;
+}
+
+.access-kpi-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.access-kpi-chip,
+.access-badge,
+.access-status-badge,
+.access-role-chip,
+.profile-chip {
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+.access-kpi-chip {
+    font-size: .72rem;
+    text-transform: uppercase;
+    padding: .35rem .7rem;
+    background: #f8fafc;
+    color: #475569;
+}
+
+.access-kpi-title {
+    color: #64748b;
+    font-size: .92rem;
+    margin-bottom: .3rem;
+}
+
+.access-kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.access-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.access-panel-title {
+    font-size: 1.02rem;
+    font-weight: 800;
+    margin: 0;
+    color: #0f172a;
+}
+
+.access-panel-subtitle {
+    margin: .2rem 0 0;
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.access-badge {
+    padding: .38rem .72rem;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: .72rem;
+    text-transform: uppercase;
+}
+
+.access-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+}
+
+.access-mini-item {
+    padding: .95rem 1rem;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.access-mini-title,
+.access-cell-title,
+.profile-value,
+.profile-card h5,
+.access-section-title {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.access-mini-meta,
+.access-cell-meta,
+.profile-label {
+    color: #64748b;
+    font-size: .87rem;
+}
+
+.access-filter-label {
+    font-size: .82rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: .45rem;
+}
+
+.access-table,
+.profile-table {
+    margin-bottom: 0;
+}
+
+.access-table thead th,
+.profile-table thead th {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.access-table tbody td,
+.profile-table tbody td {
+    vertical-align: top;
+    border-color: #eef2f7;
+}
+
+.access-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .38rem .72rem;
+    font-size: .72rem;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.status-inactive {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.access-role-chip,
+.profile-chip {
+    display: inline-flex;
+    padding: .24rem .55rem;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: .72rem;
+    margin: .2rem .25rem 0 0;
+}
+
+.access-member-preview {
+    border: 1px dashed #cbd5e1;
+    border-radius: 18px;
+    padding: 1rem;
+    background: #f8fafc;
+}
+
+.access-member-preview-title {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.access-member-preview-meta {
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.profile-label {
+    font-size: .82rem;
+    margin-bottom: .25rem;
+}
+
+.access-token-box {
+    border-radius: 16px;
+    border: 1px dashed #cbd5e1;
+    background: #f8fafc;
+    padding: .9rem 1rem;
+    font-size: .9rem;
+    color: #475569;
+}
+
+.access-section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    margin: .5rem 0 0;
+}
+
+.access-sticky-actions {
+    position: sticky;
+    bottom: 18px;
+    z-index: 20;
+    border-radius: 20px;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .10);
+}
+
+.tone-primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+.tone-success { background: linear-gradient(135deg, #059669, #10b981); }
+.tone-warning { background: linear-gradient(135deg, #d97706, #f59e0b); }
+.tone-info { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+.tone-secondary { background: linear-gradient(135deg, #475569, #64748b); }
+.tone-danger { background: linear-gradient(135deg, #dc2626, #f43f5e); }
+
+@media (max-width: 991.98px) {
+    .access-hero,
+    .access-page-hero,
+    .access-form-hero,
+    .profile-hero {
+        padding: 1.35rem;
+    }
+
+    .access-kpi-value {
+        font-size: 1.6rem;
+    }
+}
+
+/* ==========================================================
+   ACCESS MODULE THEME OVERRIDES
+   Supports admin-theme-light and admin-theme-dark safely.
+   Keep this block at the bottom of this file.
+   ========================================================== */
+
+/* ---------- LIGHT THEME ---------- */
+body.admin-theme-light .access-shell,
+body.admin-theme-light .access-page-shell,
+body.admin-theme-light .access-form-shell,
+body.admin-theme-light .profile-shell,
+html[data-admin-theme="light"] body .access-shell,
+html[data-admin-theme="light"] body .access-page-shell,
+html[data-admin-theme="light"] body .access-form-shell,
+html[data-admin-theme="light"] body .profile-shell {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .access-hero,
+body.admin-theme-light .access-page-hero,
+body.admin-theme-light .access-form-hero,
+body.admin-theme-light .profile-hero,
+html[data-admin-theme="light"] body .access-hero,
+html[data-admin-theme="light"] body .access-page-hero,
+html[data-admin-theme="light"] body .access-form-hero,
+html[data-admin-theme="light"] body .profile-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+body.admin-theme-light .access-hero::before,
+body.admin-theme-light .access-page-hero::before,
+body.admin-theme-light .access-form-hero::before,
+body.admin-theme-light .profile-hero::before,
+html[data-admin-theme="light"] body .access-hero::before,
+html[data-admin-theme="light"] body .access-page-hero::before,
+html[data-admin-theme="light"] body .access-form-hero::before,
+html[data-admin-theme="light"] body .profile-hero::before {
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, .08), transparent 38%) !important;
+    opacity: 1 !important;
+}
+
+body.admin-theme-light .access-hero-title,
+body.admin-theme-light .access-page-hero-title,
+body.admin-theme-light .access-hero h1,
+body.admin-theme-light .access-page-hero h1,
+body.admin-theme-light .access-form-hero h1,
+body.admin-theme-light .profile-hero h1,
+body.admin-theme-light .access-hero h2,
+body.admin-theme-light .access-page-hero h2,
+body.admin-theme-light .access-form-hero h2,
+body.admin-theme-light .profile-hero h2,
+html[data-admin-theme="light"] body .access-hero-title,
+html[data-admin-theme="light"] body .access-page-hero-title,
+html[data-admin-theme="light"] body .access-hero h1,
+html[data-admin-theme="light"] body .access-page-hero h1,
+html[data-admin-theme="light"] body .access-form-hero h1,
+html[data-admin-theme="light"] body .profile-hero h1,
+html[data-admin-theme="light"] body .access-hero h2,
+html[data-admin-theme="light"] body .access-page-hero h2,
+html[data-admin-theme="light"] body .access-form-hero h2,
+html[data-admin-theme="light"] body .profile-hero h2 {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .access-hero-subtitle,
+body.admin-theme-light .access-page-hero-subtitle,
+body.admin-theme-light .access-hero p,
+body.admin-theme-light .access-page-hero p,
+body.admin-theme-light .access-form-hero p,
+body.admin-theme-light .profile-hero p,
+html[data-admin-theme="light"] body .access-hero-subtitle,
+html[data-admin-theme="light"] body .access-page-hero-subtitle,
+html[data-admin-theme="light"] body .access-hero p,
+html[data-admin-theme="light"] body .access-page-hero p,
+html[data-admin-theme="light"] body .access-form-hero p,
+html[data-admin-theme="light"] body .profile-hero p {
+    color: #334155 !important;
+}
+
+body.admin-theme-light .access-hero-badge,
+body.admin-theme-light .access-meta-pill,
+html[data-admin-theme="light"] body .access-hero-badge,
+html[data-admin-theme="light"] body .access-meta-pill {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+body.admin-theme-light .access-kpi-card,
+body.admin-theme-light .access-panel,
+body.admin-theme-light .access-filter-card,
+body.admin-theme-light .access-table-card,
+body.admin-theme-light .access-form-card,
+body.admin-theme-light .profile-card,
+body.admin-theme-light .access-mini-item,
+body.admin-theme-light .access-member-preview,
+body.admin-theme-light .access-token-box,
+body.admin-theme-light .access-sticky-actions,
+html[data-admin-theme="light"] body .access-kpi-card,
+html[data-admin-theme="light"] body .access-panel,
+html[data-admin-theme="light"] body .access-filter-card,
+html[data-admin-theme="light"] body .access-table-card,
+html[data-admin-theme="light"] body .access-form-card,
+html[data-admin-theme="light"] body .profile-card,
+html[data-admin-theme="light"] body .access-mini-item,
+html[data-admin-theme="light"] body .access-member-preview,
+html[data-admin-theme="light"] body .access-token-box,
+html[data-admin-theme="light"] body .access-sticky-actions {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .06) !important;
+}
+
+body.admin-theme-light .access-kpi-title,
+body.admin-theme-light .access-panel-subtitle,
+body.admin-theme-light .access-mini-meta,
+body.admin-theme-light .access-cell-meta,
+body.admin-theme-light .profile-label,
+body.admin-theme-light .access-filter-label,
+body.admin-theme-light .access-table thead th,
+body.admin-theme-light .profile-table thead th,
+html[data-admin-theme="light"] body .access-kpi-title,
+html[data-admin-theme="light"] body .access-panel-subtitle,
+html[data-admin-theme="light"] body .access-mini-meta,
+html[data-admin-theme="light"] body .access-cell-meta,
+html[data-admin-theme="light"] body .profile-label,
+html[data-admin-theme="light"] body .access-filter-label,
+html[data-admin-theme="light"] body .access-table thead th,
+html[data-admin-theme="light"] body .profile-table thead th {
+    color: #475569 !important;
+}
+
+body.admin-theme-light .access-kpi-value,
+body.admin-theme-light .access-panel-title,
+body.admin-theme-light .access-mini-title,
+body.admin-theme-light .access-cell-title,
+body.admin-theme-light .profile-value,
+body.admin-theme-light .profile-card h5,
+body.admin-theme-light .access-section-title,
+body.admin-theme-light .access-member-preview-title,
+html[data-admin-theme="light"] body .access-kpi-value,
+html[data-admin-theme="light"] body .access-panel-title,
+html[data-admin-theme="light"] body .access-mini-title,
+html[data-admin-theme="light"] body .access-cell-title,
+html[data-admin-theme="light"] body .profile-value,
+html[data-admin-theme="light"] body .profile-card h5,
+html[data-admin-theme="light"] body .access-section-title,
+html[data-admin-theme="light"] body .access-member-preview-title {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .access-table tbody td,
+body.admin-theme-light .profile-table tbody td,
+html[data-admin-theme="light"] body .access-table tbody td,
+html[data-admin-theme="light"] body .profile-table tbody td {
+    color: #020617 !important;
+    border-color: #eef2f7 !important;
+}
+
+body.admin-theme-light .access-kpi-chip,
+body.admin-theme-light .access-chip,
+html[data-admin-theme="light"] body .access-kpi-chip,
+html[data-admin-theme="light"] body .access-chip {
+    background: #f8fafc !important;
+    color: #475569 !important;
+}
+
+body.admin-theme-light .access-badge,
+body.admin-theme-light .access-role-chip,
+body.admin-theme-light .profile-chip,
+html[data-admin-theme="light"] body .access-badge,
+html[data-admin-theme="light"] body .access-role-chip,
+html[data-admin-theme="light"] body .profile-chip {
+    background: #eef2ff !important;
+    color: #4338ca !important;
+}
+
+/* ---------- DARK THEME ---------- */
+body.admin-theme-dark .access-shell,
+body.admin-theme-dark .access-page-shell,
+body.admin-theme-dark .access-form-shell,
+body.admin-theme-dark .profile-shell,
+html[data-admin-theme="dark"] body .access-shell,
+html[data-admin-theme="dark"] body .access-page-shell,
+html[data-admin-theme="dark"] body .access-form-shell,
+html[data-admin-theme="dark"] body .profile-shell {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .access-hero,
+body.admin-theme-dark .access-page-hero,
+body.admin-theme-dark .access-form-hero,
+body.admin-theme-dark .profile-hero,
+html[data-admin-theme="dark"] body .access-hero,
+html[data-admin-theme="dark"] body .access-page-hero,
+html[data-admin-theme="dark"] body .access-form-hero,
+html[data-admin-theme="dark"] body .profile-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+body.admin-theme-dark .access-hero::before,
+body.admin-theme-dark .access-page-hero::before,
+body.admin-theme-dark .access-form-hero::before,
+body.admin-theme-dark .profile-hero::before,
+html[data-admin-theme="dark"] body .access-hero::before,
+html[data-admin-theme="dark"] body .access-page-hero::before,
+html[data-admin-theme="dark"] body .access-form-hero::before,
+html[data-admin-theme="dark"] body .profile-hero::before {
+    background: radial-gradient(circle at top right, rgba(167, 139, 250, .12), transparent 38%) !important;
+    opacity: 1 !important;
+}
+
+body.admin-theme-dark .access-hero-title,
+body.admin-theme-dark .access-page-hero-title,
+body.admin-theme-dark .access-hero h1,
+body.admin-theme-dark .access-page-hero h1,
+body.admin-theme-dark .access-form-hero h1,
+body.admin-theme-dark .profile-hero h1,
+body.admin-theme-dark .access-hero h2,
+body.admin-theme-dark .access-page-hero h2,
+body.admin-theme-dark .access-form-hero h2,
+body.admin-theme-dark .profile-hero h2,
+html[data-admin-theme="dark"] body .access-hero-title,
+html[data-admin-theme="dark"] body .access-page-hero-title,
+html[data-admin-theme="dark"] body .access-hero h1,
+html[data-admin-theme="dark"] body .access-page-hero h1,
+html[data-admin-theme="dark"] body .access-form-hero h1,
+html[data-admin-theme="dark"] body .profile-hero h1,
+html[data-admin-theme="dark"] body .access-hero h2,
+html[data-admin-theme="dark"] body .access-page-hero h2,
+html[data-admin-theme="dark"] body .access-form-hero h2,
+html[data-admin-theme="dark"] body .profile-hero h2 {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .access-hero-subtitle,
+body.admin-theme-dark .access-page-hero-subtitle,
+body.admin-theme-dark .access-hero p,
+body.admin-theme-dark .access-page-hero p,
+body.admin-theme-dark .access-form-hero p,
+body.admin-theme-dark .profile-hero p,
+html[data-admin-theme="dark"] body .access-hero-subtitle,
+html[data-admin-theme="dark"] body .access-page-hero-subtitle,
+html[data-admin-theme="dark"] body .access-hero p,
+html[data-admin-theme="dark"] body .access-page-hero p,
+html[data-admin-theme="dark"] body .access-form-hero p,
+html[data-admin-theme="dark"] body .profile-hero p {
+    color: #cbd5e1 !important;
+}
+
+body.admin-theme-dark .access-hero-badge,
+body.admin-theme-dark .access-meta-pill,
+html[data-admin-theme="dark"] body .access-hero-badge,
+html[data-admin-theme="dark"] body .access-meta-pill {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+body.admin-theme-dark .access-kpi-card,
+body.admin-theme-dark .access-panel,
+body.admin-theme-dark .access-filter-card,
+body.admin-theme-dark .access-table-card,
+body.admin-theme-dark .access-form-card,
+body.admin-theme-dark .profile-card,
+body.admin-theme-dark .access-mini-item,
+body.admin-theme-dark .access-member-preview,
+body.admin-theme-dark .access-token-box,
+body.admin-theme-dark .access-sticky-actions,
+html[data-admin-theme="dark"] body .access-kpi-card,
+html[data-admin-theme="dark"] body .access-panel,
+html[data-admin-theme="dark"] body .access-filter-card,
+html[data-admin-theme="dark"] body .access-table-card,
+html[data-admin-theme="dark"] body .access-form-card,
+html[data-admin-theme="dark"] body .profile-card,
+html[data-admin-theme="dark"] body .access-mini-item,
+html[data-admin-theme="dark"] body .access-member-preview,
+html[data-admin-theme="dark"] body .access-token-box,
+html[data-admin-theme="dark"] body .access-sticky-actions {
+    background: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .28) !important;
+}
+
+body.admin-theme-dark .access-kpi-title,
+body.admin-theme-dark .access-panel-subtitle,
+body.admin-theme-dark .access-mini-meta,
+body.admin-theme-dark .access-cell-meta,
+body.admin-theme-dark .profile-label,
+body.admin-theme-dark .access-filter-label,
+body.admin-theme-dark .access-member-preview-meta,
+body.admin-theme-dark .access-table thead th,
+body.admin-theme-dark .profile-table thead th,
+html[data-admin-theme="dark"] body .access-kpi-title,
+html[data-admin-theme="dark"] body .access-panel-subtitle,
+html[data-admin-theme="dark"] body .access-mini-meta,
+html[data-admin-theme="dark"] body .access-cell-meta,
+html[data-admin-theme="dark"] body .profile-label,
+html[data-admin-theme="dark"] body .access-filter-label,
+html[data-admin-theme="dark"] body .access-member-preview-meta,
+html[data-admin-theme="dark"] body .access-table thead th,
+html[data-admin-theme="dark"] body .profile-table thead th {
+    color: #cbd5e1 !important;
+}
+
+body.admin-theme-dark .access-kpi-value,
+body.admin-theme-dark .access-panel-title,
+body.admin-theme-dark .access-mini-title,
+body.admin-theme-dark .access-cell-title,
+body.admin-theme-dark .profile-value,
+body.admin-theme-dark .profile-card h5,
+body.admin-theme-dark .access-section-title,
+body.admin-theme-dark .access-member-preview-title,
+html[data-admin-theme="dark"] body .access-kpi-value,
+html[data-admin-theme="dark"] body .access-panel-title,
+html[data-admin-theme="dark"] body .access-mini-title,
+html[data-admin-theme="dark"] body .access-cell-title,
+html[data-admin-theme="dark"] body .profile-value,
+html[data-admin-theme="dark"] body .profile-card h5,
+html[data-admin-theme="dark"] body .access-section-title,
+html[data-admin-theme="dark"] body .access-member-preview-title {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .access-table,
+body.admin-theme-dark .profile-table,
+html[data-admin-theme="dark"] body .access-table,
+html[data-admin-theme="dark"] body .profile-table {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .access-table thead th,
+body.admin-theme-dark .profile-table thead th,
+html[data-admin-theme="dark"] body .access-table thead th,
+html[data-admin-theme="dark"] body .profile-table thead th {
+    background: #111827 !important;
+    border-color: #334155 !important;
+}
+
+body.admin-theme-dark .access-table tbody td,
+body.admin-theme-dark .profile-table tbody td,
+html[data-admin-theme="dark"] body .access-table tbody td,
+html[data-admin-theme="dark"] body .profile-table tbody td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.admin-theme-dark .access-table tbody tr:hover td,
+body.admin-theme-dark .profile-table tbody tr:hover td,
+html[data-admin-theme="dark"] body .access-table tbody tr:hover td,
+html[data-admin-theme="dark"] body .profile-table tbody tr:hover td {
+    background: #1e293b !important;
+}
+
+body.admin-theme-dark .access-kpi-chip,
+body.admin-theme-dark .access-chip,
+html[data-admin-theme="dark"] body .access-kpi-chip,
+html[data-admin-theme="dark"] body .access-chip {
+    background: #1e293b !important;
+    color: #cbd5e1 !important;
+}
+
+body.admin-theme-dark .access-badge,
+body.admin-theme-dark .access-role-chip,
+body.admin-theme-dark .profile-chip,
+html[data-admin-theme="dark"] body .access-badge,
+html[data-admin-theme="dark"] body .access-role-chip,
+html[data-admin-theme="dark"] body .profile-chip {
+    background: #312e81 !important;
+    color: #e0e7ff !important;
+}
+
+body.admin-theme-dark .status-active,
+html[data-admin-theme="dark"] body .status-active {
+    background: #064e3b !important;
+    color: #bbf7d0 !important;
+}
+
+body.admin-theme-dark .status-inactive,
+html[data-admin-theme="dark"] body .status-inactive {
+    background: #7c2d12 !important;
+    color: #fed7aa !important;
+}
+
+body.admin-theme-dark .access-token-box,
+body.admin-theme-dark .access-member-preview,
+html[data-admin-theme="dark"] body .access-token-box,
+html[data-admin-theme="dark"] body .access-member-preview {
+    border-style: dashed !important;
+}
+
+body.admin-theme-dark .access-section-divider,
+html[data-admin-theme="dark"] body .access-section-divider {
+    background: linear-gradient(90deg, transparent, #334155, transparent) !important;
+}
+
+body.admin-theme-dark .form-control,
+body.admin-theme-dark .form-select,
+body.admin-theme-dark .access-form-card input,
+body.admin-theme-dark .access-form-card select,
+body.admin-theme-dark .access-form-card textarea,
+html[data-admin-theme="dark"] body .form-control,
+html[data-admin-theme="dark"] body .form-select,
+html[data-admin-theme="dark"] body .access-form-card input,
+html[data-admin-theme="dark"] body .access-form-card select,
+html[data-admin-theme="dark"] body .access-form-card textarea {
+    background-color: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+body.admin-theme-dark .form-control::placeholder,
+body.admin-theme-dark .access-form-card input::placeholder,
+body.admin-theme-dark .access-form-card textarea::placeholder,
+html[data-admin-theme="dark"] body .form-control::placeholder,
+html[data-admin-theme="dark"] body .access-form-card input::placeholder,
+html[data-admin-theme="dark"] body .access-form-card textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+@media (max-width: 991.98px) {
+    body.admin-theme-light .access-hero,
+    body.admin-theme-light .access-page-hero,
+    body.admin-theme-light .access-form-hero,
+    body.admin-theme-light .profile-hero,
+    body.admin-theme-dark .access-hero,
+    body.admin-theme-dark .access-page-hero,
+    body.admin-theme-dark .access-form-hero,
+    body.admin-theme-dark .profile-hero {
+        border-radius: 22px !important;
+    }
+}
+
+
+
+/* ==========================================================
+   STRONG ACCESS HERO THEME FIX
+   This block uses .admin-theme-* as ancestor because the theme class
+   may be on body, html, or the main admin wrapper depending on layout.
+   Keep this at the very bottom / after the normal access hero CSS.
+   ========================================================== */
+
+.admin-theme-light .access-hero,
+.admin-theme-light .access-page-hero,
+.admin-theme-light .access-form-hero,
+.admin-theme-light .profile-hero,
+body.admin-theme-light .access-hero,
+body.admin-theme-light .access-page-hero,
+body.admin-theme-light .access-form-hero,
+body.admin-theme-light .profile-hero,
+html[data-admin-theme="light"] .access-hero,
+html[data-admin-theme="light"] .access-page-hero,
+html[data-admin-theme="light"] .access-form-hero,
+html[data-admin-theme="light"] .profile-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .access-hero,
+.admin-theme-dark .access-page-hero,
+.admin-theme-dark .access-form-hero,
+.admin-theme-dark .profile-hero,
+body.admin-theme-dark .access-hero,
+body.admin-theme-dark .access-page-hero,
+body.admin-theme-dark .access-form-hero,
+body.admin-theme-dark .profile-hero,
+html[data-admin-theme="dark"] .access-hero,
+html[data-admin-theme="dark"] .access-page-hero,
+html[data-admin-theme="dark"] .access-form-hero,
+html[data-admin-theme="dark"] .profile-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .access-hero::before,
+.admin-theme-light .access-page-hero::before,
+.admin-theme-light .access-form-hero::before,
+.admin-theme-light .profile-hero::before,
+body.admin-theme-light .access-hero::before,
+body.admin-theme-light .access-page-hero::before,
+body.admin-theme-light .access-form-hero::before,
+body.admin-theme-light .profile-hero::before,
+html[data-admin-theme="light"] .access-hero::before,
+html[data-admin-theme="light"] .access-page-hero::before,
+html[data-admin-theme="light"] .access-form-hero::before,
+html[data-admin-theme="light"] .profile-hero::before {
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, .08), transparent 38%) !important;
+    background-size: auto !important;
+    opacity: 1 !important;
+}
+
+.admin-theme-dark .access-hero::before,
+.admin-theme-dark .access-page-hero::before,
+.admin-theme-dark .access-form-hero::before,
+.admin-theme-dark .profile-hero::before,
+body.admin-theme-dark .access-hero::before,
+body.admin-theme-dark .access-page-hero::before,
+body.admin-theme-dark .access-form-hero::before,
+body.admin-theme-dark .profile-hero::before,
+html[data-admin-theme="dark"] .access-hero::before,
+html[data-admin-theme="dark"] .access-page-hero::before,
+html[data-admin-theme="dark"] .access-form-hero::before,
+html[data-admin-theme="dark"] .profile-hero::before {
+    background: radial-gradient(circle at top right, rgba(167, 139, 250, .12), transparent 38%) !important;
+    background-size: auto !important;
+    opacity: 1 !important;
+}
+
+.admin-theme-light .access-hero *,
+.admin-theme-light .access-page-hero *,
+.admin-theme-light .access-form-hero *,
+.admin-theme-light .profile-hero *,
+body.admin-theme-light .access-hero *,
+body.admin-theme-light .access-page-hero *,
+body.admin-theme-light .access-form-hero *,
+body.admin-theme-light .profile-hero *,
+html[data-admin-theme="light"] .access-hero *,
+html[data-admin-theme="light"] .access-page-hero *,
+html[data-admin-theme="light"] .access-form-hero *,
+html[data-admin-theme="light"] .profile-hero * {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .access-hero *,
+.admin-theme-dark .access-page-hero *,
+.admin-theme-dark .access-form-hero *,
+.admin-theme-dark .profile-hero *,
+body.admin-theme-dark .access-hero *,
+body.admin-theme-dark .access-page-hero *,
+body.admin-theme-dark .access-form-hero *,
+body.admin-theme-dark .profile-hero *,
+html[data-admin-theme="dark"] .access-hero *,
+html[data-admin-theme="dark"] .access-page-hero *,
+html[data-admin-theme="dark"] .access-form-hero *,
+html[data-admin-theme="dark"] .profile-hero * {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .access-hero-badge,
+.admin-theme-light .access-meta-pill,
+body.admin-theme-light .access-hero-badge,
+body.admin-theme-light .access-meta-pill,
+html[data-admin-theme="light"] .access-hero-badge,
+html[data-admin-theme="light"] .access-meta-pill {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .access-hero-badge,
+.admin-theme-dark .access-meta-pill,
+body.admin-theme-dark .access-hero-badge,
+body.admin-theme-dark .access-meta-pill,
+html[data-admin-theme="dark"] .access-hero-badge,
+html[data-admin-theme="dark"] .access-meta-pill {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}

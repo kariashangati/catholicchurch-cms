@@ -1,0 +1,452 @@
+.familia-dashboard-page,
+.familia-show-page {
+    --familia-primary: #7c3aed;
+    --familia-primary-dark: #5b21b6;
+    --familia-blue: #2563eb;
+    --familia-green: #16a34a;
+    --familia-amber: #f59e0b;
+    --familia-red: #ef4444;
+}
+
+.familia-dashboard-hero {
+    background: linear-gradient(135deg, #6d28d9, #7c3aed, #9333ea);
+    border-radius: 26px;
+    padding: 2rem;
+    color: #fff;
+    box-shadow: 0 22px 50px rgba(124, 58, 237, 0.22);
+    overflow: hidden;
+    position: relative;
+}
+
+.familia-dashboard-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,.22), transparent 36%);
+    pointer-events: none;
+}
+
+.familia-hero-pills { display:flex; flex-wrap:wrap; gap:.75rem; }
+.familia-hero-pill {
+    display:inline-flex; align-items:center; gap:.55rem;
+    padding:.68rem 1rem; border-radius:999px;
+    background: rgba(255,255,255,.14); color:#fff; font-weight:600; font-size:.92rem;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+}
+.familia-hero-pill.is-active { color:#dcfce7; }
+.familia-hero-pill.is-inactive { color:#fef3c7; }
+
+.familia-quick-grid {
+    display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:1rem;
+}
+.familia-quick-card {
+    border:0; text-decoration:none; color:#fff; text-align:left; cursor:pointer;
+    display:flex; align-items:center; gap:.85rem; padding:1rem; border-radius:18px;
+    background: rgba(255,255,255,.12); backdrop-filter: blur(8px);
+    transition: transform .18s ease, background .18s ease;
+}
+.familia-quick-card:hover { transform: translateY(-2px); background: rgba(255,255,255,.18); color:#fff; }
+.familia-quick-card strong, .familia-quick-card small { display:block; }
+.familia-quick-card small { opacity:.82; }
+.familia-quick-icon {
+    width:44px; height:44px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+    background: rgba(255,255,255,.16); font-size:1rem;
+}
+
+.familia-panel,
+.familia-directory-card {
+    border-radius: 24px;
+    background:#fff;
+}
+
+.familia-kpi-card {
+    position: relative;
+    background: #fff;
+    border-radius: 22px;
+    padding: 1.25rem;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, .06);
+    min-height: 156px;
+    overflow: hidden;
+}
+.familia-kpi-card::before {
+    content:""; position:absolute; inset:0 auto 0 0; width:5px; border-radius: 22px 0 0 22px;
+    background: currentColor;
+}
+.familia-kpi-icon {
+    width:50px; height:50px; border-radius:16px; display:flex; align-items:center; justify-content:center;
+    background: rgba(124,58,237,.10); margin-bottom:1rem; font-size:1.1rem;
+}
+.familia-kpi-label { color:#64748b; font-size:.86rem; margin-bottom:.35rem; }
+.familia-kpi-value { font-size:1.9rem; font-weight:800; line-height:1; color:#0f172a; }
+.familia-tone-primary { color: var(--familia-primary); }
+.familia-tone-success { color: var(--familia-green); }
+.familia-tone-warning { color: var(--familia-amber); }
+.familia-tone-info { color: var(--familia-blue); }
+.familia-tone-danger { color: var(--familia-red); }
+.familia-tone-secondary { color: #64748b; }
+
+.familia-section-header h5 { font-weight: 800; color:#0f172a; }
+.familia-section-header p { font-size:.9rem; }
+.familia-recent-stack { display:flex; flex-direction:column; gap:.85rem; }
+.familia-recent-item {
+    display:flex; gap:.85rem; align-items:center; padding:.9rem 1rem; border-radius:18px;
+    text-decoration:none; color:inherit; background:#f8fafc; transition: all .18s ease;
+}
+.familia-recent-item:hover { transform: translateY(-1px); background:#eef2ff; color:inherit; }
+.familia-recent-avatar,
+.familia-row-avatar,
+.familia-profile-avatar {
+    display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff;
+    background: linear-gradient(135deg, #7c3aed, #3b82f6);
+}
+.familia-recent-avatar { width:46px; height:46px; border-radius:14px; }
+.familia-profile-avatar { width:72px; height:72px; border-radius:22px; font-size:1.4rem; }
+.familia-recent-title, .familia-row-title { font-weight:700; color:#0f172a; }
+.familia-recent-meta, .familia-row-subtitle { color:#64748b; font-size:.85rem; }
+.familia-empty-state {
+    background:#f8fafc; border-radius:16px; padding:1rem; color:#64748b;
+}
+
+.familia-row-identity { display:flex; align-items:center; gap:.8rem; }
+.familia-row-avatar { width:42px; height:42px; border-radius:14px; }
+.familia-count-badge, .familia-tag-chip, .familia-inline-badge {
+    display:inline-flex; align-items:center; justify-content:center; border-radius:999px; font-weight:700;
+}
+.familia-count-badge { padding:.4rem .7rem; background:#ede9fe; color:#6d28d9; }
+.familia-tag-chip { padding:.42rem .72rem; background:#dbeafe; color:#1d4ed8; }
+.familia-tag-chip.secondary { background:#ede9fe; color:#7c3aed; }
+.familia-inline-badge { padding:.3rem .55rem; background:#dcfce7; color:#166534; font-size:.74rem; margin:.12rem; }
+
+.familia-action-row { display:flex; flex-wrap:wrap; gap:.5rem; }
+.familia-btn-soft, .familia-btn-danger {
+    border-radius:999px; padding:.5rem .85rem; font-weight:600;
+}
+.familia-btn-soft { background:#f5f3ff; color:#6d28d9; border:1px solid #ede9fe; }
+.familia-btn-soft:hover { background:#ede9fe; color:#5b21b6; }
+.familia-btn-danger { background:#fef2f2; color:#dc2626; border:1px solid #fee2e2; }
+.familia-btn-danger:hover { background:#fee2e2; color:#b91c1c; }
+
+.familia-status-badge {
+    display:inline-flex; align-items:center; gap:.35rem; border-radius:999px; padding:.42rem .72rem; font-weight:700;
+}
+.familia-status-badge.active { background:#dcfce7; color:#166534; }
+.familia-status-badge.inactive { background:#fef3c7; color:#92400e; }
+
+.familia-data-table thead th { color:#475569; font-size:.84rem; border-bottom:1px solid #e2e8f0; }
+.familia-data-table tbody td { vertical-align:middle; border-color:#f1f5f9; }
+.familia-data-table tbody tr:hover { background:#faf5ff; }
+
+.familia-modal-content {
+    border: 0;
+    border-radius: 28px;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, .16);
+    max-height: calc(100vh - 2rem);
+    overflow: hidden;
+}
+
+.familia-form-card {
+    background: #f8fafc;
+    border-radius: 22px;
+    padding: 1.25rem;
+    height: auto;
+    min-height: 100%;
+}
+.familia-modal-content .modal-body {
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+    padding-bottom: 1rem;
+}
+
+.familia-modal-content .modal-header,
+.familia-modal-content .modal-footer {
+    flex-shrink: 0;
+}
+
+.familia-kpi-icon {
+    color: currentColor !important;
+}
+
+.familia-kpi-icon i {
+    color: currentColor !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+.familia-form-card-title { font-weight:800; margin-bottom:1rem; color:#0f172a; }
+.familia-form-feature {
+    display:flex; justify-content:space-between; align-items:center; gap:1rem;
+    background:#fff; border-radius:16px; padding:.9rem 1rem; border:1px solid #e2e8f0;
+}
+.familia-form-feature-title { font-weight:700; color:#0f172a; }
+.familia-form-feature-text { font-size:.82rem; color:#64748b; }
+.familia-toggle-grid { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; }
+.familia-toggle-pill {
+    display:flex; align-items:center; gap:.55rem; background:#fff; border:1px solid #e2e8f0;
+    padding:.75rem .85rem; border-radius:999px; font-weight:600; color:#334155; cursor:pointer;
+}
+.familia-sacrament-box {
+    background:#fff; border:1px solid #e2e8f0; border-radius:18px; padding:1rem; margin-top:1rem;
+}
+.familia-sacrament-box-title { font-weight:700; margin-bottom:.85rem; color:#0f172a; }
+
+.familia-detail-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; }
+.familia-detail-item {
+    background:#f8fafc; border-radius:18px; padding:1rem; display:flex; flex-direction:column; gap:.35rem;
+}
+.familia-detail-item span { color:#64748b; font-size:.82rem; }
+.familia-detail-item strong { color:#0f172a; font-size:1rem; }
+.familia-note-panel {
+    background:#f8fafc; border-radius:18px; padding:1rem 1.1rem;
+}
+.familia-note-title { font-weight:700; color:#0f172a; margin-bottom:.35rem; }
+.familia-finance-table { border-collapse:separate; border-spacing:0 .65rem; }
+.familia-finance-table tbody tr { background:#f8fafc; }
+.familia-finance-table th, .familia-finance-table td { padding:.85rem 1rem; border:0; }
+.familia-finance-table .total-row { background:#ede9fe; color:#5b21b6; font-weight:800; }
+.familia-mini-kpis { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1rem; }
+.mini-stat-box {
+    background:#f8fafc; border-radius:18px; padding:1rem; text-align:center;
+}
+.mini-stat-label { color:#64748b; font-size:.82rem; }
+.mini-stat-value { font-size:1.5rem; font-weight:800; color:#0f172a; }
+.familia-progress { height:12px; border-radius:999px; background:#ede9fe; }
+.familia-progress .progress-bar { background: linear-gradient(90deg, #2563eb, #16a34a, #7c3aed); }
+.familia-progress-value { font-weight:800; color:#7c3aed; }
+.familia-sacrament-badges { display:flex; flex-wrap:wrap; gap:.2rem; }
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+    border-radius: 999px !important;
+    border: 1px solid #dbe2ea !important;
+    padding: .5rem .85rem !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 999px !important; margin: 0 .15rem;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #ede9fe !important; color:#6d28d9 !important; border-color:#ddd6fe !important;
+}
+
+@media (max-width: 1199.98px) {
+    .familia-quick-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 767.98px) {
+    .familia-dashboard-hero { padding:1.35rem; }
+    .familia-quick-grid, .familia-detail-grid, .familia-mini-kpis, .familia-toggle-grid { grid-template-columns:1fr; }
+    .familia-action-row { flex-direction:column; align-items:stretch; }
+    .familia-kpi-card { min-height: auto; }
+}
+/* ==========================================================
+   THEME OVERRIDE: FAMILIA DASHBOARD / SHOW MODULE
+   Appended safely. No grid pattern in hero. Keeps colored badges readable.
+   ========================================================== */
+
+.admin-theme-light .familia-dashboard-hero,
+html[data-admin-theme="light"] .familia-dashboard-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .familia-dashboard-hero,
+html[data-admin-theme="dark"] .familia-dashboard-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .familia-dashboard-hero::after,
+html[data-admin-theme="light"] .familia-dashboard-hero::after {
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, .08), transparent 38%) !important;
+}
+
+.admin-theme-dark .familia-dashboard-hero::after,
+html[data-admin-theme="dark"] .familia-dashboard-hero::after {
+    background: radial-gradient(circle at top right, rgba(167, 139, 250, .12), transparent 38%) !important;
+}
+
+.admin-theme-light .familia-dashboard-hero h1,
+.admin-theme-light .familia-dashboard-hero h2,
+.admin-theme-light .familia-dashboard-hero h3,
+.admin-theme-light .familia-dashboard-hero p,
+.admin-theme-light .familia-dashboard-hero small,
+.admin-theme-light .familia-dashboard-hero strong,
+html[data-admin-theme="light"] .familia-dashboard-hero h1,
+html[data-admin-theme="light"] .familia-dashboard-hero h2,
+html[data-admin-theme="light"] .familia-dashboard-hero h3,
+html[data-admin-theme="light"] .familia-dashboard-hero p,
+html[data-admin-theme="light"] .familia-dashboard-hero small,
+html[data-admin-theme="light"] .familia-dashboard-hero strong {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .familia-dashboard-hero h1,
+.admin-theme-dark .familia-dashboard-hero h2,
+.admin-theme-dark .familia-dashboard-hero h3,
+.admin-theme-dark .familia-dashboard-hero p,
+.admin-theme-dark .familia-dashboard-hero small,
+.admin-theme-dark .familia-dashboard-hero strong,
+html[data-admin-theme="dark"] .familia-dashboard-hero h1,
+html[data-admin-theme="dark"] .familia-dashboard-hero h2,
+html[data-admin-theme="dark"] .familia-dashboard-hero h3,
+html[data-admin-theme="dark"] .familia-dashboard-hero p,
+html[data-admin-theme="dark"] .familia-dashboard-hero small,
+html[data-admin-theme="dark"] .familia-dashboard-hero strong {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .familia-hero-pill,
+.admin-theme-light .familia-quick-card,
+html[data-admin-theme="light"] .familia-hero-pill,
+html[data-admin-theme="light"] .familia-quick-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .familia-hero-pill,
+.admin-theme-dark .familia-quick-card,
+html[data-admin-theme="dark"] .familia-hero-pill,
+html[data-admin-theme="dark"] .familia-quick-card {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-light .familia-panel,
+.admin-theme-light .familia-directory-card,
+.admin-theme-light .familia-kpi-card,
+.admin-theme-light .familia-recent-item,
+.admin-theme-light .familia-empty-state,
+.admin-theme-light .familia-form-card,
+.admin-theme-light .familia-form-feature,
+.admin-theme-light .familia-toggle-pill,
+.admin-theme-light .familia-sacrament-box,
+.admin-theme-light .familia-detail-item,
+.admin-theme-light .familia-note-panel,
+.admin-theme-light .mini-stat-box,
+html[data-admin-theme="light"] .familia-panel,
+html[data-admin-theme="light"] .familia-directory-card,
+html[data-admin-theme="light"] .familia-kpi-card,
+html[data-admin-theme="light"] .familia-recent-item,
+html[data-admin-theme="light"] .familia-empty-state,
+html[data-admin-theme="light"] .familia-form-card,
+html[data-admin-theme="light"] .familia-form-feature,
+html[data-admin-theme="light"] .familia-toggle-pill,
+html[data-admin-theme="light"] .familia-sacrament-box,
+html[data-admin-theme="light"] .familia-detail-item,
+html[data-admin-theme="light"] .familia-note-panel,
+html[data-admin-theme="light"] .mini-stat-box {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .familia-panel,
+.admin-theme-dark .familia-directory-card,
+.admin-theme-dark .familia-kpi-card,
+.admin-theme-dark .familia-recent-item,
+.admin-theme-dark .familia-empty-state,
+.admin-theme-dark .familia-modal-content,
+.admin-theme-dark .familia-form-card,
+.admin-theme-dark .familia-form-feature,
+.admin-theme-dark .familia-toggle-pill,
+.admin-theme-dark .familia-sacrament-box,
+.admin-theme-dark .familia-detail-item,
+.admin-theme-dark .familia-note-panel,
+.admin-theme-dark .mini-stat-box,
+html[data-admin-theme="dark"] .familia-panel,
+html[data-admin-theme="dark"] .familia-directory-card,
+html[data-admin-theme="dark"] .familia-kpi-card,
+html[data-admin-theme="dark"] .familia-recent-item,
+html[data-admin-theme="dark"] .familia-empty-state,
+html[data-admin-theme="dark"] .familia-modal-content,
+html[data-admin-theme="dark"] .familia-form-card,
+html[data-admin-theme="dark"] .familia-form-feature,
+html[data-admin-theme="dark"] .familia-toggle-pill,
+html[data-admin-theme="dark"] .familia-sacrament-box,
+html[data-admin-theme="dark"] .familia-detail-item,
+html[data-admin-theme="dark"] .familia-note-panel,
+html[data-admin-theme="dark"] .mini-stat-box {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .familia-kpi-value,
+.admin-theme-dark .familia-section-header h5,
+.admin-theme-dark .familia-recent-title,
+.admin-theme-dark .familia-row-title,
+.admin-theme-dark .familia-form-card-title,
+.admin-theme-dark .familia-form-feature-title,
+.admin-theme-dark .familia-sacrament-box-title,
+.admin-theme-dark .familia-detail-item strong,
+.admin-theme-dark .familia-note-title,
+.admin-theme-dark .mini-stat-value,
+html[data-admin-theme="dark"] .familia-kpi-value,
+html[data-admin-theme="dark"] .familia-section-header h5,
+html[data-admin-theme="dark"] .familia-recent-title,
+html[data-admin-theme="dark"] .familia-row-title,
+html[data-admin-theme="dark"] .familia-form-card-title,
+html[data-admin-theme="dark"] .familia-form-feature-title,
+html[data-admin-theme="dark"] .familia-sacrament-box-title,
+html[data-admin-theme="dark"] .familia-detail-item strong,
+html[data-admin-theme="dark"] .familia-note-title,
+html[data-admin-theme="dark"] .mini-stat-value {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .familia-kpi-label,
+.admin-theme-dark .familia-recent-meta,
+.admin-theme-dark .familia-row-subtitle,
+.admin-theme-dark .familia-form-feature-text,
+.admin-theme-dark .familia-detail-item span,
+.admin-theme-dark .mini-stat-label,
+html[data-admin-theme="dark"] .familia-kpi-label,
+html[data-admin-theme="dark"] .familia-recent-meta,
+html[data-admin-theme="dark"] .familia-row-subtitle,
+html[data-admin-theme="dark"] .familia-form-feature-text,
+html[data-admin-theme="dark"] .familia-detail-item span,
+html[data-admin-theme="dark"] .mini-stat-label {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .familia-data-table thead th,
+html[data-admin-theme="dark"] .familia-data-table thead th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .familia-data-table tbody td,
+html[data-admin-theme="dark"] .familia-data-table tbody td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .familia-data-table tbody tr:hover,
+html[data-admin-theme="dark"] .familia-data-table tbody tr:hover {
+    background: #1e293b !important;
+}
+
+.admin-theme-dark .familia-status-badge.active,
+html[data-admin-theme="dark"] .familia-status-badge.active {
+    background: #064e3b !important;
+    color: #bbf7d0 !important;
+}
+
+.admin-theme-dark .familia-status-badge.inactive,
+html[data-admin-theme="dark"] .familia-status-badge.inactive {
+    background: #451a03 !important;
+    color: #fde68a !important;
+}

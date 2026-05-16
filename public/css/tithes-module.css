@@ -1,0 +1,45 @@
+.tithe-stat-card {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+.tithe-stat-card .stat-label {
+    color: #64748b;
+    font-size: .875rem;
+}
+.tithe-stat-card .stat-value {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #0f172a;
+}
+.tithe-panel {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+.tithe-table thead th {
+    white-space: nowrap;
+}
+.tithe-mini-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: .2rem .65rem;
+    font-size: .78rem;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+.tithe-status-pill {
+    padding: .25rem .65rem;
+    border-radius: 999px;
+    font-size: .78rem;
+}
+.tithe-status-pill.pending { background: #fff7ed; color: #c2410c; }
+.tithe-status-pill.approved { background: #ecfdf5; color: #047857; }
+.tithe-status-pill.rejected { background: #fef2f2; color: #b91c1c; }
+.tithe-sticky-actions {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+}

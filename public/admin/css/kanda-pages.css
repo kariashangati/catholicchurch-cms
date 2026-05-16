@@ -1,0 +1,420 @@
+.kanda-pages {
+    --db-primary: #7c3aed;
+    --db-secondary: #0f172a;
+    --db-success: #16a34a;
+    --db-info: #0284c7;
+    --db-warning: #f59e0b;
+    --db-danger: #ef4444;
+    --db-muted: #64748b;
+    --db-text: #0f172a;
+    --db-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --db-shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.kanda-pages .card {
+    border-radius: 24px;
+    box-shadow: var(--db-shadow-soft);
+    overflow: hidden;
+}
+
+.kanda-pages .dashboard-hero {
+    position: relative;
+    border-radius: 30px;
+    padding: 2rem;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.12), transparent 28%),
+        linear-gradient(135deg, #5b21b6 0%, #7c3aed 45%, #9333ea 100%);
+    color: #fff;
+    box-shadow: 0 24px 60px rgba(124, 58, 237, 0.28);
+}
+
+.kanda-pages .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.kanda-pages .dashboard-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+}
+
+.kanda-pages .dashboard-title {
+    font-size: clamp(1.9rem, 2.3vw, 2.7rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: #fff;
+}
+
+.kanda-pages .dashboard-subtitle {
+    color: rgba(255,255,255,.88);
+    font-size: 1rem;
+}
+
+.kanda-pages .hero-meta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.kanda-pages .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: .68rem 1rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.14);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.kanda-pages .hero-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: .85rem;
+}
+
+.kanda-pages .hero-action-btn {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    padding: .95rem 1rem;
+    border-radius: 18px;
+    background: rgba(255,255,255,.13);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,.18);
+    transition: all .25s ease;
+    backdrop-filter: blur(10px);
+    min-height: 64px;
+}
+
+.kanda-pages .hero-action-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.18);
+    color: #fff;
+}
+
+.kanda-pages .hero-action-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.16);
+}
+
+.kanda-pages .hero-action-text {
+    font-weight: 700;
+}
+
+.kanda-pages .stat-card,
+.kanda-pages .finance-card,
+.kanda-pages .analytics-panel,
+.kanda-pages .dashboard-side-panel,
+.kanda-pages .table-panel,
+.kanda-pages .form-panel {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border: 1px solid rgba(226, 232, 240, .9);
+}
+
+.kanda-pages .stat-card,
+.kanda-pages .finance-card,
+.kanda-pages .analytics-panel,
+.kanda-pages .dashboard-side-panel {
+    transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.kanda-pages .stat-card:hover,
+.kanda-pages .finance-card:hover,
+.kanda-pages .analytics-panel:hover,
+.kanda-pages .dashboard-side-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--db-shadow);
+}
+
+.kanda-pages .stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    border-radius: 24px 0 0 24px;
+    background: var(--accent, var(--db-primary));
+}
+
+.kanda-pages .stat-card-primary { --accent: #7c3aed; }
+.kanda-pages .stat-card-success { --accent: #16a34a; }
+.kanda-pages .stat-card-info { --accent: #0284c7; }
+.kanda-pages .stat-card-warning { --accent: #f59e0b; }
+.kanda-pages .stat-card-dark { --accent: #0f172a; }
+
+.kanda-pages .finance-card-primary { --accent: #7c3aed; }
+.kanda-pages .finance-card-success { --accent: #16a34a; }
+.kanda-pages .finance-card-warning { --accent: #f59e0b; }
+.kanda-pages .finance-card-info { --accent: #0284c7; }
+.kanda-pages .finance-card-dark { --accent: #0f172a; }
+.kanda-pages .finance-card-secondary { --accent: #475569; }
+
+.kanda-pages .stat-top-row,
+.kanda-pages .finance-card-top,
+.kanda-pages .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.kanda-pages .stat-top-row,
+.kanda-pages .finance-card-top {
+    margin-bottom: 1rem;
+}
+
+.kanda-pages .stat-icon,
+.kanda-pages .finance-card-icon,
+.kanda-pages .panel-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.12rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent, #7c3aed), rgba(124,58,237,.78));
+    box-shadow: 0 12px 24px rgba(124, 58, 237, .2);
+}
+
+.kanda-pages .stat-chip,
+.kanda-pages .finance-chip,
+.kanda-pages .soft-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: .42rem .82rem;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: .78rem;
+    font-weight: 700;
+    border: 1px solid #e2e8f0;
+}
+
+.kanda-pages .stat-label,
+.kanda-pages .finance-card-title {
+    font-size: .88rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: .5rem;
+}
+
+.kanda-pages .stat-number,
+.kanda-pages .finance-card-value {
+    font-size: clamp(1.45rem, 1.9vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--db-text);
+    letter-spacing: -.03em;
+}
+
+.kanda-pages .stat-meta,
+.kanda-pages .finance-card-meta {
+    font-size: .82rem;
+    color: var(--db-muted);
+    margin-top: .5rem;
+}
+
+.kanda-pages .section-title,
+.kanda-pages .panel-title,
+.kanda-pages .form-panel-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--db-text);
+    margin-bottom: .2rem;
+}
+
+.kanda-pages .section-subtitle,
+.kanda-pages .panel-subtitle,
+.kanda-pages .form-panel-subtitle {
+    color: var(--db-muted);
+    font-size: .88rem;
+    margin: 0;
+}
+
+.kanda-pages .chart-shell {
+    position: relative;
+    height: 320px;
+    padding: 1rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(248,250,252,.95), rgba(255,255,255,1));
+    border: 1px solid #edf2f7;
+}
+
+.kanda-pages .chart-shell-lg {
+    height: 360px;
+}
+
+.kanda-pages .meta-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kanda-pages .meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: .85rem;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.kanda-pages .meta-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.kanda-pages .meta-label {
+    font-size: .86rem;
+    color: var(--db-muted);
+    font-weight: 700;
+}
+
+.kanda-pages .meta-value {
+    font-size: .92rem;
+    color: var(--db-text);
+    font-weight: 700;
+    text-align: right;
+}
+
+.kanda-pages .table-panel-header {
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+
+.kanda-pages .dashboard-table-wrap {
+    border-top: 1px solid #eef2f7;
+}
+
+.kanda-pages .dashboard-table thead th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.kanda-pages .dashboard-table td,
+.kanda-pages .dashboard-table th {
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+.kanda-pages .dashboard-table tbody tr:hover {
+    background: rgba(124,58,237,.025);
+}
+
+.kanda-pages .btn-modern {
+    border-radius: 14px;
+    padding: .55rem .95rem;
+    font-weight: 700;
+}
+
+.kanda-pages .form-panel {
+    border-radius: 28px;
+}
+
+.kanda-pages .modern-input {
+    min-height: 54px;
+    border-radius: 16px;
+    border: 1px solid #dbe5f0;
+    background: #fff;
+    padding: .85rem 1rem;
+    box-shadow: none;
+}
+
+.kanda-pages textarea.modern-input {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.kanda-pages .modern-input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.12);
+}
+
+.kanda-pages .modern-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff, #f8fbff);
+    border: 1px solid #edf2f7;
+}
+
+.kanda-pages .modern-switch-title {
+    font-weight: 800;
+    color: var(--db-text);
+}
+
+.kanda-pages .modern-switch-help {
+    font-size: .85rem;
+    color: var(--db-muted);
+    margin-top: .25rem;
+}
+
+.kanda-pages .btn-modern-primary {
+    border-radius: 14px;
+    min-height: 48px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 45%, #9333ea 100%);
+    border: 0;
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.24);
+}
+
+.kanda-pages .btn-modern-primary:hover {
+    opacity: .95;
+}
+
+.kanda-pages .btn-modern-light {
+    border-radius: 14px;
+    min-height: 48px;
+    font-weight: 700;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 991.98px) {
+    .kanda-pages .dashboard-hero {
+        padding: 1.5rem;
+    }
+
+    .kanda-pages .hero-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kanda-pages .chart-shell,
+    .kanda-pages .chart-shell-lg {
+        height: 300px;
+    }
+}

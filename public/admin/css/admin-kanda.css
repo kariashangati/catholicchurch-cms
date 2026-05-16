@@ -1,0 +1,370 @@
+/* KANDA MODULE POLISH */
+
+.kanda-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.8rem;
+}
+
+.kanda-meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+.kanda-table-card .table th {
+    background: #f8fafc;
+    color: var(--gray);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.kanda-table-card .table td {
+    vertical-align: middle;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.kanda-name-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.kanda-name-main {
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.kanda-name-sub {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.kanda-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.kanda-status-badge.active {
+    background: var(--success-soft);
+    color: var(--success);
+}
+
+.kanda-status-badge.inactive {
+    background: #eef2f7;
+    color: var(--gray);
+}
+
+.kanda-money {
+    font-weight: 800;
+    color: var(--dark);
+    white-space: nowrap;
+}
+
+.kanda-money.total {
+    color: var(--success);
+}
+
+.kanda-action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.kanda-panel-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.kanda-panel-subtitle {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.kanda-empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--gray);
+}
+
+.kanda-empty-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.kanda-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.kanda-insight-card {
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    border-radius: 20px;
+    padding: 1.2rem;
+    height: 100%;
+}
+
+.kanda-insight-label {
+    color: var(--gray);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.kanda-insight-value {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--dark);
+}
+
+.kanda-insight-help {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--gray);
+}
+
+.kanda-form-card {
+    max-width: 980px;
+}
+
+.kanda-form-section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 0.35rem;
+}
+
+.kanda-form-section-text {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.kanda-form-card .form-label {
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.kanda-form-card .form-control,
+.kanda-form-card .form-select,
+.kanda-form-card textarea {
+    border-radius: 16px;
+    min-height: 50px;
+    border: 1px solid var(--border);
+    padding: 0.85rem 1rem;
+    box-shadow: none;
+}
+
+.kanda-form-card textarea {
+    min-height: 130px;
+}
+
+.kanda-form-card .form-control:focus,
+.kanda-form-card .form-select:focus,
+.kanda-form-card textarea:focus {
+    border-color: #d8c7ff;
+    box-shadow: 0 0 0 0.2rem rgba(138, 70, 255, 0.08);
+}
+
+.kanda-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.kanda-show-summary-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.kanda-recent-member {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.kanda-recent-member-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.kanda-recent-member-name {
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.kanda-recent-member-sub {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+@media (max-width: 991.98px) {
+    .kanda-detail-grid,
+    .kanda-show-summary-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .kanda-detail-grid,
+    .kanda-show-summary-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .kanda-hero-meta {
+        gap: 0.5rem;
+    }
+}
+/* ==========================================================
+   THEME OVERRIDE: KANDA MODULE
+   Appended safely. Keeps status badges and action buttons readable.
+   ========================================================== */
+
+.admin-theme-light .kanda-meta-pill,
+html[data-admin-theme="light"] .kanda-meta-pill {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .kanda-meta-pill,
+html[data-admin-theme="dark"] .kanda-meta-pill {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-light .kanda-table-card,
+.admin-theme-light .kanda-insight-card,
+.admin-theme-light .kanda-form-card,
+html[data-admin-theme="light"] .kanda-table-card,
+html[data-admin-theme="light"] .kanda-insight-card,
+html[data-admin-theme="light"] .kanda-form-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .kanda-table-card,
+.admin-theme-dark .kanda-insight-card,
+.admin-theme-dark .kanda-form-card,
+html[data-admin-theme="dark"] .kanda-table-card,
+html[data-admin-theme="dark"] .kanda-insight-card,
+html[data-admin-theme="dark"] .kanda-form-card {
+    background: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .28) !important;
+}
+
+.admin-theme-dark .kanda-table-card .table th,
+html[data-admin-theme="dark"] .kanda-table-card .table th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .kanda-table-card .table td,
+html[data-admin-theme="dark"] .kanda-table-card .table td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .kanda-name-main,
+.admin-theme-dark .kanda-money,
+.admin-theme-dark .kanda-panel-title,
+.admin-theme-dark .kanda-insight-value,
+.admin-theme-dark .kanda-form-section-title,
+.admin-theme-dark .kanda-form-card .form-label,
+.admin-theme-dark .kanda-recent-member-name,
+html[data-admin-theme="dark"] .kanda-name-main,
+html[data-admin-theme="dark"] .kanda-money,
+html[data-admin-theme="dark"] .kanda-panel-title,
+html[data-admin-theme="dark"] .kanda-insight-value,
+html[data-admin-theme="dark"] .kanda-form-section-title,
+html[data-admin-theme="dark"] .kanda-form-card .form-label,
+html[data-admin-theme="dark"] .kanda-recent-member-name {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .kanda-name-sub,
+.admin-theme-dark .kanda-panel-subtitle,
+.admin-theme-dark .kanda-empty-state,
+.admin-theme-dark .kanda-insight-label,
+.admin-theme-dark .kanda-insight-help,
+.admin-theme-dark .kanda-form-section-text,
+.admin-theme-dark .kanda-recent-member-sub,
+html[data-admin-theme="dark"] .kanda-name-sub,
+html[data-admin-theme="dark"] .kanda-panel-subtitle,
+html[data-admin-theme="dark"] .kanda-empty-state,
+html[data-admin-theme="dark"] .kanda-insight-label,
+html[data-admin-theme="dark"] .kanda-insight-help,
+html[data-admin-theme="dark"] .kanda-form-section-text,
+html[data-admin-theme="dark"] .kanda-recent-member-sub {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .kanda-form-card .form-control,
+.admin-theme-dark .kanda-form-card .form-select,
+.admin-theme-dark .kanda-form-card textarea,
+html[data-admin-theme="dark"] .kanda-form-card .form-control,
+html[data-admin-theme="dark"] .kanda-form-card .form-select,
+html[data-admin-theme="dark"] .kanda-form-card textarea {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-dark .kanda-status-badge.active,
+html[data-admin-theme="dark"] .kanda-status-badge.active {
+    background: #064e3b !important;
+    color: #bbf7d0 !important;
+}
+
+.admin-theme-dark .kanda-status-badge.inactive,
+html[data-admin-theme="dark"] .kanda-status-badge.inactive {
+    background: #1e293b !important;
+    color: #cbd5e1 !important;
+}

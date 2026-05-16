@@ -1,0 +1,154 @@
+/* Audit UI fixes: standard hero gradient, compact pagination, readable charts */
+.audit-hero-standard,
+.audit-hero,
+.audit-page-hero,
+.login-page-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    padding: 1.75rem;
+    color: #fff;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 30%),
+        linear-gradient(135deg, #6d28d9 0%, #7c3aed 48%, #a855f7 100%) !important;
+    box-shadow: 0 24px 60px rgba(124, 58, 237, .22);
+}
+
+.audit-hero-standard .ui-hero-pattern,
+.audit-page-hero .ui-hero-pattern,
+.login-page-hero .ui-hero-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: .32;
+    pointer-events: none;
+}
+
+.audit-hero > *,
+.audit-page-hero > *,
+.login-page-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.audit-hero-subtitle,
+.audit-page-hero-subtitle,
+.login-page-hero-subtitle,
+.audit-panel-subtitle {
+    display: none !important;
+}
+
+.audit-chart-shell-md {
+    min-height: 260px;
+}
+
+.audit-chart-shell-sm {
+    min-height: 230px;
+}
+
+.audit-pagination-wrap {
+    padding: .75rem 0 0;
+}
+
+.audit-pagination-wrap nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.audit-pagination-wrap .pagination {
+    margin: 0;
+    gap: .25rem;
+}
+
+.audit-pagination-wrap .page-link {
+    padding: .35rem .65rem;
+    font-size: .8125rem;
+    line-height: 1.2;
+    border-radius: .55rem;
+}
+
+.audit-pagination-wrap .page-item:first-child .page-link,
+.audit-pagination-wrap .page-item:last-child .page-link {
+    border-radius: .55rem;
+}
+
+.audit-pagination-wrap .small,
+.audit-pagination-wrap p {
+    margin: 0;
+    font-size: .8125rem;
+    color: #64748b;
+}
+
+/* ==========================================================
+   THEME OVERRIDES: AUDIT ACCESS FIXES HERO
+   This comes after the standard !important gradient above.
+   ========================================================== */
+.admin-theme-light .audit-hero-standard,
+.admin-theme-light .audit-hero,
+.admin-theme-light .audit-page-hero,
+.admin-theme-light .login-page-hero,
+html[data-admin-theme="light"] .audit-hero-standard,
+html[data-admin-theme="light"] .audit-hero,
+html[data-admin-theme="light"] .audit-page-hero,
+html[data-admin-theme="light"] .login-page-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .audit-hero-standard,
+.admin-theme-dark .audit-hero,
+.admin-theme-dark .audit-page-hero,
+.admin-theme-dark .login-page-hero,
+html[data-admin-theme="dark"] .audit-hero-standard,
+html[data-admin-theme="dark"] .audit-hero,
+html[data-admin-theme="dark"] .audit-page-hero,
+html[data-admin-theme="dark"] .login-page-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .audit-hero-standard .ui-hero-pattern,
+.admin-theme-light .audit-page-hero .ui-hero-pattern,
+.admin-theme-light .login-page-hero .ui-hero-pattern,
+.admin-theme-dark .audit-hero-standard .ui-hero-pattern,
+.admin-theme-dark .audit-page-hero .ui-hero-pattern,
+.admin-theme-dark .login-page-hero .ui-hero-pattern,
+html[data-admin-theme="light"] .audit-hero-standard .ui-hero-pattern,
+html[data-admin-theme="light"] .audit-page-hero .ui-hero-pattern,
+html[data-admin-theme="light"] .login-page-hero .ui-hero-pattern,
+html[data-admin-theme="dark"] .audit-hero-standard .ui-hero-pattern,
+html[data-admin-theme="dark"] .audit-page-hero .ui-hero-pattern,
+html[data-admin-theme="dark"] .login-page-hero .ui-hero-pattern {
+    background-image: none !important;
+    opacity: 0 !important;
+}
+
+.admin-theme-light .audit-pagination-wrap .small,
+.admin-theme-light .audit-pagination-wrap p,
+html[data-admin-theme="light"] .audit-pagination-wrap .small,
+html[data-admin-theme="light"] .audit-pagination-wrap p {
+    color: #475569 !important;
+}
+
+.admin-theme-dark .audit-pagination-wrap .small,
+.admin-theme-dark .audit-pagination-wrap p,
+html[data-admin-theme="dark"] .audit-pagination-wrap .small,
+html[data-admin-theme="dark"] .audit-pagination-wrap p {
+    color: #cbd5e1 !important;
+}
+

@@ -1,0 +1,866 @@
+/* Admin Theme Switcher
+   Modes:
+   - classic: current system colours
+   - light: high contrast white interface
+   - dark: high contrast dark interface
+*/
+
+.admin-body,
+.admin-sidebar,
+.admin-topbar,
+.admin-page-content,
+.admin-ui-v4 .ui-page-hero,
+.admin-ui-v4 .ui-surface-card,
+.admin-ui-v4 .ui-stat-card,
+.admin-ui-v4 .ui-panel,
+.admin-ui-v4 .ui-filter-card,
+.admin-ui-v4 .ui-table-card,
+.admin-ui-v4 .ui-mini-card,
+.admin-ui-v4 .ui-finance-card,
+.admin-ui-v4 .ui-side-card,
+.card,
+.table,
+.dropdown-menu,
+.form-control,
+.form-select,
+.btn,
+.sidebar-menu .nav-link,
+.admin-icon-btn,
+.lang-pill,
+.admin-user-menu {
+    transition: background-color .2s ease, background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* Theme menu */
+.admin-theme-menu {
+    min-width: 290px;
+}
+
+.admin-theme-menu-title {
+    font-weight: 900;
+    color: var(--dark, #0f172a);
+    line-height: 1.1;
+}
+
+.admin-theme-menu-subtitle {
+    font-size: .78rem;
+    color: var(--gray, #64748b);
+    margin-top: .2rem;
+}
+
+.admin-theme-option {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    border-radius: 14px;
+    padding: .8rem .85rem;
+    white-space: normal;
+}
+
+.admin-theme-option.active,
+.admin-theme-option:active {
+    background: rgba(124, 58, 237, .1);
+    color: #5b21b6;
+}
+
+.admin-theme-option-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.admin-theme-option-text small {
+    margin-top: .18rem;
+    color: #64748b;
+    font-weight: 600;
+    font-size: .74rem;
+}
+
+.admin-theme-check {
+    opacity: 0;
+    color: #16a34a;
+}
+
+.admin-theme-option.active .admin-theme-check {
+    opacity: 1;
+}
+
+.admin-theme-swatch {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, .45);
+    flex: 0 0 auto;
+}
+
+.admin-theme-swatch-classic {
+    background: linear-gradient(135deg, #4c6ef5 0%, #7c3aed 100%);
+}
+
+.admin-theme-swatch-light {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.admin-theme-swatch-dark {
+    background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+}
+
+/* Classic keeps your current design. */
+.admin-theme-classic {}
+
+/* LIGHT THEME */
+.admin-theme-light {
+    --primary: #2563eb;
+    --primary-2: #1d4ed8;
+    --primary-light: #3b82f6;
+    --primary-soft: #eff6ff;
+    --dark: #020617;
+    --gray: #334155;
+    --gray-2: #475569;
+    --gray-light: #ffffff;
+    --border: #cbd5e1;
+    --white: #ffffff;
+
+    --ui-primary: #2563eb;
+    --ui-primary-2: #1d4ed8;
+    --ui-primary-3: #1e40af;
+    --ui-secondary: #020617;
+    --ui-muted: #334155;
+    --ui-text: #020617;
+    --ui-soft: #ffffff;
+    --ui-surface: #ffffff;
+    --ui-surface-2: #ffffff;
+    --ui-border: #cbd5e1;
+    --ui-border-strong: #94a3b8;
+    --ui-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+    --ui-shadow-soft: 0 8px 22px rgba(15, 23, 42, .06);
+    --ui-shadow-hero: 0 10px 28px rgba(15, 23, 42, .08);
+
+    background: #ffffff !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-topbar,
+.admin-theme-light .admin-sidebar {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 8px 26px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-light .admin-topbar {
+    border-bottom: 1px solid #cbd5e1 !important;
+}
+
+.admin-theme-light .admin-sidebar {
+    border-right: 1px solid #cbd5e1 !important;
+}
+
+.admin-theme-light .admin-page-content,
+.admin-theme-light .admin-main,
+.admin-theme-light .container-fluid,
+.admin-theme-light .page-loader,
+.admin-theme-light .modal-content {
+    background: #ffffff !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-page-kicker,
+.admin-theme-light .admin-page-subtitle,
+.admin-theme-light .admin-page-subtitle .text-muted,
+.admin-theme-light .admin-user-meta,
+.admin-theme-light .brand-subtitle,
+.admin-theme-light .sidebar-section-title,
+.admin-theme-light .sidebar-user-label,
+.admin-theme-light .sidebar-user-email,
+.admin-theme-light .small.text-muted,
+.admin-theme-light .text-muted {
+    color: #334155 !important;
+}
+
+.admin-theme-light .admin-page-title,
+.admin-theme-light .brand-title,
+.admin-theme-light .sidebar-user-name,
+.admin-theme-light .admin-user-name-topbar,
+.admin-theme-light .admin-user-menu,
+.admin-theme-light .admin-icon-btn,
+.admin-theme-light .lang-pill,
+.admin-theme-light .sidebar-menu .nav-link,
+.admin-theme-light .dropdown-user-summary-name {
+    color: #020617 !important;
+}
+
+.admin-theme-light .brand-icon-v2,
+.admin-theme-light .sidebar-user-card,
+.admin-theme-light .sidebar-search-box,
+.admin-theme-light .admin-icon-btn,
+.admin-theme-light .lang-pill,
+.admin-theme-light .admin-user-menu,
+.admin-theme-light .header-user-avatar {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #020617 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-light .sidebar-search-box input,
+.admin-theme-light .sidebar-search-box .form-control {
+    color: #020617 !important;
+}
+
+.admin-theme-light .sidebar-search-box input::placeholder {
+    color: #64748b !important;
+}
+
+.admin-theme-light .sidebar-menu .nav-link:hover,
+.admin-theme-light .admin-icon-btn:hover,
+.admin-theme-light .lang-pill:hover,
+.admin-theme-light .admin-user-menu:hover,
+.admin-theme-light .admin-user-menu:focus {
+    background: #f1f5f9 !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .sidebar-menu .nav-item.active .nav-link,
+.admin-theme-light .lang-pill.active,
+.admin-theme-light .lang-pill.active.sw {
+    background: #e0f2fe !important;
+    color: #075985 !important;
+    border-color: #7dd3fc !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-hero {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, .08) !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-hero-pattern {
+    opacity: .08;
+    background-image: linear-gradient(#94a3b8 1px, transparent 1px), linear-gradient(90deg, #94a3b8 1px, transparent 1px);
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-title,
+.admin-theme-light .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-text small {
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-icon {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+
+.admin-theme-light .card,
+.admin-theme-light .dropdown-menu,
+.admin-theme-light .admin-dropdown-menu,
+.admin-theme-light .communication-dropdown-card,
+.admin-theme-light .admin-ui-v4 .ui-surface-card,
+.admin-theme-light .admin-ui-v4 .ui-stat-card,
+.admin-theme-light .admin-ui-v4 .ui-panel,
+.admin-theme-light .admin-ui-v4 .ui-filter-card,
+.admin-theme-light .admin-ui-v4 .ui-table-card,
+.admin-theme-light .admin-ui-v4 .ui-modal-card,
+.admin-theme-light .admin-ui-v4 .ui-mini-card,
+.admin-theme-light .admin-ui-v4 .ui-finance-card,
+.admin-theme-light .admin-ui-v4 .ui-side-card,
+.admin-theme-light .table,
+.admin-theme-light .dropdown-user-summary {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+}
+
+.admin-theme-light .form-control,
+.admin-theme-light .form-select,
+.admin-theme-light textarea,
+.admin-theme-light input[type="date"],
+.admin-theme-light input[type="text"],
+.admin-theme-light input[type="email"],
+.admin-theme-light input[type="number"],
+.admin-theme-light input[type="search"] {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #94a3b8 !important;
+}
+
+.admin-theme-light .table > :not(caption) > * > *,
+.admin-theme-light .table thead th,
+.admin-theme-light .table tbody td {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* DARK THEME */
+.admin-theme-dark {
+    --primary: #a78bfa;
+    --primary-2: #8b5cf6;
+    --primary-light: #c4b5fd;
+    --primary-soft: #1e1b4b;
+    --dark: #f8fafc;
+    --gray: #cbd5e1;
+    --gray-2: #94a3b8;
+    --gray-light: #0f172a;
+    --border: #334155;
+    --white: #0f172a;
+
+    --ui-primary: #a78bfa;
+    --ui-primary-2: #8b5cf6;
+    --ui-primary-3: #6d28d9;
+    --ui-secondary: #f8fafc;
+    --ui-muted: #cbd5e1;
+    --ui-text: #f8fafc;
+    --ui-soft: #020617;
+    --ui-surface: #0f172a;
+    --ui-surface-2: #111827;
+    --ui-border: #334155;
+    --ui-border-strong: #475569;
+    --ui-shadow: 0 16px 40px rgba(0, 0, 0, .38);
+    --ui-shadow-soft: 0 12px 30px rgba(0, 0, 0, .32);
+    --ui-shadow-hero: 0 20px 50px rgba(0, 0, 0, .35);
+
+    background: #020617 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-topbar,
+.admin-theme-dark .admin-sidebar {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .34) !important;
+}
+
+.admin-theme-dark .admin-topbar {
+    border-bottom: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .admin-sidebar {
+    border-right: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .admin-page-content,
+.admin-theme-dark .admin-main,
+.admin-theme-dark .container-fluid,
+.admin-theme-dark .page-loader,
+.admin-theme-dark .modal-content {
+    background: #020617 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-page-title,
+.admin-theme-dark .brand-title,
+.admin-theme-dark .sidebar-user-name,
+.admin-theme-dark .admin-user-name-topbar,
+.admin-theme-dark .admin-user-menu,
+.admin-theme-dark .admin-icon-btn,
+.admin-theme-dark .lang-pill,
+.admin-theme-dark .sidebar-menu .nav-link,
+.admin-theme-dark .dropdown-user-summary-name,
+.admin-theme-dark h1,
+.admin-theme-dark h2,
+.admin-theme-dark h3,
+.admin-theme-dark h4,
+.admin-theme-dark h5,
+.admin-theme-dark h6,
+.admin-theme-dark label,
+.admin-theme-dark .fw-bold,
+.admin-theme-dark .fw-semibold {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-page-kicker,
+.admin-theme-dark .admin-page-subtitle,
+.admin-theme-dark .admin-page-subtitle .text-muted,
+.admin-theme-dark .admin-user-meta,
+.admin-theme-dark .brand-subtitle,
+.admin-theme-dark .sidebar-section-title,
+.admin-theme-dark .sidebar-user-label,
+.admin-theme-dark .sidebar-user-email,
+.admin-theme-dark .small.text-muted,
+.admin-theme-dark .text-muted,
+.admin-theme-dark .admin-theme-option-text small {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .brand-icon-v2,
+.admin-theme-dark .sidebar-user-card,
+.admin-theme-dark .sidebar-search-box,
+.admin-theme-dark .admin-icon-btn,
+.admin-theme-dark .lang-pill,
+.admin-theme-dark .admin-user-menu,
+.admin-theme-dark .header-user-avatar {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-dark .sidebar-search-box input,
+.admin-theme-dark .sidebar-search-box .form-control {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .sidebar-search-box input::placeholder {
+    color: #94a3b8 !important;
+}
+
+.admin-theme-dark .sidebar-menu .nav-link:hover,
+.admin-theme-dark .admin-icon-btn:hover,
+.admin-theme-dark .lang-pill:hover,
+.admin-theme-dark .admin-user-menu:hover,
+.admin-theme-dark .admin-user-menu:focus {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+.admin-theme-dark .sidebar-menu .nav-item.active .nav-link,
+.admin-theme-dark .lang-pill.active,
+.admin-theme-dark .lang-pill.active.sw {
+    background: #312e81 !important;
+    color: #ffffff !important;
+    border-color: #8b5cf6 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-hero {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,.34) !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-hero-pattern {
+    opacity: .08;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-title,
+.admin-theme-dark .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-text small {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-icon {
+    background: #111827 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .card,
+.admin-theme-dark .dropdown-menu,
+.admin-theme-dark .admin-dropdown-menu,
+.admin-theme-dark .communication-dropdown-card,
+.admin-theme-dark .admin-ui-v4 .ui-surface-card,
+.admin-theme-dark .admin-ui-v4 .ui-stat-card,
+.admin-theme-dark .admin-ui-v4 .ui-panel,
+.admin-theme-dark .admin-ui-v4 .ui-filter-card,
+.admin-theme-dark .admin-ui-v4 .ui-table-card,
+.admin-theme-dark .admin-ui-v4 .ui-modal-card,
+.admin-theme-dark .admin-ui-v4 .ui-mini-card,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card,
+.admin-theme-dark .admin-ui-v4 .ui-side-card,
+.admin-theme-dark .table,
+.admin-theme-dark .dropdown-user-summary {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .dropdown-item,
+.admin-theme-dark .communication-grid-item,
+.admin-theme-dark .admin-theme-menu-title,
+.admin-theme-dark .admin-theme-option {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .dropdown-item:hover,
+.admin-theme-dark .communication-grid-item:hover,
+.admin-theme-dark .admin-theme-option:hover,
+.admin-theme-dark .admin-theme-option.active {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+.admin-theme-dark .form-control,
+.admin-theme-dark .form-select,
+.admin-theme-dark textarea,
+.admin-theme-dark input[type="date"],
+.admin-theme-dark input[type="text"],
+.admin-theme-dark input[type="email"],
+.admin-theme-dark input[type="number"],
+.admin-theme-dark input[type="search"] {
+    background-color: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-dark .form-control::placeholder,
+.admin-theme-dark textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.admin-theme-dark .table > :not(caption) > * > *,
+.admin-theme-dark .table thead th,
+.admin-theme-dark .table tbody td {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .page-loader-text {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .border,
+.admin-theme-dark .border-top,
+.admin-theme-dark .border-end,
+.admin-theme-dark .border-bottom,
+.admin-theme-dark .border-start,
+.admin-theme-dark hr,
+.admin-theme-dark .dropdown-divider {
+    border-color: #334155 !important;
+}
+
+/* =====================================================================
+   FINAL STRONG OVERRIDES FOR PAGE HEROES, CMS HEROES AND MIXED CARDS
+   Keep this block at the END of public/admin/css/admin-theme-switcher.css.
+   It targets the actual classes used by cms.css/admin-ui-v3/admin-ui-v4.
+   ===================================================================== */
+
+/* LIGHT: smooth soft white surfaces */
+body.admin-theme-light,
+html[data-admin-theme="light"] body {
+    background: #f8fafc !important;
+}
+
+body.admin-theme-light .admin-main,
+body.admin-theme-light .admin-page-content,
+body.admin-theme-light .content-wrapper,
+body.admin-theme-light main,
+html[data-admin-theme="light"] body .admin-main,
+html[data-admin-theme="light"] body .admin-page-content,
+html[data-admin-theme="light"] body .content-wrapper,
+html[data-admin-theme="light"] body main {
+    background: linear-gradient(180deg, #fbfdff 0%, #f8fafc 100%) !important;
+    color: #020617 !important;
+}
+
+/* LIGHT: override every purple/gradient hero, including cms.css !important gradients */
+body.admin-theme-light .admin-ui-v4 .ui-page-hero,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero,
+body.admin-theme-light .ui-page-hero,
+body.admin-theme-light .cms-hero,
+body.admin-theme-light .cms-hero-dashboard,
+body.admin-theme-light .cms-hero-homepage,
+body.admin-theme-light .cms-hero-content,
+body.admin-theme-light [class*="hero"]:not(.btn):not([class*="icon"]),
+html[data-admin-theme="light"] body .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="light"] body .admin-ui-v3 .ui-page-hero,
+html[data-admin-theme="light"] body .ui-page-hero,
+html[data-admin-theme="light"] body .cms-hero,
+html[data-admin-theme="light"] body .cms-hero-dashboard,
+html[data-admin-theme="light"] body .cms-hero-homepage,
+html[data-admin-theme="light"] body .cms-hero-content,
+html[data-admin-theme="light"] body [class*="hero"]:not(.btn):not([class*="icon"]) {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+body.admin-theme-light .admin-ui-v4 .ui-hero-pattern,
+body.admin-theme-light .admin-ui-v3 .ui-hero-pattern,
+body.admin-theme-light .cms-hero::before,
+html[data-admin-theme="light"] body .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="light"] body .admin-ui-v3 .ui-hero-pattern,
+html[data-admin-theme="light"] body .cms-hero::before {
+    background-image:
+        linear-gradient(rgba(148, 163, 184, .16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, .16) 1px, transparent 1px) !important;
+    background-size: 18px 18px !important;
+    opacity: .35 !important;
+}
+
+body.admin-theme-light .ui-page-hero *,
+body.admin-theme-light .cms-hero *,
+body.admin-theme-light [class*="hero"] *:not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+html[data-admin-theme="light"] body .ui-page-hero *,
+html[data-admin-theme="light"] body .cms-hero *,
+html[data-admin-theme="light"] body [class*="hero"] *:not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info) {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .ui-page-subtitle,
+body.admin-theme-light .cms-hero-subtitle,
+body.admin-theme-light .ui-meta-pill,
+body.admin-theme-light .cms-hero-pill,
+body.admin-theme-light .ui-page-badge,
+body.admin-theme-light .cms-hero-badge,
+html[data-admin-theme="light"] body .ui-page-subtitle,
+html[data-admin-theme="light"] body .cms-hero-subtitle,
+html[data-admin-theme="light"] body .ui-meta-pill,
+html[data-admin-theme="light"] body .cms-hero-pill,
+html[data-admin-theme="light"] body .ui-page-badge,
+html[data-admin-theme="light"] body .cms-hero-badge {
+    color: #334155 !important;
+}
+
+body.admin-theme-light .ui-page-badge,
+body.admin-theme-light .ui-meta-pill,
+body.admin-theme-light .ui-hero-action,
+body.admin-theme-light .cms-hero-badge,
+body.admin-theme-light .cms-hero-pill,
+body.admin-theme-light .cms-hero .btn,
+body.admin-theme-light .cms-quick-links .btn,
+html[data-admin-theme="light"] body .ui-page-badge,
+html[data-admin-theme="light"] body .ui-meta-pill,
+html[data-admin-theme="light"] body .ui-hero-action,
+html[data-admin-theme="light"] body .cms-hero-badge,
+html[data-admin-theme="light"] body .cms-hero-pill,
+html[data-admin-theme="light"] body .cms-hero .btn,
+html[data-admin-theme="light"] body .cms-quick-links .btn {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+/* DARK: prevent old light card CSS from leaking into dark mode */
+body.admin-theme-dark,
+html[data-admin-theme="dark"] body {
+    background: #020617 !important;
+}
+
+body.admin-theme-dark .admin-main,
+body.admin-theme-dark .admin-page-content,
+body.admin-theme-dark .content-wrapper,
+body.admin-theme-dark main,
+html[data-admin-theme="dark"] body .admin-main,
+html[data-admin-theme="dark"] body .admin-page-content,
+html[data-admin-theme="dark"] body .content-wrapper,
+html[data-admin-theme="dark"] body main {
+    background: #020617 !important;
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero,
+body.admin-theme-dark .ui-page-hero,
+body.admin-theme-dark .cms-hero,
+body.admin-theme-dark .cms-hero-dashboard,
+body.admin-theme-dark .cms-hero-homepage,
+body.admin-theme-dark .cms-hero-content,
+body.admin-theme-dark [class*="hero"]:not(.btn):not([class*="icon"]),
+html[data-admin-theme="dark"] body .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="dark"] body .admin-ui-v3 .ui-page-hero,
+html[data-admin-theme="dark"] body .ui-page-hero,
+html[data-admin-theme="dark"] body .cms-hero,
+html[data-admin-theme="dark"] body .cms-hero-dashboard,
+html[data-admin-theme="dark"] body .cms-hero-homepage,
+html[data-admin-theme="dark"] body .cms-hero-content,
+html[data-admin-theme="dark"] body [class*="hero"]:not(.btn):not([class*="icon"]) {
+    background: #0f172a !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+body.admin-theme-dark .admin-ui-v4 .ui-hero-pattern,
+body.admin-theme-dark .admin-ui-v3 .ui-hero-pattern,
+body.admin-theme-dark .cms-hero::before,
+html[data-admin-theme="dark"] body .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="dark"] body .admin-ui-v3 .ui-hero-pattern,
+html[data-admin-theme="dark"] body .cms-hero::before {
+    background-image:
+        linear-gradient(rgba(148, 163, 184, .14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, .14) 1px, transparent 1px) !important;
+    background-size: 18px 18px !important;
+    opacity: .16 !important;
+}
+
+body.admin-theme-dark .ui-page-hero *,
+body.admin-theme-dark .cms-hero *,
+body.admin-theme-dark [class*="hero"] *:not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+html[data-admin-theme="dark"] body .ui-page-hero *,
+html[data-admin-theme="dark"] body .cms-hero *,
+html[data-admin-theme="dark"] body [class*="hero"] *:not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info) {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .ui-page-subtitle,
+body.admin-theme-dark .cms-hero-subtitle,
+body.admin-theme-dark .ui-meta-pill,
+body.admin-theme-dark .cms-hero-pill,
+body.admin-theme-dark .ui-page-badge,
+body.admin-theme-dark .cms-hero-badge,
+html[data-admin-theme="dark"] body .ui-page-subtitle,
+html[data-admin-theme="dark"] body .cms-hero-subtitle,
+html[data-admin-theme="dark"] body .ui-meta-pill,
+html[data-admin-theme="dark"] body .cms-hero-pill,
+html[data-admin-theme="dark"] body .ui-page-badge,
+html[data-admin-theme="dark"] body .cms-hero-badge {
+    color: #cbd5e1 !important;
+}
+
+body.admin-theme-dark .ui-page-badge,
+body.admin-theme-dark .ui-meta-pill,
+body.admin-theme-dark .ui-hero-action,
+body.admin-theme-dark .cms-hero-badge,
+body.admin-theme-dark .cms-hero-pill,
+body.admin-theme-dark .cms-hero .btn,
+body.admin-theme-dark .cms-quick-links .btn,
+html[data-admin-theme="dark"] body .ui-page-badge,
+html[data-admin-theme="dark"] body .ui-meta-pill,
+html[data-admin-theme="dark"] body .ui-hero-action,
+html[data-admin-theme="dark"] body .cms-hero-badge,
+html[data-admin-theme="dark"] body .cms-hero-pill,
+html[data-admin-theme="dark"] body .cms-hero .btn,
+html[data-admin-theme="dark"] body .cms-quick-links .btn {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+/* Cards/panels/charts - fixes dark mode pages where old CSS keeps cards white */
+body.admin-theme-dark .card,
+body.admin-theme-dark .stat-card,
+body.admin-theme-dark .summary-card,
+body.admin-theme-dark .dashboard-card,
+body.admin-theme-dark .metric-card,
+body.admin-theme-dark .chart-card,
+body.admin-theme-dark .report-card,
+body.admin-theme-dark .data-card,
+body.admin-theme-dark .filter-card,
+body.admin-theme-dark .table-card,
+body.admin-theme-dark .cms-card,
+body.admin-theme-dark .cms-stat-card,
+body.admin-theme-dark .admin-ui-v4 .ui-surface-card,
+body.admin-theme-dark .admin-ui-v4 .ui-stat-card,
+body.admin-theme-dark .admin-ui-v4 .ui-panel,
+body.admin-theme-dark .admin-ui-v4 .ui-filter-card,
+body.admin-theme-dark .admin-ui-v4 .ui-table-card,
+body.admin-theme-dark .admin-ui-v4 .ui-mini-card,
+body.admin-theme-dark .admin-ui-v4 .ui-finance-card,
+body.admin-theme-dark .admin-ui-v4 .ui-side-card,
+body.admin-theme-dark .admin-ui-v3 .ui-surface-card,
+body.admin-theme-dark .admin-ui-v3 .ui-stat-card,
+body.admin-theme-dark .admin-ui-v3 .ui-panel,
+body.admin-theme-dark .admin-ui-v3 .ui-filter-card,
+body.admin-theme-dark .admin-ui-v3 .ui-table-card,
+body.admin-theme-dark .admin-ui-v3 .ui-mini-card,
+body.admin-theme-dark .admin-ui-v3 .ui-finance-card,
+body.admin-theme-dark .admin-ui-v3 .ui-side-card,
+html[data-admin-theme="dark"] body .card,
+html[data-admin-theme="dark"] body .stat-card,
+html[data-admin-theme="dark"] body .summary-card,
+html[data-admin-theme="dark"] body .dashboard-card,
+html[data-admin-theme="dark"] body .metric-card,
+html[data-admin-theme="dark"] body .chart-card,
+html[data-admin-theme="dark"] body .report-card,
+html[data-admin-theme="dark"] body .data-card,
+html[data-admin-theme="dark"] body .filter-card,
+html[data-admin-theme="dark"] body .table-card,
+html[data-admin-theme="dark"] body .cms-card,
+html[data-admin-theme="dark"] body .cms-stat-card {
+    background: #0f172a !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 14px 34px rgba(0,0,0,.28) !important;
+}
+
+body.admin-theme-dark .card *,
+body.admin-theme-dark .stat-card *,
+body.admin-theme-dark .summary-card *,
+body.admin-theme-dark .dashboard-card *,
+body.admin-theme-dark .metric-card *,
+body.admin-theme-dark .chart-card *,
+body.admin-theme-dark .report-card *,
+body.admin-theme-dark .data-card *,
+body.admin-theme-dark .filter-card *,
+body.admin-theme-dark .table-card *,
+body.admin-theme-dark .cms-card *,
+body.admin-theme-dark .cms-stat-card *,
+html[data-admin-theme="dark"] body .card *,
+html[data-admin-theme="dark"] body .stat-card *,
+html[data-admin-theme="dark"] body .summary-card *,
+html[data-admin-theme="dark"] body .dashboard-card *,
+html[data-admin-theme="dark"] body .metric-card *,
+html[data-admin-theme="dark"] body .chart-card *,
+html[data-admin-theme="dark"] body .report-card *,
+html[data-admin-theme="dark"] body .data-card *,
+html[data-admin-theme="dark"] body .filter-card *,
+html[data-admin-theme="dark"] body .table-card *,
+html[data-admin-theme="dark"] body .cms-card *,
+html[data-admin-theme="dark"] body .cms-stat-card * {
+    color: inherit !important;
+}
+
+body.admin-theme-dark .card .text-muted,
+body.admin-theme-dark .stat-card .text-muted,
+body.admin-theme-dark .summary-card .text-muted,
+body.admin-theme-dark .dashboard-card .text-muted,
+body.admin-theme-dark .metric-card .text-muted,
+body.admin-theme-dark .chart-card .text-muted,
+body.admin-theme-dark .report-card .text-muted,
+body.admin-theme-dark .data-card .text-muted,
+body.admin-theme-dark .filter-card .text-muted,
+body.admin-theme-dark .table-card .text-muted,
+body.admin-theme-dark .cms-card .text-muted,
+body.admin-theme-dark .cms-stat-card .text-muted,
+html[data-admin-theme="dark"] body .text-muted {
+    color: #cbd5e1 !important;
+}
+
+/* Light cards stay soft, not harsh white on white */
+body.admin-theme-light .card,
+body.admin-theme-light .stat-card,
+body.admin-theme-light .summary-card,
+body.admin-theme-light .dashboard-card,
+body.admin-theme-light .metric-card,
+body.admin-theme-light .chart-card,
+body.admin-theme-light .report-card,
+body.admin-theme-light .data-card,
+body.admin-theme-light .filter-card,
+body.admin-theme-light .table-card,
+body.admin-theme-light .cms-card,
+body.admin-theme-light .cms-stat-card,
+html[data-admin-theme="light"] body .card,
+html[data-admin-theme="light"] body .stat-card,
+html[data-admin-theme="light"] body .summary-card,
+html[data-admin-theme="light"] body .dashboard-card,
+html[data-admin-theme="light"] body .metric-card,
+html[data-admin-theme="light"] body .chart-card,
+html[data-admin-theme="light"] body .report-card,
+html[data-admin-theme="light"] body .data-card,
+html[data-admin-theme="light"] body .filter-card,
+html[data-admin-theme="light"] body .table-card,
+html[data-admin-theme="light"] body .cms-card,
+html[data-admin-theme="light"] body .cms-stat-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .06) !important;
+}

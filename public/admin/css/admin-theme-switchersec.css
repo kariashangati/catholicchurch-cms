@@ -1,0 +1,875 @@
+/* Admin Theme Switcher
+   Modes:
+   - classic: current system colours
+   - light: high contrast white interface
+   - dark: high contrast dark interface
+*/
+
+.admin-body,
+.admin-sidebar,
+.admin-topbar,
+.admin-page-content,
+.admin-ui-v4 .ui-page-hero,
+.admin-ui-v4 .ui-surface-card,
+.admin-ui-v4 .ui-stat-card,
+.admin-ui-v4 .ui-panel,
+.admin-ui-v4 .ui-filter-card,
+.admin-ui-v4 .ui-table-card,
+.admin-ui-v4 .ui-mini-card,
+.admin-ui-v4 .ui-finance-card,
+.admin-ui-v4 .ui-side-card,
+.card,
+.table,
+.dropdown-menu,
+.form-control,
+.form-select,
+.btn,
+.sidebar-menu .nav-link,
+.admin-icon-btn,
+.lang-pill,
+.admin-user-menu {
+    transition: background-color .2s ease, background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* Theme menu */
+.admin-theme-menu {
+    min-width: 290px;
+}
+
+.admin-theme-menu-title {
+    font-weight: 900;
+    color: var(--dark, #0f172a);
+    line-height: 1.1;
+}
+
+.admin-theme-menu-subtitle {
+    font-size: .78rem;
+    color: var(--gray, #64748b);
+    margin-top: .2rem;
+}
+
+.admin-theme-option {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    border-radius: 14px;
+    padding: .8rem .85rem;
+    white-space: normal;
+}
+
+.admin-theme-option.active,
+.admin-theme-option:active {
+    background: rgba(124, 58, 237, .1);
+    color: #5b21b6;
+}
+
+.admin-theme-option-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.admin-theme-option-text small {
+    margin-top: .18rem;
+    color: #64748b;
+    font-weight: 600;
+    font-size: .74rem;
+}
+
+.admin-theme-check {
+    opacity: 0;
+    color: #16a34a;
+}
+
+.admin-theme-option.active .admin-theme-check {
+    opacity: 1;
+}
+
+.admin-theme-swatch {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, .45);
+    flex: 0 0 auto;
+}
+
+.admin-theme-swatch-classic {
+    background: linear-gradient(135deg, #4c6ef5 0%, #7c3aed 100%);
+}
+
+.admin-theme-swatch-light {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.admin-theme-swatch-dark {
+    background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+}
+
+/* Classic keeps your current design. */
+.admin-theme-classic {}
+
+/* LIGHT THEME */
+.admin-theme-light {
+    --primary: #2563eb;
+    --primary-2: #1d4ed8;
+    --primary-light: #3b82f6;
+    --primary-soft: #eff6ff;
+    --dark: #020617;
+    --gray: #334155;
+    --gray-2: #475569;
+    --gray-light: #ffffff;
+    --border: #cbd5e1;
+    --white: #ffffff;
+
+    --ui-primary: #2563eb;
+    --ui-primary-2: #1d4ed8;
+    --ui-primary-3: #1e40af;
+    --ui-secondary: #020617;
+    --ui-muted: #334155;
+    --ui-text: #020617;
+    --ui-soft: #ffffff;
+    --ui-surface: #ffffff;
+    --ui-surface-2: #ffffff;
+    --ui-border: #cbd5e1;
+    --ui-border-strong: #94a3b8;
+    --ui-shadow: 0 10px 28px rgba(15, 23, 42, .08);
+    --ui-shadow-soft: 0 8px 22px rgba(15, 23, 42, .06);
+    --ui-shadow-hero: 0 10px 28px rgba(15, 23, 42, .08);
+
+    background: #ffffff !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-topbar,
+.admin-theme-light .admin-sidebar {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 8px 26px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-light .admin-topbar {
+    border-bottom: 1px solid #cbd5e1 !important;
+}
+
+.admin-theme-light .admin-sidebar {
+    border-right: 1px solid #cbd5e1 !important;
+}
+
+.admin-theme-light .admin-page-content,
+.admin-theme-light .admin-main,
+.admin-theme-light .container-fluid,
+.admin-theme-light .page-loader,
+.admin-theme-light .modal-content {
+    background: #ffffff !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-page-kicker,
+.admin-theme-light .admin-page-subtitle,
+.admin-theme-light .admin-page-subtitle .text-muted,
+.admin-theme-light .admin-user-meta,
+.admin-theme-light .brand-subtitle,
+.admin-theme-light .sidebar-section-title,
+.admin-theme-light .sidebar-user-label,
+.admin-theme-light .sidebar-user-email,
+.admin-theme-light .small.text-muted,
+.admin-theme-light .text-muted {
+    color: #334155 !important;
+}
+
+.admin-theme-light .admin-page-title,
+.admin-theme-light .brand-title,
+.admin-theme-light .sidebar-user-name,
+.admin-theme-light .admin-user-name-topbar,
+.admin-theme-light .admin-user-menu,
+.admin-theme-light .admin-icon-btn,
+.admin-theme-light .lang-pill,
+.admin-theme-light .sidebar-menu .nav-link,
+.admin-theme-light .dropdown-user-summary-name {
+    color: #020617 !important;
+}
+
+.admin-theme-light .brand-icon-v2,
+.admin-theme-light .sidebar-user-card,
+.admin-theme-light .sidebar-search-box,
+.admin-theme-light .admin-icon-btn,
+.admin-theme-light .lang-pill,
+.admin-theme-light .admin-user-menu,
+.admin-theme-light .header-user-avatar {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #020617 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-light .sidebar-search-box input,
+.admin-theme-light .sidebar-search-box .form-control {
+    color: #020617 !important;
+}
+
+.admin-theme-light .sidebar-search-box input::placeholder {
+    color: #64748b !important;
+}
+
+.admin-theme-light .sidebar-menu .nav-link:hover,
+.admin-theme-light .admin-icon-btn:hover,
+.admin-theme-light .lang-pill:hover,
+.admin-theme-light .admin-user-menu:hover,
+.admin-theme-light .admin-user-menu:focus {
+    background: #f1f5f9 !important;
+    color: #020617 !important;
+}
+
+.admin-theme-light .sidebar-menu .nav-item.active .nav-link,
+.admin-theme-light .lang-pill.active,
+.admin-theme-light .lang-pill.active.sw {
+    background: #e0f2fe !important;
+    color: #075985 !important;
+    border-color: #7dd3fc !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-hero {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, .08) !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-hero-pattern {
+    opacity: .08;
+    background-image: linear-gradient(#94a3b8 1px, transparent 1px), linear-gradient(90deg, #94a3b8 1px, transparent 1px);
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-title,
+.admin-theme-light .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-text small {
+    color: #020617 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-page-badge,
+.admin-theme-light .admin-ui-v4 .ui-meta-pill,
+.admin-theme-light .admin-ui-v4 .ui-hero-action,
+.admin-theme-light .admin-ui-v4 .ui-hero-action-icon {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+
+.admin-theme-light .card,
+.admin-theme-light .dropdown-menu,
+.admin-theme-light .admin-dropdown-menu,
+.admin-theme-light .communication-dropdown-card,
+.admin-theme-light .admin-ui-v4 .ui-surface-card,
+.admin-theme-light .admin-ui-v4 .ui-stat-card,
+.admin-theme-light .admin-ui-v4 .ui-panel,
+.admin-theme-light .admin-ui-v4 .ui-filter-card,
+.admin-theme-light .admin-ui-v4 .ui-table-card,
+.admin-theme-light .admin-ui-v4 .ui-modal-card,
+.admin-theme-light .admin-ui-v4 .ui-mini-card,
+.admin-theme-light .admin-ui-v4 .ui-finance-card,
+.admin-theme-light .admin-ui-v4 .ui-side-card,
+.admin-theme-light .table,
+.admin-theme-light .dropdown-user-summary {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+}
+
+.admin-theme-light .form-control,
+.admin-theme-light .form-select,
+.admin-theme-light textarea,
+.admin-theme-light input[type="date"],
+.admin-theme-light input[type="text"],
+.admin-theme-light input[type="email"],
+.admin-theme-light input[type="number"],
+.admin-theme-light input[type="search"] {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #94a3b8 !important;
+}
+
+.admin-theme-light .table > :not(caption) > * > *,
+.admin-theme-light .table thead th,
+.admin-theme-light .table tbody td {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* DARK THEME */
+.admin-theme-dark {
+    --primary: #a78bfa;
+    --primary-2: #8b5cf6;
+    --primary-light: #c4b5fd;
+    --primary-soft: #1e1b4b;
+    --dark: #f8fafc;
+    --gray: #cbd5e1;
+    --gray-2: #94a3b8;
+    --gray-light: #0f172a;
+    --border: #334155;
+    --white: #0f172a;
+
+    --ui-primary: #a78bfa;
+    --ui-primary-2: #8b5cf6;
+    --ui-primary-3: #6d28d9;
+    --ui-secondary: #f8fafc;
+    --ui-muted: #cbd5e1;
+    --ui-text: #f8fafc;
+    --ui-soft: #020617;
+    --ui-surface: #0f172a;
+    --ui-surface-2: #111827;
+    --ui-border: #334155;
+    --ui-border-strong: #475569;
+    --ui-shadow: 0 16px 40px rgba(0, 0, 0, .38);
+    --ui-shadow-soft: 0 12px 30px rgba(0, 0, 0, .32);
+    --ui-shadow-hero: 0 20px 50px rgba(0, 0, 0, .35);
+
+    background: #020617 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-topbar,
+.admin-theme-dark .admin-sidebar {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .34) !important;
+}
+
+.admin-theme-dark .admin-topbar {
+    border-bottom: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .admin-sidebar {
+    border-right: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .admin-page-content,
+.admin-theme-dark .admin-main,
+.admin-theme-dark .container-fluid,
+.admin-theme-dark .page-loader,
+.admin-theme-dark .modal-content {
+    background: #020617 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-page-title,
+.admin-theme-dark .brand-title,
+.admin-theme-dark .sidebar-user-name,
+.admin-theme-dark .admin-user-name-topbar,
+.admin-theme-dark .admin-user-menu,
+.admin-theme-dark .admin-icon-btn,
+.admin-theme-dark .lang-pill,
+.admin-theme-dark .sidebar-menu .nav-link,
+.admin-theme-dark .dropdown-user-summary-name,
+.admin-theme-dark h1,
+.admin-theme-dark h2,
+.admin-theme-dark h3,
+.admin-theme-dark h4,
+.admin-theme-dark h5,
+.admin-theme-dark h6,
+.admin-theme-dark label,
+.admin-theme-dark .fw-bold,
+.admin-theme-dark .fw-semibold {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-page-kicker,
+.admin-theme-dark .admin-page-subtitle,
+.admin-theme-dark .admin-page-subtitle .text-muted,
+.admin-theme-dark .admin-user-meta,
+.admin-theme-dark .brand-subtitle,
+.admin-theme-dark .sidebar-section-title,
+.admin-theme-dark .sidebar-user-label,
+.admin-theme-dark .sidebar-user-email,
+.admin-theme-dark .small.text-muted,
+.admin-theme-dark .text-muted,
+.admin-theme-dark .admin-theme-option-text small {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .brand-icon-v2,
+.admin-theme-dark .sidebar-user-card,
+.admin-theme-dark .sidebar-search-box,
+.admin-theme-dark .admin-icon-btn,
+.admin-theme-dark .lang-pill,
+.admin-theme-dark .admin-user-menu,
+.admin-theme-dark .header-user-avatar {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-dark .sidebar-search-box input,
+.admin-theme-dark .sidebar-search-box .form-control {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .sidebar-search-box input::placeholder {
+    color: #94a3b8 !important;
+}
+
+.admin-theme-dark .sidebar-menu .nav-link:hover,
+.admin-theme-dark .admin-icon-btn:hover,
+.admin-theme-dark .lang-pill:hover,
+.admin-theme-dark .admin-user-menu:hover,
+.admin-theme-dark .admin-user-menu:focus {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+.admin-theme-dark .sidebar-menu .nav-item.active .nav-link,
+.admin-theme-dark .lang-pill.active,
+.admin-theme-dark .lang-pill.active.sw {
+    background: #312e81 !important;
+    color: #ffffff !important;
+    border-color: #8b5cf6 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-hero {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,.34) !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-hero-pattern {
+    opacity: .08;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-title,
+.admin-theme-dark .admin-ui-v4 .ui-page-subtitle,
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action:hover,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-text small {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-page-badge,
+.admin-theme-dark .admin-ui-v4 .ui-meta-pill,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action,
+.admin-theme-dark .admin-ui-v4 .ui-hero-action-icon {
+    background: #111827 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .card,
+.admin-theme-dark .dropdown-menu,
+.admin-theme-dark .admin-dropdown-menu,
+.admin-theme-dark .communication-dropdown-card,
+.admin-theme-dark .admin-ui-v4 .ui-surface-card,
+.admin-theme-dark .admin-ui-v4 .ui-stat-card,
+.admin-theme-dark .admin-ui-v4 .ui-panel,
+.admin-theme-dark .admin-ui-v4 .ui-filter-card,
+.admin-theme-dark .admin-ui-v4 .ui-table-card,
+.admin-theme-dark .admin-ui-v4 .ui-modal-card,
+.admin-theme-dark .admin-ui-v4 .ui-mini-card,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card,
+.admin-theme-dark .admin-ui-v4 .ui-side-card,
+.admin-theme-dark .table,
+.admin-theme-dark .dropdown-user-summary {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .dropdown-item,
+.admin-theme-dark .communication-grid-item,
+.admin-theme-dark .admin-theme-menu-title,
+.admin-theme-dark .admin-theme-option {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .dropdown-item:hover,
+.admin-theme-dark .communication-grid-item:hover,
+.admin-theme-dark .admin-theme-option:hover,
+.admin-theme-dark .admin-theme-option.active {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+.admin-theme-dark .form-control,
+.admin-theme-dark .form-select,
+.admin-theme-dark textarea,
+.admin-theme-dark input[type="date"],
+.admin-theme-dark input[type="text"],
+.admin-theme-dark input[type="email"],
+.admin-theme-dark input[type="number"],
+.admin-theme-dark input[type="search"] {
+    background-color: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-dark .form-control::placeholder,
+.admin-theme-dark textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.admin-theme-dark .table > :not(caption) > * > *,
+.admin-theme-dark .table thead th,
+.admin-theme-dark .table tbody td {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .page-loader-text {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .border,
+.admin-theme-dark .border-top,
+.admin-theme-dark .border-end,
+.admin-theme-dark .border-bottom,
+.admin-theme-dark .border-start,
+.admin-theme-dark hr,
+.admin-theme-dark .dropdown-divider {
+    border-color: #334155 !important;
+}
+
+
+/* =====================================================================
+   BALANCED HERO OVERRIDE ONLY
+   Purpose:
+   - Keep the old theme behaviour for tables, cards, badges and status pills.
+   - Override only real page hero containers so purple gradients become
+     soft white in light mode and dark in dark mode.
+   - Do NOT use broad selectors like [class*="hero"] and do NOT force
+     card/status children to inherit colors.
+   ===================================================================== */
+
+/* ---------- LIGHT HERO SURFACE ---------- */
+body.admin-theme-light .admin-ui-v4 .ui-page-hero,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero,
+body.admin-theme-light .dashboard-v3 .dashboard-hero,
+body.admin-theme-light .finance-dashboard-v3 .finance-hero,
+body.admin-theme-light .finance-dashboard-v3 .dashboard-hero,
+body.admin-theme-light .kanda-v3 .dashboard-hero,
+body.admin-theme-light .kanda-pages .dashboard-hero,
+body.admin-theme-light .kanda-report-v3 .dashboard-hero,
+body.admin-theme-light .familia-dashboard-hero,
+body.admin-theme-light .members-hero,
+body.admin-theme-light .members-show-hero,
+body.admin-theme-light .apg-hero,
+body.admin-theme-light .apg-show-hero,
+body.admin-theme-light .access-hero,
+body.admin-theme-light .access-page-hero,
+body.admin-theme-light .access-form-hero,
+body.admin-theme-light .profile-hero,
+body.admin-theme-light .audit-hero-standard,
+body.admin-theme-light .audit-hero,
+body.admin-theme-light .audit-page-hero,
+body.admin-theme-light .login-page-hero,
+body.admin-theme-light .cms-hero,
+body.admin-theme-light .cms-hero-dashboard,
+body.admin-theme-light .cms-hero-homepage,
+body.admin-theme-light .cms-hero-content,
+html[data-admin-theme="light"] body .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="light"] body .admin-ui-v3 .ui-page-hero,
+html[data-admin-theme="light"] body .dashboard-v3 .dashboard-hero,
+html[data-admin-theme="light"] body .finance-dashboard-v3 .finance-hero,
+html[data-admin-theme="light"] body .finance-dashboard-v3 .dashboard-hero,
+html[data-admin-theme="light"] body .kanda-v3 .dashboard-hero,
+html[data-admin-theme="light"] body .kanda-pages .dashboard-hero,
+html[data-admin-theme="light"] body .kanda-report-v3 .dashboard-hero,
+html[data-admin-theme="light"] body .familia-dashboard-hero,
+html[data-admin-theme="light"] body .members-hero,
+html[data-admin-theme="light"] body .members-show-hero,
+html[data-admin-theme="light"] body .apg-hero,
+html[data-admin-theme="light"] body .apg-show-hero,
+html[data-admin-theme="light"] body .access-hero,
+html[data-admin-theme="light"] body .access-page-hero,
+html[data-admin-theme="light"] body .access-form-hero,
+html[data-admin-theme="light"] body .profile-hero,
+html[data-admin-theme="light"] body .audit-hero-standard,
+html[data-admin-theme="light"] body .audit-hero,
+html[data-admin-theme="light"] body .audit-page-hero,
+html[data-admin-theme="light"] body .login-page-hero,
+html[data-admin-theme="light"] body .cms-hero,
+html[data-admin-theme="light"] body .cms-hero-dashboard,
+html[data-admin-theme="light"] body .cms-hero-homepage,
+html[data-admin-theme="light"] body .cms-hero-content {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+body.admin-theme-light .admin-ui-v4 .ui-hero-pattern,
+body.admin-theme-light .admin-ui-v3 .ui-hero-pattern,
+body.admin-theme-light .cms-hero::before,
+body.admin-theme-light .cms-hero-dashboard::before,
+body.admin-theme-light .cms-hero-homepage::before,
+body.admin-theme-light .cms-hero-content::before,
+body.admin-theme-light .access-hero::before,
+body.admin-theme-light .access-page-hero::before,
+body.admin-theme-light .access-form-hero::before,
+body.admin-theme-light .profile-hero::before,
+body.admin-theme-light .audit-hero::before,
+body.admin-theme-light .audit-page-hero::before,
+body.admin-theme-light .login-page-hero::before,
+body.admin-theme-light .dashboard-v3 .dashboard-hero::after,
+body.admin-theme-light .familia-dashboard-hero::after,
+body.admin-theme-light .members-show-hero::after,
+body.admin-theme-light .apg-hero::before,
+html[data-admin-theme="light"] body .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="light"] body .admin-ui-v3 .ui-hero-pattern,
+html[data-admin-theme="light"] body .cms-hero::before,
+html[data-admin-theme="light"] body .cms-hero-dashboard::before,
+html[data-admin-theme="light"] body .cms-hero-homepage::before,
+html[data-admin-theme="light"] body .cms-hero-content::before {
+    background-image:
+        linear-gradient(rgba(148, 163, 184, .14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, .14) 1px, transparent 1px) !important;
+    background-size: 20px 20px !important;
+    opacity: .32 !important;
+}
+
+body.admin-theme-light .admin-ui-v4 .ui-page-hero,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero,
+body.admin-theme-light .dashboard-v3 .dashboard-hero,
+body.admin-theme-light .finance-dashboard-v3 .finance-hero,
+body.admin-theme-light .finance-dashboard-v3 .dashboard-hero,
+body.admin-theme-light .kanda-v3 .dashboard-hero,
+body.admin-theme-light .kanda-pages .dashboard-hero,
+body.admin-theme-light .kanda-report-v3 .dashboard-hero,
+body.admin-theme-light .familia-dashboard-hero,
+body.admin-theme-light .members-hero,
+body.admin-theme-light .members-show-hero,
+body.admin-theme-light .apg-hero,
+body.admin-theme-light .apg-show-hero,
+body.admin-theme-light .access-hero,
+body.admin-theme-light .access-page-hero,
+body.admin-theme-light .access-form-hero,
+body.admin-theme-light .profile-hero,
+body.admin-theme-light .audit-hero-standard,
+body.admin-theme-light .audit-hero,
+body.admin-theme-light .audit-page-hero,
+body.admin-theme-light .login-page-hero,
+body.admin-theme-light .cms-hero,
+body.admin-theme-light .cms-hero-dashboard,
+body.admin-theme-light .cms-hero-homepage,
+body.admin-theme-light .cms-hero-content,
+body.admin-theme-light .admin-ui-v4 .ui-page-hero h1,
+body.admin-theme-light .admin-ui-v4 .ui-page-hero h2,
+body.admin-theme-light .admin-ui-v4 .ui-page-hero h3,
+body.admin-theme-light .admin-ui-v4 .ui-page-hero p,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero h1,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero h2,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero h3,
+body.admin-theme-light .admin-ui-v3 .ui-page-hero p,
+body.admin-theme-light .ui-page-title,
+body.admin-theme-light .ui-page-subtitle,
+body.admin-theme-light .cms-hero-title,
+body.admin-theme-light .cms-hero-subtitle,
+body.admin-theme-light .access-hero-title,
+body.admin-theme-light .access-hero-subtitle,
+body.admin-theme-light .access-page-hero-title,
+body.admin-theme-light .access-page-hero-subtitle,
+body.admin-theme-light .audit-page-hero-title,
+body.admin-theme-light .audit-page-hero-subtitle {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .ui-page-badge,
+body.admin-theme-light .ui-meta-pill,
+body.admin-theme-light .ui-hero-action,
+body.admin-theme-light .ui-hero-action-icon,
+body.admin-theme-light .dashboard-hero-badge,
+body.admin-theme-light .hero-pill,
+body.admin-theme-light .cms-hero-badge,
+body.admin-theme-light .cms-hero-pill,
+body.admin-theme-light .access-hero-badge,
+body.admin-theme-light .audit-hero-badge {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+/* ---------- DARK HERO SURFACE ---------- */
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero,
+body.admin-theme-dark .dashboard-v3 .dashboard-hero,
+body.admin-theme-dark .finance-dashboard-v3 .finance-hero,
+body.admin-theme-dark .finance-dashboard-v3 .dashboard-hero,
+body.admin-theme-dark .kanda-v3 .dashboard-hero,
+body.admin-theme-dark .kanda-pages .dashboard-hero,
+body.admin-theme-dark .kanda-report-v3 .dashboard-hero,
+body.admin-theme-dark .familia-dashboard-hero,
+body.admin-theme-dark .members-hero,
+body.admin-theme-dark .members-show-hero,
+body.admin-theme-dark .apg-hero,
+body.admin-theme-dark .apg-show-hero,
+body.admin-theme-dark .access-hero,
+body.admin-theme-dark .access-page-hero,
+body.admin-theme-dark .access-form-hero,
+body.admin-theme-dark .profile-hero,
+body.admin-theme-dark .audit-hero-standard,
+body.admin-theme-dark .audit-hero,
+body.admin-theme-dark .audit-page-hero,
+body.admin-theme-dark .login-page-hero,
+body.admin-theme-dark .cms-hero,
+body.admin-theme-dark .cms-hero-dashboard,
+body.admin-theme-dark .cms-hero-homepage,
+body.admin-theme-dark .cms-hero-content,
+html[data-admin-theme="dark"] body .admin-ui-v4 .ui-page-hero,
+html[data-admin-theme="dark"] body .admin-ui-v3 .ui-page-hero,
+html[data-admin-theme="dark"] body .dashboard-v3 .dashboard-hero,
+html[data-admin-theme="dark"] body .finance-dashboard-v3 .finance-hero,
+html[data-admin-theme="dark"] body .finance-dashboard-v3 .dashboard-hero,
+html[data-admin-theme="dark"] body .kanda-v3 .dashboard-hero,
+html[data-admin-theme="dark"] body .kanda-pages .dashboard-hero,
+html[data-admin-theme="dark"] body .kanda-report-v3 .dashboard-hero,
+html[data-admin-theme="dark"] body .familia-dashboard-hero,
+html[data-admin-theme="dark"] body .members-hero,
+html[data-admin-theme="dark"] body .members-show-hero,
+html[data-admin-theme="dark"] body .apg-hero,
+html[data-admin-theme="dark"] body .apg-show-hero,
+html[data-admin-theme="dark"] body .access-hero,
+html[data-admin-theme="dark"] body .access-page-hero,
+html[data-admin-theme="dark"] body .access-form-hero,
+html[data-admin-theme="dark"] body .profile-hero,
+html[data-admin-theme="dark"] body .audit-hero-standard,
+html[data-admin-theme="dark"] body .audit-hero,
+html[data-admin-theme="dark"] body .audit-page-hero,
+html[data-admin-theme="dark"] body .login-page-hero,
+html[data-admin-theme="dark"] body .cms-hero,
+html[data-admin-theme="dark"] body .cms-hero-dashboard,
+html[data-admin-theme="dark"] body .cms-hero-homepage,
+html[data-admin-theme="dark"] body .cms-hero-content {
+    background: #0f172a !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .34) !important;
+}
+
+body.admin-theme-dark .admin-ui-v4 .ui-hero-pattern,
+body.admin-theme-dark .admin-ui-v3 .ui-hero-pattern,
+body.admin-theme-dark .cms-hero::before,
+body.admin-theme-dark .cms-hero-dashboard::before,
+body.admin-theme-dark .cms-hero-homepage::before,
+body.admin-theme-dark .cms-hero-content::before,
+body.admin-theme-dark .access-hero::before,
+body.admin-theme-dark .access-page-hero::before,
+body.admin-theme-dark .access-form-hero::before,
+body.admin-theme-dark .profile-hero::before,
+body.admin-theme-dark .audit-hero::before,
+body.admin-theme-dark .audit-page-hero::before,
+body.admin-theme-dark .login-page-hero::before,
+body.admin-theme-dark .dashboard-v3 .dashboard-hero::after,
+body.admin-theme-dark .familia-dashboard-hero::after,
+body.admin-theme-dark .members-show-hero::after,
+body.admin-theme-dark .apg-hero::before,
+html[data-admin-theme="dark"] body .admin-ui-v4 .ui-hero-pattern,
+html[data-admin-theme="dark"] body .admin-ui-v3 .ui-hero-pattern,
+html[data-admin-theme="dark"] body .cms-hero::before,
+html[data-admin-theme="dark"] body .cms-hero-dashboard::before,
+html[data-admin-theme="dark"] body .cms-hero-homepage::before,
+html[data-admin-theme="dark"] body .cms-hero-content::before {
+    background-image:
+        linear-gradient(rgba(148, 163, 184, .12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, .12) 1px, transparent 1px) !important;
+    background-size: 20px 20px !important;
+    opacity: .18 !important;
+}
+
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero,
+body.admin-theme-dark .dashboard-v3 .dashboard-hero,
+body.admin-theme-dark .finance-dashboard-v3 .finance-hero,
+body.admin-theme-dark .finance-dashboard-v3 .dashboard-hero,
+body.admin-theme-dark .kanda-v3 .dashboard-hero,
+body.admin-theme-dark .kanda-pages .dashboard-hero,
+body.admin-theme-dark .kanda-report-v3 .dashboard-hero,
+body.admin-theme-dark .familia-dashboard-hero,
+body.admin-theme-dark .members-hero,
+body.admin-theme-dark .members-show-hero,
+body.admin-theme-dark .apg-hero,
+body.admin-theme-dark .apg-show-hero,
+body.admin-theme-dark .access-hero,
+body.admin-theme-dark .access-page-hero,
+body.admin-theme-dark .access-form-hero,
+body.admin-theme-dark .profile-hero,
+body.admin-theme-dark .audit-hero-standard,
+body.admin-theme-dark .audit-hero,
+body.admin-theme-dark .audit-page-hero,
+body.admin-theme-dark .login-page-hero,
+body.admin-theme-dark .cms-hero,
+body.admin-theme-dark .cms-hero-dashboard,
+body.admin-theme-dark .cms-hero-homepage,
+body.admin-theme-dark .cms-hero-content,
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero h1,
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero h2,
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero h3,
+body.admin-theme-dark .admin-ui-v4 .ui-page-hero p,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero h1,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero h2,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero h3,
+body.admin-theme-dark .admin-ui-v3 .ui-page-hero p,
+body.admin-theme-dark .ui-page-title,
+body.admin-theme-dark .ui-page-subtitle,
+body.admin-theme-dark .cms-hero-title,
+body.admin-theme-dark .cms-hero-subtitle,
+body.admin-theme-dark .access-hero-title,
+body.admin-theme-dark .access-hero-subtitle,
+body.admin-theme-dark .access-page-hero-title,
+body.admin-theme-dark .access-page-hero-subtitle,
+body.admin-theme-dark .audit-page-hero-title,
+body.admin-theme-dark .audit-page-hero-subtitle {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .ui-page-badge,
+body.admin-theme-dark .ui-meta-pill,
+body.admin-theme-dark .ui-hero-action,
+body.admin-theme-dark .ui-hero-action-icon,
+body.admin-theme-dark .dashboard-hero-badge,
+body.admin-theme-dark .hero-pill,
+body.admin-theme-dark .cms-hero-badge,
+body.admin-theme-dark .cms-hero-pill,
+body.admin-theme-dark .access-hero-badge,
+body.admin-theme-dark .audit-hero-badge {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: none !important;
+}
+
+/* Keep real coloured buttons readable inside hero. */
+body.admin-theme-light .ui-page-hero .btn-primary,
+body.admin-theme-light .ui-page-hero .btn-success,
+body.admin-theme-light .ui-page-hero .btn-danger,
+body.admin-theme-light .ui-page-hero .btn-warning,
+body.admin-theme-light .ui-page-hero .btn-info,
+body.admin-theme-light .cms-hero .btn-primary,
+body.admin-theme-light .cms-hero .btn-success,
+body.admin-theme-light .cms-hero .btn-danger,
+body.admin-theme-light .cms-hero .btn-warning,
+body.admin-theme-light .cms-hero .btn-info,
+body.admin-theme-dark .ui-page-hero .btn-primary,
+body.admin-theme-dark .ui-page-hero .btn-success,
+body.admin-theme-dark .ui-page-hero .btn-danger,
+body.admin-theme-dark .ui-page-hero .btn-warning,
+body.admin-theme-dark .ui-page-hero .btn-info,
+body.admin-theme-dark .cms-hero .btn-primary,
+body.admin-theme-dark .cms-hero .btn-success,
+body.admin-theme-dark .cms-hero .btn-danger,
+body.admin-theme-dark .cms-hero .btn-warning,
+body.admin-theme-dark .cms-hero .btn-info {
+    color: #ffffff !important;
+}

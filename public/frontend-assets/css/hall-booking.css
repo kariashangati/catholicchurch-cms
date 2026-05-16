@@ -1,0 +1,1096 @@
+/* ==========================================================
+   Frontend Hall Booking / Ukumbi
+   Matches frontend layout and remains independent from admin CSS.
+   ========================================================== */
+
+.hall-public-page {
+    --hall-primary: #6d28d9;
+    --hall-primary-2: #8b5cf6;
+    --hall-blue: #2563eb;
+    --hall-ink: #0f172a;
+    --hall-muted: #64748b;
+    --hall-soft: #f8fafc;
+    --hall-border: #e2e8f0;
+    --hall-success: #16a34a;
+    --hall-warning: #f59e0b;
+    --hall-danger: #ef4444;
+    --hall-card: #ffffff;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 45%, #ffffff 100%);
+    min-height: 80vh;
+    color: var(--hall-ink);
+}
+
+.hall-public-hero,
+.hall-detail-hero {
+    padding: 7.5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hall-public-hero::before,
+.hall-detail-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 16% 24%, rgba(124, 58, 237, .18), transparent 32%),
+        radial-gradient(circle at 84% 12%, rgba(37, 99, 235, .14), transparent 34%);
+    pointer-events: none;
+}
+
+.hall-public-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.hall-public-hero-grid.compact {
+    grid-template-columns: minmax(0, 1fr) 420px;
+}
+
+.hall-public-kicker,
+.section-mini-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .45rem .85rem;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, .10);
+    color: #5b21b6;
+    font-size: .78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.hall-public-hero-copy h1,
+.hall-detail-hero-panel h1 {
+    margin: 1rem 0 .85rem;
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    line-height: .98;
+    letter-spacing: -.055em;
+    font-weight: 950;
+    color: var(--hall-ink);
+}
+
+.hall-public-hero-copy p,
+.hall-detail-hero-panel p,
+.hall-public-section-head p {
+    color: var(--hall-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 720px;
+}
+
+.hall-public-hero-actions,
+.hall-confirm-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1.6rem;
+}
+
+.hall-public-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    min-height: 48px;
+    padding: .82rem 1.15rem;
+    border-radius: 999px;
+    border: 0;
+    text-decoration: none;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.hall-public-btn:hover {
+    transform: translateY(-1px);
+}
+
+.hall-public-btn-primary {
+    color: #fff;
+    background: linear-gradient(135deg, var(--hall-blue), var(--hall-primary));
+    box-shadow: 0 16px 30px rgba(109, 40, 217, .24);
+}
+
+.hall-public-btn-primary:hover {
+    color: #fff;
+    box-shadow: 0 18px 34px rgba(109, 40, 217, .32);
+}
+
+.hall-public-btn-soft {
+    color: #4c1d95;
+    background: #fff;
+    border: 1px solid var(--hall-border);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
+}
+
+.hall-public-btn-soft:hover,
+.hall-public-link:hover,
+.hall-back-link:hover {
+    color: #4c1d95;
+}
+
+.w-100 { width: 100%; }
+
+.hall-public-btn:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.hall-public-hero-card,
+.track-form-card,
+.hall-booking-panel,
+.hall-calendar-card,
+.hall-info-card,
+.hall-confirm-card,
+.track-status-card,
+.payment-submit-card {
+    background: rgba(255, 255, 255, .94);
+    border: 1px solid rgba(226, 232, 240, .85);
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .10);
+    backdrop-filter: blur(14px);
+}
+
+.hall-public-hero-card {
+    padding: 1.6rem;
+    display: grid;
+    gap: .55rem;
+}
+
+.hero-card-icon {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--hall-primary), var(--hall-primary-2));
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.hall-public-hero-card span,
+.hall-public-hero-card small {
+    color: var(--hall-muted);
+}
+
+.hall-public-hero-card strong {
+    font-size: 1.65rem;
+    color: var(--hall-ink);
+}
+
+.hall-public-section {
+    padding: 4rem 0;
+}
+
+.hall-public-section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+}
+
+.hall-public-section-head h2 {
+    margin: .75rem 0 .35rem;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    letter-spacing: -.035em;
+    font-weight: 950;
+}
+
+.hall-public-link {
+    color: #6d28d9;
+    font-weight: 900;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hall-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.hall-card {
+    background: #fff;
+    border: 1px solid var(--hall-border);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, .08);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.hall-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .12);
+}
+
+.hall-card-image {
+    height: 230px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.hall-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+}
+
+.hall-card:hover .hall-card-image img {
+    transform: scale(1.05);
+}
+
+.hall-card-price {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: .45rem .75rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, .88);
+    color: #fff;
+    font-weight: 900;
+    font-size: .78rem;
+}
+
+.hall-card-body {
+    padding: 1.15rem;
+}
+
+.hall-card-meta,
+.hall-detail-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+
+.hall-card-meta span,
+.hall-detail-facts span {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 800;
+}
+
+.hall-card h3 {
+    margin: .9rem 0 .45rem;
+    font-size: 1.35rem;
+    font-weight: 950;
+}
+
+.hall-card h3 a {
+    color: var(--hall-ink);
+    text-decoration: none;
+}
+
+.hall-card p {
+    color: var(--hall-muted);
+    line-height: 1.6;
+}
+
+.hall-card-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid var(--hall-border);
+    padding-top: 1rem;
+    color: var(--hall-muted);
+    font-size: .86rem;
+    font-weight: 800;
+}
+
+.hall-card-footer a {
+    color: #6d28d9;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hall-public-empty {
+    background: #fff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 28px;
+    padding: 3rem;
+    text-align: center;
+    color: var(--hall-muted);
+}
+
+.hall-public-empty i {
+    font-size: 2.4rem;
+    color: #7c3aed;
+}
+
+.hall-public-empty h3 {
+    color: var(--hall-ink);
+    font-weight: 950;
+}
+
+/* Detail */
+.hall-detail-hero {
+    background: linear-gradient(90deg, rgba(15, 23, 42, .78), rgba(15, 23, 42, .45)), var(--hall-cover);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hall-detail-hero::before {
+    background: radial-gradient(circle at 72% 10%, rgba(124, 58, 237, .45), transparent 36%);
+}
+
+.hall-detail-hero-panel {
+    position: relative;
+    max-width: 880px;
+}
+
+.hall-detail-hero-panel h1,
+.hall-detail-hero-panel p {
+    color: #fff;
+}
+
+.hall-detail-facts span {
+    background: rgba(255, 255, 255, .14);
+    border-color: rgba(255, 255, 255, .25);
+    color: #fff;
+}
+
+.hall-back-link {
+    display: inline-flex;
+    gap: .45rem;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hall-detail-layout,
+.track-result-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 390px;
+    gap: 1.4rem;
+    align-items: start;
+}
+
+.hall-gallery-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .7rem;
+    margin-bottom: 1rem;
+}
+
+.hall-gallery-strip img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--hall-border);
+}
+
+.hall-calendar-card,
+.hall-info-card,
+.hall-booking-panel,
+.track-status-card,
+.payment-submit-card {
+    padding: 1.2rem;
+}
+
+.hall-calendar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hall-calendar-head h2,
+.hall-info-card h3,
+.payment-submit-card h3 {
+    margin: .55rem 0 .25rem;
+    font-size: 1.55rem;
+    font-weight: 950;
+    letter-spacing: -.025em;
+}
+
+.hall-calendar-head p,
+.payment-submit-card p {
+    color: var(--hall-muted);
+    margin: 0;
+}
+
+.hall-calendar-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: .65rem;
+    background: #f8fafc;
+    border: 1px solid var(--hall-border);
+    border-radius: 999px;
+    padding: .4rem;
+    white-space: nowrap;
+}
+
+.calendar-nav-btn {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 999px;
+    background: #fff;
+    color: #6d28d9;
+    box-shadow: 0 8px 16px rgba(15, 23, 42, .07);
+    cursor: pointer;
+}
+
+.hall-calendar-weekdays,
+.hall-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: .45rem;
+}
+
+.hall-calendar-weekdays {
+    margin-bottom: .45rem;
+}
+
+.hall-calendar-weekdays span {
+    text-align: center;
+    color: #64748b;
+    font-size: .76rem;
+    font-weight: 900;
+}
+
+.hall-day {
+    min-height: 104px;
+    border: 1px solid var(--hall-border);
+    border-radius: 18px;
+    background: #fff;
+    color: var(--hall-ink);
+    text-align: left;
+    padding: .65rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    cursor: pointer;
+    transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+}
+
+.hall-day.is-empty {
+    border: 0;
+    background: transparent;
+    cursor: default;
+}
+
+.hall-day .day-number {
+    font-weight: 950;
+    font-size: 1.1rem;
+}
+
+.hall-day small {
+    font-size: .7rem;
+    font-weight: 850;
+}
+
+.hall-day strong {
+    font-size: .72rem;
+    margin-top: auto;
+}
+
+.hall-day.is-available:hover,
+.hall-day.is-selected {
+    transform: translateY(-2px);
+    border-color: #7c3aed;
+    box-shadow: 0 12px 24px rgba(124, 58, 237, .16);
+}
+
+.hall-day.is-selected {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+}
+
+.hall-day.is-disabled {
+    cursor: not-allowed;
+    opacity: .72;
+}
+
+.status-inapatikana small { color: var(--hall-success); }
+.status-inasubiri small { color: var(--hall-warning); }
+.status-imehifadhiwa small,
+.status-imefungwa small,
+.status-imepita small { color: var(--hall-danger); }
+
+.hall-calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1rem;
+    color: var(--hall-muted);
+    font-size: .84rem;
+    font-weight: 800;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 999px;
+    margin-right: .35rem;
+}
+
+.legend-dot.available { background: var(--hall-success); }
+.legend-dot.pending { background: var(--hall-warning); }
+.legend-dot.booked { background: var(--hall-danger); }
+.legend-dot.blocked { background: #64748b; }
+
+.hall-selected-card {
+    padding: 1rem;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    border: 1px solid #dbeafe;
+    margin-bottom: 1rem;
+}
+
+.hall-selected-card span,
+.hall-selected-card small {
+    display: block;
+    color: var(--hall-muted);
+    font-weight: 800;
+}
+
+.hall-selected-card strong {
+    display: block;
+    color: var(--hall-ink);
+    font-size: 1.2rem;
+    margin: .25rem 0;
+}
+
+.hall-booking-form {
+    display: grid;
+    gap: .9rem;
+}
+
+.form-group {
+    display: grid;
+    gap: .35rem;
+}
+
+.form-group label,
+.check-row {
+    font-weight: 900;
+    color: #334155;
+    font-size: .86rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select,
+.track-form-card input {
+    width: 100%;
+    border: 1px solid #dbe3ee;
+    border-radius: 16px;
+    min-height: 46px;
+    padding: .75rem .9rem;
+    color: var(--hall-ink);
+    background: #fff;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.track-form-card input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, .14);
+}
+
+.form-error {
+    color: var(--hall-danger);
+    font-weight: 800;
+}
+
+.payment-box {
+    border: 1px solid #dbeafe;
+    background: #f8fbff;
+    border-radius: 20px;
+    padding: .95rem;
+}
+
+.payment-box h4 {
+    margin: 0 0 .65rem;
+    font-weight: 950;
+}
+
+.payment-box dl {
+    margin: 0;
+    display: grid;
+    gap: .45rem;
+}
+
+.payment-box dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: .35rem;
+}
+
+.payment-box dt {
+    color: var(--hall-muted);
+    font-weight: 800;
+}
+
+.payment-box dd {
+    margin: 0;
+    font-weight: 950;
+    color: var(--hall-ink);
+    text-align: right;
+}
+
+.payment-box p,
+.optional-payment-details {
+    color: var(--hall-muted);
+}
+
+.optional-payment-details {
+    border: 1px solid var(--hall-border);
+    border-radius: 18px;
+    padding: .8rem;
+}
+
+.optional-payment-details summary {
+    cursor: pointer;
+    font-weight: 950;
+    color: #5b21b6;
+}
+
+.check-row {
+    display: flex;
+    gap: .55rem;
+    align-items: flex-start;
+}
+
+.hall-info-card {
+    margin-top: 1rem;
+}
+
+.hall-rich-text {
+    color: var(--hall-muted);
+    line-height: 1.75;
+}
+
+/* Confirmation + tracking */
+.hall-confirm-section {
+    padding-top: 8rem;
+}
+
+.hall-confirm-card {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.confirm-icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 1rem;
+    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--hall-success), #22c55e);
+}
+
+.hall-confirm-card h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 950;
+    letter-spacing: -.04em;
+    margin: .8rem 0 .4rem;
+}
+
+.reference-box {
+    max-width: 520px;
+    margin: 1.4rem auto;
+    border: 1px dashed #a78bfa;
+    border-radius: 24px;
+    padding: 1rem;
+    background: #faf5ff;
+    display: grid;
+    gap: .35rem;
+}
+
+.reference-box span {
+    color: var(--hall-muted);
+    font-weight: 900;
+}
+
+.reference-box strong {
+    color: #4c1d95;
+    font-size: 1.6rem;
+    letter-spacing: .05em;
+}
+
+.copy-btn {
+    border: 0;
+    border-radius: 999px;
+    padding: .55rem .85rem;
+    background: #fff;
+    color: #6d28d9;
+    font-weight: 900;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.confirmation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.confirmation-grid div {
+    background: #f8fafc;
+    border: 1px solid var(--hall-border);
+    border-radius: 18px;
+    padding: .85rem;
+}
+
+.confirmation-grid span {
+    display: block;
+    color: var(--hall-muted);
+    font-size: .78rem;
+    font-weight: 900;
+    margin-bottom: .25rem;
+}
+
+.confirmation-grid strong {
+    color: var(--hall-ink);
+    font-weight: 950;
+}
+
+.confirmation-payment {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.track-form-card {
+    padding: 1.2rem;
+}
+
+.track-status-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin: .8rem 0 1rem;
+}
+
+.status-badge {
+    border-radius: 999px;
+    padding: .45rem .75rem;
+    font-size: .78rem;
+    font-weight: 950;
+}
+
+.booking-inasubiri,
+.payment-haijalipwa,
+.payment-malipo_yamewasilishwa { background: #fff7ed; color: #9a3412; }
+.booking-imeidhinishwa,
+.payment-malipo_yamethibitishwa { background: #dcfce7; color: #166534; }
+.booking-imekataliwa,
+.booking-imefutwa,
+.payment-malipo_yamekataliwa { background: #fee2e2; color: #991b1b; }
+.booking-imekamilika { background: #dbeafe; color: #1d4ed8; }
+
+.compact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-note-box,
+.success-note {
+    border-radius: 18px;
+    padding: .9rem;
+    background: #f8fafc;
+    border: 1px solid var(--hall-border);
+    color: var(--hall-muted);
+}
+
+.admin-note-box strong,
+.success-note {
+    color: var(--hall-ink);
+    font-weight: 900;
+}
+
+.success-note {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: #166534;
+    background: #dcfce7;
+    border-color: #bbf7d0;
+}
+
+.compact-form {
+    margin-top: 1rem;
+}
+
+@media (max-width: 1100px) {
+    .hall-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hall-detail-layout,
+    .track-result-layout,
+    .hall-public-hero-grid,
+    .hall-public-hero-grid.compact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hall-public-hero,
+    .hall-detail-hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .hall-public-section-head,
+    .hall-calendar-head {
+        display: block;
+    }
+
+    .hall-calendar-controls {
+        margin-top: 1rem;
+    }
+
+    .hall-card-grid,
+    .confirmation-grid,
+    .compact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hall-gallery-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hall-calendar-weekdays {
+        display: none;
+    }
+
+    .hall-calendar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hall-day {
+        min-height: 92px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hall-calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hall-confirm-card {
+        padding: 1rem;
+    }
+}
+
+/* ==========================================================
+   PUBLIC HALL BOOKING CENTERING / POLISH FIX
+   Fixes pages appearing stretched/left-aligned on frontend.
+   Keep this block at the bottom of hall-booking.css.
+   ========================================================== */
+
+.hall-public-page,
+.hall-detail-page,
+.hall-confirm-page,
+.hall-track-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Some frontend layouts do not define .home-shell globally on every page.
+   Define it inside this module so the content always matches other frontend pages. */
+.hall-public-page .home-shell,
+.hall-detail-page .home-shell,
+.hall-confirm-page .home-shell,
+.hall-track-page .home-shell {
+    width: min(100% - 2rem, 1060px) !important;
+    max-width: 1060px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Match the centered compact style used by your giving page. */
+.hall-public-hero,
+.hall-detail-hero {
+    padding: 6.25rem 0 3rem !important;
+}
+
+.hall-public-section {
+    padding: 3rem 0 !important;
+}
+
+.hall-public-hero-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, .72fr) !important;
+    gap: 1.25rem !important;
+}
+
+.hall-public-hero-copy,
+.hall-detail-hero-panel {
+    min-width: 0;
+}
+
+.hall-public-hero-copy h1,
+.hall-detail-hero-panel h1 {
+    font-size: clamp(2rem, 4vw, 3.75rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.045em !important;
+    max-width: 760px !important;
+    overflow-wrap: anywhere;
+}
+
+.hall-public-hero-copy p,
+.hall-detail-hero-panel p,
+.hall-public-section-head p {
+    max-width: 650px !important;
+    font-size: .98rem !important;
+}
+
+.hall-public-hero-card,
+.hall-booking-panel,
+.hall-calendar-card,
+.hall-info-card,
+.hall-confirm-card,
+.track-form-card,
+.track-status-card,
+.payment-submit-card {
+    border-radius: 24px !important;
+}
+
+.hall-public-hero-card {
+    padding: 1.25rem !important;
+}
+
+.hall-public-hero-card strong {
+    font-size: 1.35rem !important;
+}
+
+.hall-public-section-head {
+    align-items: flex-end !important;
+    margin-bottom: 1.15rem !important;
+}
+
+.hall-public-section-head h2 {
+    font-size: clamp(1.7rem, 2.8vw, 2.55rem) !important;
+}
+
+.hall-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+}
+
+.hall-card-image {
+    height: 200px !important;
+}
+
+.hall-card-body {
+    padding: 1rem !important;
+}
+
+.hall-public-empty {
+    padding: 2.25rem 1rem !important;
+}
+
+/* Make the detail/track pages use the same safe width. */
+.hall-detail-layout,
+.track-result-layout {
+    grid-template-columns: minmax(0, 1fr) 360px !important;
+    gap: 1.1rem !important;
+}
+
+.hall-calendar-grid,
+.hall-calendar-weekdays {
+    min-width: 0;
+}
+
+.hall-day {
+    min-height: 92px !important;
+    border-radius: 16px !important;
+}
+
+/* The frontend top navbar is fixed; keep hall page content below it cleanly. */
+.hall-public-page .hall-public-hero:first-child,
+.hall-detail-page .hall-detail-hero:first-child {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 1100px) {
+    .hall-public-page .home-shell,
+    .hall-detail-page .home-shell,
+    .hall-confirm-page .home-shell,
+    .hall-track-page .home-shell {
+        width: min(100% - 1.5rem, 960px) !important;
+    }
+
+    .hall-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .hall-detail-layout,
+    .track-result-layout,
+    .hall-public-hero-grid,
+    .hall-public-hero-grid.compact {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hall-public-page .home-shell,
+    .hall-detail-page .home-shell,
+    .hall-confirm-page .home-shell,
+    .hall-track-page .home-shell {
+        width: min(100% - 1.15rem, 680px) !important;
+    }
+
+    .hall-public-hero,
+    .hall-detail-hero {
+        padding: 5.25rem 0 2.25rem !important;
+    }
+
+    .hall-public-hero-copy h1,
+    .hall-detail-hero-panel h1 {
+        font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    }
+
+    .hall-card-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hall-public-section-head {
+        display: block !important;
+    }
+
+    .hall-public-link {
+        display: inline-flex;
+        margin-top: .75rem;
+        white-space: normal !important;
+    }
+}

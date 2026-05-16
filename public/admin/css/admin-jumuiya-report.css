@@ -1,0 +1,60 @@
+.jumuiya-report-kpi .stat-number {
+    font-size: 1.9rem;
+}
+
+.jumuiya-report-summary-card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    padding: 1.2rem;
+    height: 100%;
+}
+
+.jumuiya-report-table .table th {
+    background: #f8fafc;
+    color: var(--gray);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.jumuiya-report-table .table td {
+    vertical-align: middle;
+    border-bottom: 1px solid #eef2f7;
+}
+/* ==========================================================
+   THEME OVERRIDE: JUMUIYA REPORT MODULE
+   Appended safely for summary cards and report tables.
+   ========================================================== */
+
+.admin-theme-light .jumuiya-report-summary-card,
+html[data-admin-theme="light"] .jumuiya-report-summary-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .jumuiya-report-summary-card,
+html[data-admin-theme="dark"] .jumuiya-report-summary-card {
+    background: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .jumuiya-report-table .table th,
+html[data-admin-theme="dark"] .jumuiya-report-table .table th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .jumuiya-report-table .table td,
+html[data-admin-theme="dark"] .jumuiya-report-table .table td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}

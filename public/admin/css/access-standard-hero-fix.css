@@ -1,0 +1,170 @@
+/* ==========================================================
+   ACCESS STANDARD HERO FIX
+   Purpose:
+   - Fix theme override for .access-standard-hero used by System Access pages.
+   - Make the hero and action buttons more compact.
+   - Safe scope: only .access-standard-hero and children.
+
+   IMPORTANT:
+   Load this file AFTER the inline .access-standard-hero <style> block,
+   or paste this block at the bottom of that same <style> block.
+   ========================================================== */
+
+/* Compact default/classic hero */
+.access-standard-hero {
+    border-radius: 22px !important;
+    padding: 18px 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.access-standard-hero .access-hero-title {
+    font-size: clamp(1.35rem, 1.8vw, 1.75rem) !important;
+    line-height: 1.15 !important;
+    margin-top: .5rem !important;
+    margin-bottom: .25rem !important;
+}
+
+.access-standard-hero .access-hero-badge {
+    padding: .32rem .68rem !important;
+    font-size: .72rem !important;
+    line-height: 1.1 !important;
+}
+
+.access-standard-hero .access-meta-pill {
+    padding: .42rem .7rem !important;
+    border-radius: 12px !important;
+    font-size: .78rem !important;
+    margin-right: .35rem !important;
+    margin-bottom: .35rem !important;
+}
+
+.access-standard-hero .access-hero-actions {
+    gap: 8px !important;
+}
+
+.access-standard-hero .access-hero-action {
+    padding: 9px 12px !important;
+    border-radius: 12px !important;
+    font-size: .82rem !important;
+    min-height: 38px !important;
+    gap: 8px !important;
+}
+
+/* LIGHT theme */
+body.admin-theme-light .access-standard-hero,
+html[data-admin-theme="light"] body .access-standard-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+body.admin-theme-light .access-standard-hero::before,
+html[data-admin-theme="light"] body .access-standard-hero::before {
+    background: none !important;
+    opacity: 0 !important;
+}
+
+body.admin-theme-light .access-standard-hero h1,
+body.admin-theme-light .access-standard-hero h2,
+body.admin-theme-light .access-standard-hero h3,
+body.admin-theme-light .access-standard-hero p,
+body.admin-theme-light .access-standard-hero span,
+body.admin-theme-light .access-standard-hero small,
+body.admin-theme-light .access-standard-hero strong,
+body.admin-theme-light .access-standard-hero label,
+html[data-admin-theme="light"] body .access-standard-hero h1,
+html[data-admin-theme="light"] body .access-standard-hero h2,
+html[data-admin-theme="light"] body .access-standard-hero h3,
+html[data-admin-theme="light"] body .access-standard-hero p,
+html[data-admin-theme="light"] body .access-standard-hero span,
+html[data-admin-theme="light"] body .access-standard-hero small,
+html[data-admin-theme="light"] body .access-standard-hero strong,
+html[data-admin-theme="light"] body .access-standard-hero label {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .access-standard-hero .access-hero-badge,
+body.admin-theme-light .access-standard-hero .access-meta-pill,
+body.admin-theme-light .access-standard-hero .access-hero-action,
+html[data-admin-theme="light"] body .access-standard-hero .access-hero-badge,
+html[data-admin-theme="light"] body .access-standard-hero .access-meta-pill,
+html[data-admin-theme="light"] body .access-standard-hero .access-hero-action {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+body.admin-theme-light .access-standard-hero .access-hero-action:hover,
+html[data-admin-theme="light"] body .access-standard-hero .access-hero-action:hover {
+    background: #f1f5f9 !important;
+    color: #020617 !important;
+}
+
+/* DARK theme */
+body.admin-theme-dark .access-standard-hero,
+html[data-admin-theme="dark"] body .access-standard-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+body.admin-theme-dark .access-standard-hero::before,
+html[data-admin-theme="dark"] body .access-standard-hero::before {
+    background: none !important;
+    opacity: 0 !important;
+}
+
+body.admin-theme-dark .access-standard-hero h1,
+body.admin-theme-dark .access-standard-hero h2,
+body.admin-theme-dark .access-standard-hero h3,
+body.admin-theme-dark .access-standard-hero p,
+body.admin-theme-dark .access-standard-hero span,
+body.admin-theme-dark .access-standard-hero small,
+body.admin-theme-dark .access-standard-hero strong,
+body.admin-theme-dark .access-standard-hero label,
+html[data-admin-theme="dark"] body .access-standard-hero h1,
+html[data-admin-theme="dark"] body .access-standard-hero h2,
+html[data-admin-theme="dark"] body .access-standard-hero h3,
+html[data-admin-theme="dark"] body .access-standard-hero p,
+html[data-admin-theme="dark"] body .access-standard-hero span,
+html[data-admin-theme="dark"] body .access-standard-hero small,
+html[data-admin-theme="dark"] body .access-standard-hero strong,
+html[data-admin-theme="dark"] body .access-standard-hero label {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .access-standard-hero .access-hero-badge,
+body.admin-theme-dark .access-standard-hero .access-meta-pill,
+body.admin-theme-dark .access-standard-hero .access-hero-action,
+html[data-admin-theme="dark"] body .access-standard-hero .access-hero-badge,
+html[data-admin-theme="dark"] body .access-standard-hero .access-meta-pill,
+html[data-admin-theme="dark"] body .access-standard-hero .access-hero-action {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+body.admin-theme-dark .access-standard-hero .access-hero-action:hover,
+html[data-admin-theme="dark"] body .access-standard-hero .access-hero-action:hover {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+@media (max-width: 991.98px) {
+    .access-standard-hero {
+        padding: 14px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .access-standard-hero .access-hero-actions {
+        grid-template-columns: 1fr !important;
+    }
+}

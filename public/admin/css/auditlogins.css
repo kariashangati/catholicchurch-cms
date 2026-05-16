@@ -1,0 +1,211 @@
+
+        .login-page-shell {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .login-page-hero {
+            border-radius: 28px;
+            padding: 1.75rem;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+                linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #0ea5e9 100%);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, .18);
+        }
+
+        .login-page-hero-title {
+            font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+            font-weight: 800;
+            margin-bottom: .35rem;
+        }
+
+        .login-page-hero-subtitle {
+            margin: 0;
+            color: rgba(255,255,255,.82);
+            max-width: 760px;
+        }
+
+        .login-filter-card,
+        .login-table-card {
+            border: 0;
+            border-radius: 24px;
+            background: #fff;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+        }
+
+        .login-filter-card .card-body,
+        .login-table-card .card-body {
+            padding: 1.35rem;
+        }
+
+        .login-filter-label {
+            font-size: .82rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: .45rem;
+        }
+
+        .login-table {
+            margin-bottom: 0;
+        }
+
+        .login-table thead th {
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            color: #64748b;
+            border-bottom: 1px solid #e2e8f0;
+            white-space: nowrap;
+        }
+
+        .login-table tbody td {
+            vertical-align: top;
+            border-color: #eef2f7;
+        }
+
+        .login-cell-title {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .login-cell-meta {
+            color: #64748b;
+            font-size: .86rem;
+            margin-top: .15rem;
+        }
+
+        .login-status-badge,
+        .login-risk-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: .38rem .72rem;
+            border-radius: 999px;
+            font-size: .72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .03em;
+        }
+
+        .login-status-badge.status-success { background: #ecfdf5; color: #047857; }
+        .login-status-badge.status-failed { background: #fef2f2; color: #b91c1c; }
+        .login-status-badge.status-logged_out { background: #f1f5f9; color: #475569; }
+        .login-status-badge.status-locked_out { background: #fff7ed; color: #c2410c; }
+
+        .login-risk-badge.risk-low { background: #ecfdf5; color: #047857; }
+        .login-risk-badge.risk-medium { background: #eff6ff; color: #1d4ed8; }
+        .login-risk-badge.risk-high { background: #fff7ed; color: #c2410c; }
+        .login-risk-badge.risk-critical { background: #fef2f2; color: #b91c1c; }
+
+        .login-empty {
+            padding: 2rem;
+            text-align: center;
+            color: #64748b;
+        }
+
+        .login-suspicious-yes {
+            color: #b91c1c;
+            font-weight: 700;
+        }
+
+        .login-suspicious-no {
+            color: #047857;
+            font-weight: 700;
+        }
+
+/* ==========================================================
+   THEME OVERRIDES: AUDIT LOGIN PAGE
+   ========================================================== */
+.admin-theme-light .login-page-hero,
+html[data-admin-theme="light"] .login-page-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .login-page-hero,
+html[data-admin-theme="dark"] .login-page-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .login-page-hero-title,
+.admin-theme-light .login-page-hero-subtitle,
+html[data-admin-theme="light"] .login-page-hero-title,
+html[data-admin-theme="light"] .login-page-hero-subtitle {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .login-page-hero-title,
+.admin-theme-dark .login-page-hero-subtitle,
+html[data-admin-theme="dark"] .login-page-hero-title,
+html[data-admin-theme="dark"] .login-page-hero-subtitle {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .login-filter-card,
+.admin-theme-light .login-table-card,
+html[data-admin-theme="light"] .login-filter-card,
+html[data-admin-theme="light"] .login-table-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.admin-theme-dark .login-filter-card,
+.admin-theme-dark .login-table-card,
+html[data-admin-theme="dark"] .login-filter-card,
+html[data-admin-theme="dark"] .login-table-card {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+}
+
+.admin-theme-dark .login-filter-label,
+.admin-theme-dark .login-table thead th,
+.admin-theme-dark .login-cell-meta,
+.admin-theme-dark .login-empty,
+html[data-admin-theme="dark"] .login-filter-label,
+html[data-admin-theme="dark"] .login-table thead th,
+html[data-admin-theme="dark"] .login-cell-meta,
+html[data-admin-theme="dark"] .login-empty {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .login-cell-title,
+html[data-admin-theme="dark"] .login-cell-title {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .login-table thead th,
+.admin-theme-dark .login-table tbody td,
+html[data-admin-theme="dark"] .login-table thead th,
+html[data-admin-theme="dark"] .login-table tbody td {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-light .login-table thead th,
+.admin-theme-light .login-table tbody td,
+html[data-admin-theme="light"] .login-table thead th,
+html[data-admin-theme="light"] .login-table tbody td {
+    background-color: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .login-suspicious-yes,
+html[data-admin-theme="dark"] .login-suspicious-yes { color: #fca5a5 !important; }
+.admin-theme-dark .login-suspicious-no,
+html[data-admin-theme="dark"] .login-suspicious-no { color: #86efac !important; }
+

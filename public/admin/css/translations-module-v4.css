@@ -1,0 +1,95 @@
+.translations-module-v4 .translation-value-preview {
+    max-width: 540px;
+    color: #334155;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.translations-module-v4 .dataTables_wrapper .dataTables_filter input,
+.translations-module-v4 .dataTables_wrapper .dataTables_length select {
+    border-radius: 12px;
+    border: 1px solid #dbe5f0;
+    padding: .45rem .75rem;
+    min-height: 40px;
+}
+
+.translations-module-v4 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 12px !important;
+}
+
+.translations-module-v4 .dataTables_wrapper .dataTables_info,
+.translations-module-v4 .dataTables_wrapper .dataTables_length,
+.translations-module-v4 .dataTables_wrapper .dataTables_filter {
+    padding: 1rem;
+}
+
+.translations-module-v4 .ui-panel form .form-control,
+.translations-module-v4 .ui-panel form .form-select,
+.translations-module-v4 .ui-filter-card .form-control,
+.translations-module-v4 .ui-filter-card .form-select {
+    border-radius: 14px;
+    min-height: 48px;
+}
+
+
+/* ==========================================================
+   THEME OVERRIDES: TRANSLATIONS MODULE V4
+   Safe: scoped only to translations-module-v4.
+   ========================================================== */
+.admin-theme-light .translations-module-v4 .translation-value-preview,
+html[data-admin-theme="light"] .translations-module-v4 .translation-value-preview {
+    color: #334155 !important;
+}
+
+.admin-theme-dark .translations-module-v4 .translation-value-preview,
+html[data-admin-theme="dark"] .translations-module-v4 .translation-value-preview {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-light .translations-module-v4 .ui-panel,
+.admin-theme-light .translations-module-v4 .ui-filter-card,
+.admin-theme-light .translations-module-v4 .ui-table-card,
+html[data-admin-theme="light"] .translations-module-v4 .ui-panel,
+html[data-admin-theme="light"] .translations-module-v4 .ui-filter-card,
+html[data-admin-theme="light"] .translations-module-v4 .ui-table-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .translations-module-v4 .ui-panel,
+.admin-theme-dark .translations-module-v4 .ui-filter-card,
+.admin-theme-dark .translations-module-v4 .ui-table-card,
+html[data-admin-theme="dark"] .translations-module-v4 .ui-panel,
+html[data-admin-theme="dark"] .translations-module-v4 .ui-filter-card,
+html[data-admin-theme="dark"] .translations-module-v4 .ui-table-card {
+    background: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .translations-module-v4 .form-control,
+.admin-theme-dark .translations-module-v4 .form-select,
+.admin-theme-dark .translations-module-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .translations-module-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .translations-module-v4 .form-control,
+html[data-admin-theme="dark"] .translations-module-v4 .form-select,
+html[data-admin-theme="dark"] .translations-module-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .translations-module-v4 .dataTables_wrapper .dataTables_length select {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-dark .translations-module-v4 .dataTables_wrapper .dataTables_info,
+.admin-theme-dark .translations-module-v4 .dataTables_wrapper .dataTables_length,
+.admin-theme-dark .translations-module-v4 .dataTables_wrapper .dataTables_filter,
+html[data-admin-theme="dark"] .translations-module-v4 .dataTables_wrapper .dataTables_info,
+html[data-admin-theme="dark"] .translations-module-v4 .dataTables_wrapper .dataTables_length,
+html[data-admin-theme="dark"] .translations-module-v4 .dataTables_wrapper .dataTables_filter {
+    color: #cbd5e1 !important;
+}

@@ -1,0 +1,20 @@
+
+        .access-form-shell { display: flex; flex-direction: column; gap: 1.5rem; }
+        .access-form-hero {
+            border-radius: 28px; padding: 1.75rem; color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+                linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #0ea5e9 100%);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, .18);
+        }
+        .access-form-card {
+            border: 0; border-radius: 24px; background: #fff; box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+        }
+        .access-form-card .card-body { padding: 1.4rem; }
+        .access-section-title { font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; }
+        .access-member-preview {
+            border: 1px dashed #cbd5e1; border-radius: 18px; padding: 1rem; background: #f8fafc;
+        }
+        .access-member-preview-title { font-weight: 700; color: #0f172a; }
+        .access-member-preview-meta { color: #64748b; font-size: .9rem; }
+    

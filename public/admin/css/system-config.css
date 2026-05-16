@@ -1,0 +1,573 @@
+.syscfg-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.syscfg-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    color: #fff;
+    padding: 1.8rem;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .16);
+}
+
+.syscfg-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: .22;
+    pointer-events: none;
+}
+
+.syscfg-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.syscfg-hero-dashboard {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 38%, #1d4ed8 100%);
+}
+
+.syscfg-hero-general {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #0ea5e9 100%);
+}
+
+.syscfg-hero-branding {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #2563eb 40%, #7c3aed 100%);
+}
+
+.syscfg-hero-maintenance {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #3f1d0b 0%, #b45309 40%, #f59e0b 100%);
+}
+
+.syscfg-hero-environment {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.14), transparent 28%),
+        linear-gradient(135deg, #111827 0%, #374151 35%, #4b5563 100%);
+}
+
+.syscfg-hero-systeminfo {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 35%, #312e81 100%);
+}
+
+.syscfg-hero-communication {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.16), transparent 28%),
+        linear-gradient(135deg, #052e16 0%, #166534 40%, #16a34a 100%);
+}
+
+.syscfg-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.14);
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.syscfg-hero-title {
+    font-size: clamp(1.55rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    margin: .95rem 0 .45rem;
+}
+
+.syscfg-hero-subtitle {
+    color: rgba(255,255,255,.82);
+    max-width: 860px;
+    margin: 0;
+}
+
+.syscfg-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.14);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.syscfg-brand-preview-card {
+    min-width: 280px;
+    max-width: 360px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 24px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.syscfg-brand-preview-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.syscfg-brand-name {
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.syscfg-brand-tagline {
+    font-size: .88rem;
+    color: rgba(255,255,255,.78);
+}
+
+.syscfg-favicon-preview {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(255,255,255,.12);
+    padding: .2rem;
+}
+
+.syscfg-logo-preview {
+    max-width: 180px;
+    max-height: 64px;
+    object-fit: contain;
+    display: block;
+}
+
+.syscfg-kpi-card,
+.syscfg-panel,
+.syscfg-form-card {
+    border: 0;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .08);
+    height: 100%;
+}
+
+.syscfg-kpi-card .card-body,
+.syscfg-panel .card-body,
+.syscfg-form-card .card-body {
+    padding: 1.35rem;
+}
+
+.syscfg-kpi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .85rem;
+}
+
+.syscfg-kpi-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.syscfg-kpi-chip,
+.syscfg-panel-badge {
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .35rem .7rem;
+    border-radius: 999px;
+}
+
+.syscfg-kpi-chip {
+    background: #f8fafc;
+    color: #475569;
+}
+
+.syscfg-kpi-title {
+    color: #64748b;
+    font-size: .92rem;
+    margin-bottom: .3rem;
+}
+
+.syscfg-kpi-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.05;
+}
+
+.syscfg-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.syscfg-panel-title {
+    font-size: 1.02rem;
+    font-weight: 800;
+    margin: 0;
+    color: #0f172a;
+}
+
+.syscfg-panel-subtitle {
+    margin: .2rem 0 0;
+    color: #64748b;
+    font-size: .9rem;
+}
+
+.syscfg-panel-badge {
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.syscfg-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+.syscfg-info-item {
+    padding: .85rem 1rem;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.syscfg-info-label {
+    color: #64748b;
+    font-size: .82rem;
+    margin-bottom: .18rem;
+}
+
+.syscfg-info-value {
+    color: #0f172a;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.syscfg-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    margin-right: .45rem;
+}
+
+.syscfg-status-dot.is-success {
+    background: #10b981;
+}
+
+.syscfg-status-dot.is-danger {
+    background: #ef4444;
+}
+
+.syscfg-section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.syscfg-image-preview-wrap {
+    border: 1px dashed #cbd5e1;
+    border-radius: 20px;
+    background: #f8fafc;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.syscfg-image-preview {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.syscfg-favicon-large-preview {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.syscfg-repeater-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.syscfg-repeater-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.syscfg-sticky-actions {
+    position: sticky;
+    bottom: 18px;
+    z-index: 20;
+    border-radius: 20px;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .10);
+}
+
+.syscfg-env-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.syscfg-env-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.syscfg-env-key {
+    font-size: .8rem;
+    font-weight: 800;
+    color: #334155;
+    margin-bottom: .45rem;
+}
+
+.syscfg-env-meta {
+    font-size: .78rem;
+    color: #64748b;
+    margin-top: .35rem;
+}
+
+.tone-primary { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+.tone-success { background: linear-gradient(135deg, #059669, #10b981); }
+.tone-warning { background: linear-gradient(135deg, #d97706, #f59e0b); }
+.tone-info { background: linear-gradient(135deg, #0284c7, #0ea5e9); }
+.tone-secondary { background: linear-gradient(135deg, #475569, #64748b); }
+.tone-danger { background: linear-gradient(135deg, #dc2626, #f43f5e); }
+
+@media (max-width: 991.98px) {
+    .syscfg-hero {
+        padding: 1.35rem;
+    }
+
+    .syscfg-kpi-value {
+        font-size: 1.55rem;
+    }
+
+    .syscfg-env-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Standardized System Config hero gradient to match the admin purple hero system. */
+.syscfg-hero,
+.syscfg-hero-dashboard,
+.syscfg-hero-general,
+.syscfg-hero-branding,
+.syscfg-hero-maintenance,
+.syscfg-hero-environment,
+.syscfg-hero-systeminfo,
+.syscfg-hero-communication {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(135deg, #6d28d9 0%, #7c3aed 45%, #a855f7 100%) !important;
+}
+
+.syscfg-repeater-item {
+    margin-bottom: 1rem;
+}
+
+.syscfg-sticky-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    background: rgba(248, 250, 252, .92);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+}
+
+
+/* ==========================================================
+   THEME OVERRIDES: SYSTEM CONFIG
+   Keep this at the bottom because system-config.css has !important hero gradients.
+   ========================================================== */
+.admin-theme-light .syscfg-hero,
+.admin-theme-light .syscfg-hero-dashboard,
+.admin-theme-light .syscfg-hero-general,
+.admin-theme-light .syscfg-hero-branding,
+.admin-theme-light .syscfg-hero-maintenance,
+.admin-theme-light .syscfg-hero-environment,
+.admin-theme-light .syscfg-hero-systeminfo,
+.admin-theme-light .syscfg-hero-communication,
+html[data-admin-theme="light"] .syscfg-hero,
+html[data-admin-theme="light"] .syscfg-hero-dashboard,
+html[data-admin-theme="light"] .syscfg-hero-general,
+html[data-admin-theme="light"] .syscfg-hero-branding,
+html[data-admin-theme="light"] .syscfg-hero-maintenance,
+html[data-admin-theme="light"] .syscfg-hero-environment,
+html[data-admin-theme="light"] .syscfg-hero-systeminfo,
+html[data-admin-theme="light"] .syscfg-hero-communication {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+.admin-theme-dark .syscfg-hero,
+.admin-theme-dark .syscfg-hero-dashboard,
+.admin-theme-dark .syscfg-hero-general,
+.admin-theme-dark .syscfg-hero-branding,
+.admin-theme-dark .syscfg-hero-maintenance,
+.admin-theme-dark .syscfg-hero-environment,
+.admin-theme-dark .syscfg-hero-systeminfo,
+.admin-theme-dark .syscfg-hero-communication,
+html[data-admin-theme="dark"] .syscfg-hero,
+html[data-admin-theme="dark"] .syscfg-hero-dashboard,
+html[data-admin-theme="dark"] .syscfg-hero-general,
+html[data-admin-theme="dark"] .syscfg-hero-branding,
+html[data-admin-theme="dark"] .syscfg-hero-maintenance,
+html[data-admin-theme="dark"] .syscfg-hero-environment,
+html[data-admin-theme="dark"] .syscfg-hero-systeminfo,
+html[data-admin-theme="dark"] .syscfg-hero-communication {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+.admin-theme-light .syscfg-hero::before,
+.admin-theme-dark .syscfg-hero::before,
+html[data-admin-theme="light"] .syscfg-hero::before,
+html[data-admin-theme="dark"] .syscfg-hero::before {
+    background: none !important;
+    opacity: 0 !important;
+}
+
+.admin-theme-light .syscfg-hero *,
+html[data-admin-theme="light"] .syscfg-hero * {
+    color: #020617 !important;
+}
+
+.admin-theme-dark .syscfg-hero *,
+html[data-admin-theme="dark"] .syscfg-hero * {
+    color: #f8fafc !important;
+}
+
+.admin-theme-light .syscfg-hero-badge,
+.admin-theme-light .syscfg-hero-pill,
+.admin-theme-light .syscfg-brand-preview-card,
+html[data-admin-theme="light"] .syscfg-hero-badge,
+html[data-admin-theme="light"] .syscfg-hero-pill,
+html[data-admin-theme="light"] .syscfg-brand-preview-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+.admin-theme-dark .syscfg-hero-badge,
+.admin-theme-dark .syscfg-hero-pill,
+.admin-theme-dark .syscfg-brand-preview-card,
+html[data-admin-theme="dark"] .syscfg-hero-badge,
+html[data-admin-theme="dark"] .syscfg-hero-pill,
+html[data-admin-theme="dark"] .syscfg-brand-preview-card {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+    box-shadow: none !important;
+}
+
+.admin-theme-light .syscfg-kpi-card,
+.admin-theme-light .syscfg-panel,
+.admin-theme-light .syscfg-form-card,
+.admin-theme-light .syscfg-info-item,
+.admin-theme-light .syscfg-env-card,
+.admin-theme-light .syscfg-repeater-item,
+.admin-theme-light .syscfg-image-preview-wrap,
+.admin-theme-light .syscfg-sticky-actions,
+html[data-admin-theme="light"] .syscfg-kpi-card,
+html[data-admin-theme="light"] .syscfg-panel,
+html[data-admin-theme="light"] .syscfg-form-card,
+html[data-admin-theme="light"] .syscfg-info-item,
+html[data-admin-theme="light"] .syscfg-env-card,
+html[data-admin-theme="light"] .syscfg-repeater-item,
+html[data-admin-theme="light"] .syscfg-image-preview-wrap,
+html[data-admin-theme="light"] .syscfg-sticky-actions {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .syscfg-kpi-card,
+.admin-theme-dark .syscfg-panel,
+.admin-theme-dark .syscfg-form-card,
+.admin-theme-dark .syscfg-info-item,
+.admin-theme-dark .syscfg-env-card,
+.admin-theme-dark .syscfg-repeater-item,
+.admin-theme-dark .syscfg-image-preview-wrap,
+.admin-theme-dark .syscfg-sticky-actions,
+html[data-admin-theme="dark"] .syscfg-kpi-card,
+html[data-admin-theme="dark"] .syscfg-panel,
+html[data-admin-theme="dark"] .syscfg-form-card,
+html[data-admin-theme="dark"] .syscfg-info-item,
+html[data-admin-theme="dark"] .syscfg-env-card,
+html[data-admin-theme="dark"] .syscfg-repeater-item,
+html[data-admin-theme="dark"] .syscfg-image-preview-wrap,
+html[data-admin-theme="dark"] .syscfg-sticky-actions {
+    background: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .syscfg-kpi-value,
+.admin-theme-dark .syscfg-panel-title,
+.admin-theme-dark .syscfg-section-title,
+.admin-theme-dark .syscfg-info-value,
+.admin-theme-dark .syscfg-env-key,
+html[data-admin-theme="dark"] .syscfg-kpi-value,
+html[data-admin-theme="dark"] .syscfg-panel-title,
+html[data-admin-theme="dark"] .syscfg-section-title,
+html[data-admin-theme="dark"] .syscfg-info-value,
+html[data-admin-theme="dark"] .syscfg-env-key {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .syscfg-kpi-title,
+.admin-theme-dark .syscfg-panel-subtitle,
+.admin-theme-dark .syscfg-info-label,
+.admin-theme-dark .syscfg-env-meta,
+html[data-admin-theme="dark"] .syscfg-kpi-title,
+html[data-admin-theme="dark"] .syscfg-panel-subtitle,
+html[data-admin-theme="dark"] .syscfg-info-label,
+html[data-admin-theme="dark"] .syscfg-env-meta {
+    color: #cbd5e1 !important;
+}

@@ -1,0 +1,203 @@
+
+/* Offerings modal fix */
+.offering-modal .offering-modal-dialog {
+    margin: 1rem auto;
+    max-width: min(1140px, calc(100vw - 2rem));
+}
+
+.offering-modal .modal-content {
+    border: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    max-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.offering-modal .modal-header,
+.offering-modal .modal-footer {
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.offering-modal .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 220px);
+    padding-bottom: 1.25rem;
+}
+
+.offering-modal .ui-modal-header {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.offering-modal .modal-footer {
+    border-top: 1px solid #edf2f7;
+    padding: 1rem 1.5rem;
+}
+
+.offering-modal textarea.form-control,
+.offering-modal textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.offering-modal .offerings-form-section-title {
+    font-size: .78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #7c3aed;
+    margin-bottom: .15rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px dashed #dbe4f0;
+}
+
+@media (max-width: 991.98px) {
+    .offering-modal .offering-modal-dialog {
+        margin: .75rem;
+        max-width: calc(100vw - 1.5rem);
+    }
+
+    .offering-modal .modal-content {
+        max-height: calc(100vh - 1.5rem);
+        border-radius: 20px;
+    }
+
+    .offering-modal .modal-body {
+        max-height: calc(100vh - 200px);
+        padding: 1rem !important;
+    }
+
+    .offering-modal .modal-header,
+    .offering-modal .modal-footer {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+.offerings-module-v4 .ui-page-hero {
+    margin-bottom: 1.75rem;
+}
+
+.offerings-module-v4 .ui-table-card,
+.offerings-module-v4 .ui-filter-card,
+.offerings-module-v4 .ui-panel,
+.offerings-module-v4 .ui-side-card,
+.offerings-module-v4 .ui-mini-card {
+    box-shadow: var(--ui-shadow-soft);
+}
+
+.offerings-module-v4 .offerings-form-section-title {
+    font-size: .88rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--ui-primary);
+    padding-bottom: .55rem;
+    border-bottom: 1px dashed var(--ui-border);
+}
+
+.offerings-module-v4 .modal-xl {
+    max-width: 1140px;
+}
+
+.offerings-module-v4 .offering-modal .modal-content {
+    max-height: calc(100vh - 2rem);
+}
+
+.offerings-module-v4 .offering-modal .modal-body {
+    overflow-y: auto;
+}
+
+.offerings-module-v4 .offerings-table td,
+.offerings-module-v4 .offerings-table th {
+    white-space: nowrap;
+}
+
+.offerings-module-v4 .offerings-actions .btn {
+    min-width: 94px;
+}
+
+.offerings-module-v4 .ui-attention-value,
+.offerings-module-v4 .ui-mini-value,
+.offerings-module-v4 .ui-stat-value {
+    letter-spacing: -.03em;
+}
+
+.offerings-module-v4 .dataTables_wrapper .dataTables_filter input,
+.offerings-module-v4 .dataTables_wrapper .dataTables_length select {
+    border-radius: 12px;
+    border: 1px solid var(--ui-border);
+    min-height: 40px;
+}
+
+.offerings-module-v4 .offerings-dt-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0 .5rem;
+}
+
+.offerings-module-v4 .dataTables_paginate .paginate_button {
+    border-radius: 999px !important;
+    margin: 0 .15rem;
+}
+
+.offerings-module-v4 .dataTables_paginate .paginate_button.current,
+.offerings-module-v4 .dataTables_paginate .paginate_button.current:hover {
+    background: linear-gradient(135deg, var(--ui-primary), var(--ui-primary-2)) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+@media (max-width: 991.98px) {
+    .offerings-module-v4 .offerings-dt-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* OFFERINGS MODULE V4 */
+.admin-theme-dark .offering-modal .modal-content,
+.admin-theme-dark .offering-modal .modal-header,
+.admin-theme-dark .offering-modal .modal-footer,
+html[data-admin-theme="dark"] .offering-modal .modal-content,
+html[data-admin-theme="dark"] .offering-modal .modal-header,
+html[data-admin-theme="dark"] .offering-modal .modal-footer {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+.admin-theme-dark .offering-modal .ui-modal-header,
+.admin-theme-dark .offering-modal .modal-footer,
+html[data-admin-theme="dark"] .offering-modal .ui-modal-header,
+html[data-admin-theme="dark"] .offering-modal .modal-footer { border-color: #334155 !important; }
+.admin-theme-dark .offering-modal .offerings-form-section-title,
+.admin-theme-dark .offerings-module-v4 .offerings-form-section-title,
+html[data-admin-theme="dark"] .offering-modal .offerings-form-section-title,
+html[data-admin-theme="dark"] .offerings-module-v4 .offerings-form-section-title {
+    color: #c4b5fd !important;
+    border-color: #334155 !important;
+}
+.admin-theme-dark .offerings-module-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .offerings-module-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .offerings-module-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .offerings-module-v4 .dataTables_wrapper .dataTables_length select {
+    background: #020617 !important; color: #f8fafc !important; border-color: #475569 !important;
+}
+.admin-theme-light .offering-modal .modal-content,
+.admin-theme-light .offering-modal .modal-header,
+.admin-theme-light .offering-modal .modal-footer,
+html[data-admin-theme="light"] .offering-modal .modal-content,
+html[data-admin-theme="light"] .offering-modal .modal-header,
+html[data-admin-theme="light"] .offering-modal .modal-footer {
+    background: #ffffff !important; color: #020617 !important; border-color: #e2e8f0 !important;
+}
+

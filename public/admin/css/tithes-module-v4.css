@@ -1,0 +1,86 @@
+.tithe-v4 .row-has-existing {
+    background: rgba(245, 158, 11, .06);
+}
+.tithe-v4 .dataTables_wrapper .dataTables_filter input,
+.tithe-v4 .dataTables_wrapper .dataTables_length select {
+    border-radius: 12px;
+    border: 1px solid #dbe3ef;
+    min-height: 40px;
+}
+.tithe-v4 .dataTables_wrapper .pagination .page-link {
+    border-radius: 10px;
+    margin: 0 .15rem;
+}
+.tithe-v4 .ui-note-box strong {
+    font-variant-numeric: tabular-nums;
+}
+.tithe-v4 .tithe-chart-wrap {
+    min-height: 360px;
+    position: relative;
+}
+.tithe-v4 .tithe-chart-wrap-sm {
+    min-height: 300px;
+}
+.tithe-v4 .tithe-chart-wrap canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+.tithe-v4 .ui-hero-action.border-0 {
+    appearance: none;
+}
+.tithe-v4 .modal .form-control,
+.tithe-v4 .modal .form-select {
+    min-height: 46px;
+}
+
+
+/* ==========================================================
+   THEME OVERRIDES: TITHE V4
+   ========================================================== */
+.admin-theme-light .tithe-v4 .row-has-existing,
+html[data-admin-theme="light"] .tithe-v4 .row-has-existing {
+    background: rgba(245, 158, 11, .06) !important;
+}
+
+.admin-theme-dark .tithe-v4 .row-has-existing,
+html[data-admin-theme="dark"] .tithe-v4 .row-has-existing {
+    background: rgba(245, 158, 11, .14) !important;
+}
+
+.admin-theme-dark .tithe-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .tithe-v4 .dataTables_wrapper .dataTables_length select,
+.admin-theme-dark .tithe-v4 .modal .form-control,
+.admin-theme-dark .tithe-v4 .modal .form-select,
+html[data-admin-theme="dark"] .tithe-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .tithe-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .tithe-v4 .modal .form-control,
+html[data-admin-theme="dark"] .tithe-v4 .modal .form-select {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+
+.admin-theme-light .tithe-v4 .tithe-chart-wrap,
+.admin-theme-light .tithe-v4 .tithe-chart-wrap-sm,
+html[data-admin-theme="light"] .tithe-v4 .tithe-chart-wrap,
+html[data-admin-theme="light"] .tithe-v4 .tithe-chart-wrap-sm {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .tithe-v4 .tithe-chart-wrap,
+.admin-theme-dark .tithe-v4 .tithe-chart-wrap-sm,
+html[data-admin-theme="dark"] .tithe-v4 .tithe-chart-wrap,
+html[data-admin-theme="dark"] .tithe-v4 .tithe-chart-wrap-sm {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .tithe-v4 .ui-note-box,
+html[data-admin-theme="dark"] .tithe-v4 .ui-note-box {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}

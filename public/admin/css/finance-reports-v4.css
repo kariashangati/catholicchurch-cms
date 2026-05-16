@@ -1,0 +1,128 @@
+/* Finance Reports v4 helpers */
+.finance-reports-v4 .reports-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.finance-reports-v4 .reports-mini-stack {
+    display: grid;
+    gap: .9rem;
+}
+
+.finance-reports-v4 .reports-mini-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .95rem 1rem;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fff, #f8fbff);
+    border: 1px solid #e2e8f0;
+}
+
+.finance-reports-v4 .reports-mini-line span {
+    color: #64748b;
+    font-weight: 700;
+}
+
+.finance-reports-v4 .reports-mini-line strong {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.finance-reports-v4 .reports-note-box {
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(124,58,237,.08), rgba(14,165,233,.08));
+    border: 1px solid rgba(124,58,237,.12);
+}
+
+.finance-reports-v4 .reports-note-box h6 {
+    margin-bottom: .35rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.finance-reports-v4 .reports-table thead th {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #64748b;
+    border-bottom-width: 1px;
+    white-space: nowrap;
+}
+
+.finance-reports-v4 .reports-table tbody td {
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+    vertical-align: middle;
+}
+
+.finance-reports-v4 .reports-badge-bank {
+    background: rgba(2,132,199,.08);
+    color: #0284c7;
+    border: 1px solid rgba(2,132,199,.16);
+}
+
+.finance-reports-v4 .reports-badge-mixed {
+    background: rgba(245,158,11,.08);
+    color: #b45309;
+    border: 1px solid rgba(245,158,11,.18);
+}
+
+.finance-reports-v4 .ui-empty-state {
+    min-height: 180px;
+    border-radius: 20px;
+    border: 1px dashed #dbe5f0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f8fafc;
+}
+
+.finance-reports-v4 .ui-empty-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto .85rem;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(124,58,237,.08);
+    color: #7c3aed;
+    font-size: 1.15rem;
+}
+
+.finance-reports-v4 .ui-empty-title {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.finance-reports-v4 .pagination {
+    margin-bottom: 0;
+}
+
+.finance-reports-v4 .pagination .page-link {
+    border-radius: 12px;
+    margin: 0 .15rem;
+}
+
+@media (max-width: 991.98px) {
+    .finance-reports-v4 .reports-mini-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   LIGHT / DARK THEME OVERRIDES
+   Scope: this module only. Classic theme remains unchanged.
+   ========================================================== */
+/* THEME OVERRIDES: FINANCE REPORTS V4 */
+.admin-theme-light .finance-reports-v4 .reports-mini-line, .admin-theme-light .finance-reports-v4 .reports-note-box, .admin-theme-light .finance-reports-v4 .ui-empty-state, html[data-admin-theme="light"] .finance-reports-v4 .reports-mini-line, html[data-admin-theme="light"] .finance-reports-v4 .reports-note-box, html[data-admin-theme="light"] .finance-reports-v4 .ui-empty-state { background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important; color:#020617!important; border-color:#e2e8f0!important; }
+.admin-theme-dark .finance-reports-v4 .reports-mini-line, .admin-theme-dark .finance-reports-v4 .reports-note-box, .admin-theme-dark .finance-reports-v4 .ui-empty-state, html[data-admin-theme="dark"] .finance-reports-v4 .reports-mini-line, html[data-admin-theme="dark"] .finance-reports-v4 .reports-note-box, html[data-admin-theme="dark"] .finance-reports-v4 .ui-empty-state { background:#0f172a!important; color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-dark .finance-reports-v4 .reports-mini-line span, html[data-admin-theme="dark"] .finance-reports-v4 .reports-mini-line span { color:#cbd5e1!important; }
+.admin-theme-dark .finance-reports-v4 .reports-mini-line strong, .admin-theme-dark .finance-reports-v4 .reports-note-box h6, .admin-theme-dark .finance-reports-v4 .ui-empty-title, html[data-admin-theme="dark"] .finance-reports-v4 .reports-mini-line strong, html[data-admin-theme="dark"] .finance-reports-v4 .reports-note-box h6, html[data-admin-theme="dark"] .finance-reports-v4 .ui-empty-title { color:#f8fafc!important; }
+.admin-theme-dark .finance-reports-v4 .reports-table thead th, html[data-admin-theme="dark"] .finance-reports-v4 .reports-table thead th { background:#111827!important; color:#cbd5e1!important; border-color:#334155!important; }
+.admin-theme-dark .finance-reports-v4 .reports-table tbody td, html[data-admin-theme="dark"] .finance-reports-v4 .reports-table tbody td { color:#f8fafc!important; border-color:#334155!important; }

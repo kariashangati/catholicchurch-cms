@@ -1,0 +1,153 @@
+
+.admin-ui-v4.reports-v4-page .ui-page-hero,
+.admin-ui-v4.finance-reports-v4 .ui-page-hero,
+.admin-ui-v4.sacrament-reports-v4 .ui-page-hero {
+    margin-bottom: 1.5rem;
+}
+.admin-ui-v4 .ui-stat-card .card-body,
+.admin-ui-v4 .ui-panel .card-body,
+.admin-ui-v4 .ui-table-card .card-body,
+.admin-ui-v4 .ui-filter-card .card-body,
+.admin-ui-v4 .ui-mini-card .card-body,
+.admin-ui-v4 .ui-finance-card .card-body,
+.admin-ui-v4 .ui-side-card .card-body { padding: 1.25rem; }
+.admin-ui-v4 .ui-table-card .card-header,
+.admin-ui-v4 .ui-panel .card-header,
+.admin-ui-v4 .ui-finance-card .card-header {
+    background: transparent;
+    border-bottom: 1px solid rgba(226,232,240,.9);
+    padding: 1rem 1.25rem;
+}
+.admin-ui-v4 .ui-table-card .table,
+.admin-ui-v4 .ui-panel .table,
+.admin-ui-v4 .ui-finance-card .table { margin-bottom: 0; }
+.admin-ui-v4 .ui-table-card .table thead th,
+.admin-ui-v4 .ui-panel .table thead th,
+.admin-ui-v4 .ui-finance-card .table thead th {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--ui-muted);
+    border-bottom-color: var(--ui-border);
+    white-space: nowrap;
+}
+.admin-ui-v4 .ui-table-card .table tbody td,
+.admin-ui-v4 .ui-panel .table tbody td,
+.admin-ui-v4 .ui-finance-card .table tbody td { vertical-align: middle; }
+.admin-ui-v4 .ui-filter-card .btn,
+.admin-ui-v4 .ui-table-card .btn,
+.admin-ui-v4 .ui-panel .btn,
+.admin-ui-v4 .ui-finance-card .btn { border-radius: 14px; font-weight: 700; }
+.admin-ui-v4 .ui-empty-state {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    color: var(--ui-muted);
+}
+.admin-ui-v4 .ui-empty-state i {
+    width: 52px; height: 52px; border-radius: 16px; display: inline-flex; align-items:center; justify-content:center;
+    background: rgba(124,58,237,.08); color: var(--ui-primary); margin-bottom: .8rem;
+}
+.admin-ui-v4 .ui-kpi-grid .card-body { min-height: 150px; }
+.admin-ui-v4 .ui-status-pill { display:inline-flex; align-items:center; gap:.35rem; padding:.34rem .72rem; font-size:.75rem; font-weight:700; }
+.admin-ui-v4 .ui-status-paid, .admin-ui-v4 .ui-status-approved { background: rgba(22,163,74,.1); color:#15803d; border:1px solid rgba(22,163,74,.18); }
+.admin-ui-v4 .ui-status-unpaid, .admin-ui-v4 .ui-status-rejected { background: rgba(239,68,68,.1); color:#b91c1c; border:1px solid rgba(239,68,68,.18); }
+.admin-ui-v4 .ui-status-partial, .admin-ui-v4 .ui-status-pending { background: rgba(245,158,11,.12); color:#b45309; border:1px solid rgba(245,158,11,.2); }
+.admin-ui-v4 .ui-status-mixed, .admin-ui-v4 .ui-status-info { background: rgba(2,132,199,.1); color:#0369a1; border:1px solid rgba(2,132,199,.18); }
+.admin-ui-v4 .ui-inline-stat-row { display:flex; justify-content:space-between; align-items:center; padding:.9rem 0; border-bottom:1px dashed var(--ui-border); }
+.admin-ui-v4 .ui-inline-stat-row:last-child { border-bottom:0; }
+.admin-ui-v4 .ui-inline-stat-row strong { color: var(--ui-secondary); }
+.admin-ui-v4 .ui-report-tile { height: 100%; }
+.admin-ui-v4 .ui-report-tile .reports-icon, .admin-ui-v4 .ui-report-tile .ui-panel-icon i { font-size: 1.1rem; }
+.admin-ui-v4 .ui-mini-stat { padding: 1rem; border-radius: 18px; border:1px solid var(--ui-border); background:linear-gradient(180deg,#fff,#fbfdff); height:100%; }
+.admin-ui-v4 .ui-mini-stat .label { font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; color:var(--ui-muted); font-weight:700; }
+.admin-ui-v4 .ui-mini-stat .value { font-size:1.55rem; font-weight:800; color:var(--ui-secondary); margin-top:.35rem; }
+.admin-ui-v4 .ui-print-actions { display:flex; justify-content:flex-end; gap:.75rem; margin-bottom:1rem; }
+.admin-ui-v4 .ui-yes { color:#15803d; font-weight:700; }
+.admin-ui-v4 .ui-no { color:#b91c1c; font-weight:700; }
+.admin-ui-v4 .ui-report-note { padding: 1rem 1.1rem; border-radius: 18px; background: rgba(2,132,199,.08); border:1px solid rgba(2,132,199,.14); color:#0f172a; }
+
+
+/* ==========================================================
+   THEME OVERRIDES: REPORTS V4 POLISH
+   Safe: scoped to admin-ui-v4 report helpers.
+   ========================================================== */
+.admin-theme-light .admin-ui-v4 .ui-table-card .card-header,
+.admin-theme-light .admin-ui-v4 .ui-panel .card-header,
+.admin-theme-light .admin-ui-v4 .ui-finance-card .card-header,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-table-card .card-header,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-panel .card-header,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-finance-card .card-header {
+    background: #ffffff !important;
+    border-bottom-color: #e2e8f0 !important;
+    color: #020617 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-table-card .card-header,
+.admin-theme-dark .admin-ui-v4 .ui-panel .card-header,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card .card-header,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .card-header,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel .card-header,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-card .card-header {
+    background: #0f172a !important;
+    border-bottom-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-table-card .table thead th,
+.admin-theme-dark .admin-ui-v4 .ui-panel .table thead th,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card .table thead th,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .table thead th,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel .table thead th,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-card .table thead th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-bottom-color: #334155 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-table-card .table tbody td,
+.admin-theme-dark .admin-ui-v4 .ui-panel .table tbody td,
+.admin-theme-dark .admin-ui-v4 .ui-finance-card .table tbody td,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-table-card .table tbody td,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-panel .table tbody td,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-finance-card .table tbody td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-light .admin-ui-v4 .ui-mini-stat,
+.admin-theme-light .admin-ui-v4 .ui-report-note,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-mini-stat,
+html[data-admin-theme="light"] .admin-ui-v4 .ui-report-note {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-mini-stat,
+.admin-theme-dark .admin-ui-v4 .ui-report-note,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-stat,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-report-note {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-mini-stat .label,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-stat .label {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-mini-stat .value,
+.admin-theme-dark .admin-ui-v4 .ui-inline-stat-row strong,
+.admin-theme-dark .admin-ui-v4 .ui-report-note,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-mini-stat .value,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-inline-stat-row strong,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-report-note {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .admin-ui-v4 .ui-inline-stat-row,
+html[data-admin-theme="dark"] .admin-ui-v4 .ui-inline-stat-row {
+    border-bottom-color: #334155 !important;
+}

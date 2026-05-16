@@ -1,0 +1,101 @@
+.finance-toolbar {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.finance-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.finance-stat-card {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+    padding: 1rem 1.1rem;
+}
+
+.finance-stat-label {
+    font-size: .82rem;
+    color: #6b7280;
+    margin-bottom: .45rem;
+}
+
+.finance-stat-value {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.finance-soft-card {
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.finance-soft-card .card-header {
+    border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+    background: transparent;
+}
+
+.finance-table thead th {
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    color: #475569;
+    border-bottom-width: 1px;
+}
+
+.finance-pill {
+    display: inline-flex;
+    padding: .25rem .65rem;
+    border-radius: 999px;
+    font-size: .74rem;
+    font-weight: 600;
+}
+
+.finance-pill.pending { background: #fff7ed; color: #c2410c; }
+.finance-pill.approved, .finance-pill.verified { background: #ecfdf5; color: #047857; }
+.finance-pill.rejected { background: #fef2f2; color: #b91c1c; }
+
+.finance-month-bar {
+    height: 10px;
+    border-radius: 999px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.finance-month-bar > span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+.finance-modal .modal-content {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.18);
+}
+
+/* ==========================================================
+   LIGHT / DARK THEME OVERRIDES
+   Scope: this module only. Classic theme remains unchanged.
+   ========================================================== */
+/* THEME OVERRIDES: FINANCE CONTRIBUTIONS */
+.admin-theme-light .finance-stat-card, .admin-theme-light .finance-soft-card, html[data-admin-theme="light"] .finance-stat-card, html[data-admin-theme="light"] .finance-soft-card { background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important; color:#020617!important; border-color:#e2e8f0!important; }
+.admin-theme-dark .finance-stat-card, .admin-theme-dark .finance-soft-card, html[data-admin-theme="dark"] .finance-stat-card, html[data-admin-theme="dark"] .finance-soft-card { background:#0f172a!important; color:#f8fafc!important; border-color:#334155!important; box-shadow:0 12px 30px rgba(0,0,0,.28)!important; }
+.admin-theme-dark .finance-soft-card .card-header, html[data-admin-theme="dark"] .finance-soft-card .card-header { background:#111827!important; color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-light .finance-stat-value, html[data-admin-theme="light"] .finance-stat-value { color:#020617!important; }
+.admin-theme-dark .finance-stat-value, html[data-admin-theme="dark"] .finance-stat-value { color:#f8fafc!important; }
+.admin-theme-dark .finance-stat-label, html[data-admin-theme="dark"] .finance-stat-label { color:#cbd5e1!important; }
+.admin-theme-dark .finance-table thead th, html[data-admin-theme="dark"] .finance-table thead th { background:#111827!important; color:#cbd5e1!important; border-color:#334155!important; }
+.admin-theme-dark .finance-table tbody td, html[data-admin-theme="dark"] .finance-table tbody td { color:#f8fafc!important; border-color:#334155!important; }
+.admin-theme-dark .finance-modal .modal-content, html[data-admin-theme="dark"] .finance-modal .modal-content { background:#0f172a!important; color:#f8fafc!important; border:1px solid #334155!important; }
+.admin-theme-dark .finance-month-bar, html[data-admin-theme="dark"] .finance-month-bar { background:#334155!important; }

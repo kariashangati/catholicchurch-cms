@@ -35,4 +35,24 @@ return [
         ],
     ],
 
+    'wkhtmltopdf' => [
+        'binary' => env('WKHTMLTOPDF_BINARY', 'C:/wkhtmltopdf/wkhtmltopdf.bat'),
+    ],
+
+
+
+
+    'mpesa' => [
+    'env' => env('MPESA_ENV', 'sandbox'),
+    'host' => env('MPESA_HOST', 'https://openapi.m-pesa.com'),
+    'market' => env('MPESA_MARKET', 'vodacomTZN'),
+    'country' => env('MPESA_COUNTRY', 'TZN'),
+    'currency' => env('MPESA_CURRENCY', 'TZS'),
+    'service_provider_code' => env('MPESA_SERVICE_PROVIDER_CODE'),
+    'origin' => env('MPESA_ORIGIN', '*'),
+    'api_key' => env('MPESA_API_KEY'),
+    'public_key' => env('MPESA_PUBLIC_KEY'),
+    'api_version' => env('MPESA_API_VERSION', '3.1'),
+],
+
 ];

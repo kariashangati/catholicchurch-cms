@@ -1,0 +1,201 @@
+
+.cc-schedule-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    padding: 28px;
+    background: linear-gradient(135deg, rgba(86, 34, 197, 0.98), rgba(30, 64, 175, 0.95), rgba(14, 116, 144, 0.92));
+    color: #fff;
+    box-shadow: 0 22px 60px rgba(37, 99, 235, 0.20);
+}
+
+.cc-schedule-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.22), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.16), transparent 26%);
+    pointer-events: none;
+}
+
+.cc-schedule-hero__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.cc-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 7px 14px;
+    background: rgba(255,255,255,0.14);
+    font-size: 0.84rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.cc-title {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.cc-subtitle {
+    max-width: 760px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 0;
+}
+
+.cc-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.12);
+    font-weight: 700;
+}
+
+.cc-kpi {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.07);
+}
+
+.cc-kpi__icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 1.35rem;
+    color: #fff;
+}
+
+.cc-kpi--purple .cc-kpi__icon { background: linear-gradient(135deg, #7c3aed, #4f46e5); }
+.cc-kpi--blue .cc-kpi__icon { background: linear-gradient(135deg, #2563eb, #0ea5e9); }
+.cc-kpi--emerald .cc-kpi__icon { background: linear-gradient(135deg, #059669, #22c55e); }
+
+.cc-kpi__label {
+    font-size: 0.86rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.cc-kpi__value {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.cc-panel {
+    background: #fff;
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+}
+
+.cc-panel__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.cc-panel__title {
+    margin-bottom: 4px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.cc-panel__text {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.cc-panel__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 16px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.cc-table thead th {
+    border-bottom-width: 1px;
+    color: #64748b;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cc-table tbody tr td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    vertical-align: middle;
+}
+
+.cc-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.84rem;
+}
+
+.cc-status--scheduled {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.cc-empty {
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.cc-empty__icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    border-radius: 24px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    color: #4f46e5;
+    font-size: 1.6rem;
+}
+
+.cc-empty__title {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.cc-empty__text {
+    color: #64748b;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.cc-modal {
+    border: none;
+    border-radius: 28px;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
+}

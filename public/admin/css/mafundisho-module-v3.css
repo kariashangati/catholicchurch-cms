@@ -1,0 +1,528 @@
+.teaching-page {
+    --primary: #7c3aed;
+    --primary-2: #8b5cf6;
+    --soft: #f8fafc;
+    --border: #e9d5ff;
+}
+
+/* DEFAULT / CLASSIC */
+.teaching-hero {
+    background: linear-gradient(135deg, #6d28d9, #7c3aed, #9333ea);
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 24px 50px rgba(124, 58, 237, .24);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.teaching-hero:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, .18), transparent 36%);
+    pointer-events: none;
+}
+
+.teaching-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.teaching-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .16);
+    color: #fff;
+    font-weight: 700;
+    font-size: .82rem;
+    backdrop-filter: blur(10px);
+}
+
+.teaching-chip.soft {
+    background: rgba(255, 255, 255, .1);
+}
+
+.teaching-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.teaching-quick-grid.single-column {
+    grid-template-columns: 1fr;
+}
+
+.teaching-action-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .13);
+    color: #fff;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: .2s ease;
+}
+
+.teaching-action-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, .18);
+    color: #fff;
+}
+
+.teaching-action-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .16);
+    flex-shrink: 0;
+}
+
+.teaching-action-card strong,
+.teaching-action-card small {
+    display: block;
+}
+
+.teaching-action-card small {
+    opacity: .85;
+}
+
+.teaching-kpi-card {
+    border: 0;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, .06);
+}
+
+.teaching-kpi-card .card-body {
+    padding: 22px;
+}
+
+.teaching-kpi-label {
+    display: block;
+    font-size: .78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.teaching-kpi-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+}
+
+.teaching-kpi-meta {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: .88rem;
+}
+
+.teaching-chart-shell {
+    height: 320px;
+}
+
+.teaching-chart-shell.small-shell {
+    height: 260px;
+}
+
+.teaching-donut-shell {
+    height: 260px;
+}
+
+.teaching-inline-chart {
+    height: 120px;
+}
+
+.teaching-status-stack {
+    display: grid;
+    gap: 10px;
+}
+
+.teaching-status-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: #f8fafc;
+    color: #374151;
+    font-weight: 600;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dot-blue {
+    background: #3b82f6;
+}
+
+.dot-green {
+    background: #22c55e;
+}
+
+.dot-amber {
+    background: #f59e0b;
+}
+
+.teaching-type-card .teaching-type-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.teaching-type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.teaching-type-grid > div {
+    padding: 14px;
+    border-radius: 16px;
+    background: #f8fafc;
+}
+
+.teaching-type-grid span {
+    display: block;
+    color: #6b7280;
+    font-size: .82rem;
+    margin-bottom: 4px;
+}
+
+.teaching-type-grid strong {
+    font-size: 1.05rem;
+    color: #111827;
+}
+
+.teaching-member-picker {
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.teaching-member-picker table th {
+    background: #faf5ff;
+}
+
+.teaching-section-card {
+    padding: 18px;
+    border-radius: 20px;
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+}
+
+.teaching-section-card-title {
+    font-weight: 800;
+    color: #581c87;
+    margin-bottom: 16px;
+}
+
+#mafundishoEnrollmentsTable tbody tr:hover,
+#mafundishoRecentTable tbody tr:hover,
+.teaching-member-picker-table tbody tr:hover {
+    background: #faf5ff;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: .5rem .9rem;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: .35rem 1.8rem .35rem .75rem;
+}
+
+.dataTables_wrapper .pagination .page-link {
+    border-radius: 12px !important;
+    margin: 0 3px;
+    border: none;
+    color: #6b21a8;
+}
+
+.dataTables_wrapper .pagination .page-item.active .page-link {
+    background: #7c3aed;
+    color: #fff;
+}
+
+/* ==========================================================
+   THEME OVERRIDE: MAFUNDISHO HERO ONLY
+   No grid/small-box pattern.
+   ========================================================== */
+
+/* LIGHT THEME */
+body.admin-theme-light .teaching-hero,
+html[data-admin-theme="light"] body .teaching-hero {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #020617 !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .07) !important;
+}
+
+body.admin-theme-light .teaching-hero:after,
+html[data-admin-theme="light"] body .teaching-hero:after {
+    background: radial-gradient(circle at top right, rgba(37, 99, 235, .08), transparent 38%) !important;
+    opacity: 1 !important;
+}
+
+body.admin-theme-light .teaching-hero h1,
+body.admin-theme-light .teaching-hero h2,
+body.admin-theme-light .teaching-hero h3,
+body.admin-theme-light .teaching-hero p,
+body.admin-theme-light .teaching-hero span,
+body.admin-theme-light .teaching-hero small,
+body.admin-theme-light .teaching-hero strong,
+body.admin-theme-light .teaching-hero label,
+html[data-admin-theme="light"] body .teaching-hero h1,
+html[data-admin-theme="light"] body .teaching-hero h2,
+html[data-admin-theme="light"] body .teaching-hero h3,
+html[data-admin-theme="light"] body .teaching-hero p,
+html[data-admin-theme="light"] body .teaching-hero span,
+html[data-admin-theme="light"] body .teaching-hero small,
+html[data-admin-theme="light"] body .teaching-hero strong,
+html[data-admin-theme="light"] body .teaching-hero label {
+    color: #020617 !important;
+}
+
+body.admin-theme-light .teaching-chip,
+body.admin-theme-light .teaching-chip.soft,
+body.admin-theme-light .teaching-action-card,
+html[data-admin-theme="light"] body .teaching-chip,
+html[data-admin-theme="light"] body .teaching-chip.soft,
+html[data-admin-theme="light"] body .teaching-action-card {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border: 1px solid #dbe3ee !important;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, .06) !important;
+}
+
+body.admin-theme-light .teaching-action-card:hover,
+html[data-admin-theme="light"] body .teaching-action-card:hover {
+    background: #f1f5f9 !important;
+    color: #020617 !important;
+}
+
+body.admin-theme-light .teaching-action-icon,
+html[data-admin-theme="light"] body .teaching-action-icon {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+}
+
+/* DARK THEME */
+body.admin-theme-dark .teaching-hero,
+html[data-admin-theme="dark"] body .teaching-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%) !important;
+    background-color: #0f172a !important;
+    background-image: none !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, .38) !important;
+}
+
+body.admin-theme-dark .teaching-hero:after,
+html[data-admin-theme="dark"] body .teaching-hero:after {
+    background: radial-gradient(circle at top right, rgba(167, 139, 250, .12), transparent 38%) !important;
+    opacity: 1 !important;
+}
+
+body.admin-theme-dark .teaching-hero h1,
+body.admin-theme-dark .teaching-hero h2,
+body.admin-theme-dark .teaching-hero h3,
+body.admin-theme-dark .teaching-hero p,
+body.admin-theme-dark .teaching-hero span,
+body.admin-theme-dark .teaching-hero small,
+body.admin-theme-dark .teaching-hero strong,
+body.admin-theme-dark .teaching-hero label,
+html[data-admin-theme="dark"] body .teaching-hero h1,
+html[data-admin-theme="dark"] body .teaching-hero h2,
+html[data-admin-theme="dark"] body .teaching-hero h3,
+html[data-admin-theme="dark"] body .teaching-hero p,
+html[data-admin-theme="dark"] body .teaching-hero span,
+html[data-admin-theme="dark"] body .teaching-hero small,
+html[data-admin-theme="dark"] body .teaching-hero strong,
+html[data-admin-theme="dark"] body .teaching-hero label {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .teaching-chip,
+body.admin-theme-dark .teaching-chip.soft,
+body.admin-theme-dark .teaching-action-card,
+html[data-admin-theme="dark"] body .teaching-chip,
+html[data-admin-theme="dark"] body .teaching-chip.soft,
+html[data-admin-theme="dark"] body .teaching-action-card {
+    background: #111827 !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    box-shadow: none !important;
+}
+
+body.admin-theme-dark .teaching-action-card:hover,
+html[data-admin-theme="dark"] body .teaching-action-card:hover {
+    background: #1e293b !important;
+    color: #ffffff !important;
+}
+
+body.admin-theme-dark .teaching-action-icon,
+html[data-admin-theme="dark"] body .teaching-action-icon {
+    background: #1e293b !important;
+    color: #c4b5fd !important;
+}
+
+/* DARK THEME: inner Mafundisho cards */
+body.admin-theme-dark .teaching-kpi-card,
+body.admin-theme-dark .teaching-member-picker,
+body.admin-theme-dark .teaching-section-card,
+body.admin-theme-dark .teaching-type-grid > div,
+body.admin-theme-dark .teaching-status-item,
+html[data-admin-theme="dark"] body .teaching-kpi-card,
+html[data-admin-theme="dark"] body .teaching-member-picker,
+html[data-admin-theme="dark"] body .teaching-section-card,
+html[data-admin-theme="dark"] body .teaching-type-grid > div,
+html[data-admin-theme="dark"] body .teaching-status-item {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+body.admin-theme-dark .teaching-kpi-value,
+body.admin-theme-dark .teaching-type-card .teaching-type-title,
+body.admin-theme-dark .teaching-type-grid strong,
+body.admin-theme-dark .teaching-section-card-title,
+html[data-admin-theme="dark"] body .teaching-kpi-value,
+html[data-admin-theme="dark"] body .teaching-type-card .teaching-type-title,
+html[data-admin-theme="dark"] body .teaching-type-grid strong,
+html[data-admin-theme="dark"] body .teaching-section-card-title {
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark .teaching-kpi-label,
+body.admin-theme-dark .teaching-kpi-meta,
+body.admin-theme-dark .teaching-type-grid span,
+html[data-admin-theme="dark"] body .teaching-kpi-label,
+html[data-admin-theme="dark"] body .teaching-kpi-meta,
+html[data-admin-theme="dark"] body .teaching-type-grid span {
+    color: #cbd5e1 !important;
+}
+
+body.admin-theme-dark .teaching-member-picker table th,
+html[data-admin-theme="dark"] body .teaching-member-picker table th {
+    background: #111827 !important;
+    color: #f8fafc !important;
+}
+
+body.admin-theme-dark #mafundishoEnrollmentsTable tbody tr:hover,
+body.admin-theme-dark #mafundishoRecentTable tbody tr:hover,
+body.admin-theme-dark .teaching-member-picker-table tbody tr:hover,
+html[data-admin-theme="dark"] body #mafundishoEnrollmentsTable tbody tr:hover,
+html[data-admin-theme="dark"] body #mafundishoRecentTable tbody tr:hover,
+html[data-admin-theme="dark"] body .teaching-member-picker-table tbody tr:hover {
+    background: #1e293b !important;
+}
+
+/* LIGHT THEME: softer inner cards */
+body.admin-theme-light .teaching-kpi-card,
+body.admin-theme-light .teaching-member-picker,
+body.admin-theme-light .teaching-section-card,
+body.admin-theme-light .teaching-type-grid > div,
+body.admin-theme-light .teaching-status-item,
+html[data-admin-theme="light"] body .teaching-kpi-card,
+html[data-admin-theme="light"] body .teaching-member-picker,
+html[data-admin-theme="light"] body .teaching-section-card,
+html[data-admin-theme="light"] body .teaching-type-grid > div,
+html[data-admin-theme="light"] body .teaching-status-item {
+    background: #ffffff !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+body.admin-theme-light .teaching-section-card,
+html[data-admin-theme="light"] body .teaching-section-card {
+    background: #f8fafc !important;
+}
+
+body.admin-theme-light .teaching-member-picker table th,
+html[data-admin-theme="light"] body .teaching-member-picker table th {
+    background: #f8fafc !important;
+    color: #020617 !important;
+}
+
+/* Optional: slightly reduce hero height without breaking layout */
+body.admin-theme-light .teaching-hero,
+body.admin-theme-dark .teaching-hero,
+html[data-admin-theme="light"] body .teaching-hero,
+html[data-admin-theme="dark"] body .teaching-hero {
+    padding: 26px 28px !important;
+}
+
+@media (max-width: 991.98px) {
+    .teaching-quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teaching-chart-shell,
+    .teaching-donut-shell {
+        height: 280px;
+    }
+
+    .teaching-hero {
+        padding: 22px !important;
+        border-radius: 22px;
+    }
+}
+
+
+/* ==========================================================
+   LIGHT / DARK ADMIN THEME OVERRIDES
+   Safe module-specific overrides. Classic theme remains unchanged.
+   ========================================================== */
+
+/* MAFUNDISHO EXTRA THEME FIXES */
+.admin-theme-dark .teaching-chart-shell,
+.admin-theme-dark .teaching-chart-shell.small-shell,
+.admin-theme-dark .teaching-donut-shell,
+.admin-theme-dark .teaching-inline-chart,
+html[data-admin-theme="dark"] .teaching-chart-shell,
+html[data-admin-theme="dark"] .teaching-chart-shell.small-shell,
+html[data-admin-theme="dark"] .teaching-donut-shell,
+html[data-admin-theme="dark"] .teaching-inline-chart {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+}
+.admin-theme-dark .teaching-member-picker table th,
+.admin-theme-dark .teaching-member-picker table td,
+html[data-admin-theme="dark"] .teaching-member-picker table th,
+html[data-admin-theme="dark"] .teaching-member-picker table td {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+.admin-theme-dark .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .dataTables_wrapper .dataTables_length select {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}
+

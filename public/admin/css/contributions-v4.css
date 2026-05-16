@@ -1,0 +1,283 @@
+.contributions-dashboard-v4 .ui-chart-shell,
+.contributions-page-v4 .ui-chart-shell {
+    position: relative;
+    min-height: 320px;
+}
+
+.contributions-dashboard-v4 .ui-chart-shell.ui-chart-shell-sm {
+    min-height: 280px;
+}
+
+.contributions-dashboard-v4 .ui-kpi-note,
+.contributions-page-v4 .ui-kpi-note {
+    color: var(--ui-muted);
+    font-size: .82rem;
+    margin-top: .45rem;
+}
+
+.contributions-dashboard-v4 .ui-empty-state,
+.contributions-page-v4 .ui-empty-state {
+    border: 1px dashed var(--ui-border-strong);
+    border-radius: var(--ui-radius-md);
+    padding: 2rem 1.25rem;
+    text-align: center;
+    background: linear-gradient(180deg, #fff, #fbfdff);
+}
+
+.contributions-dashboard-v4 .ui-empty-state-icon,
+.contributions-page-v4 .ui-empty-state-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(124,58,237,.14), rgba(124,58,237,.05));
+    color: var(--ui-primary);
+}
+
+.contributions-dashboard-v4 .ui-table-card .table,
+.contributions-page-v4 .ui-table-card .table {
+    margin-bottom: 0;
+}
+
+.contributions-dashboard-v4 .ui-table-card thead th,
+.contributions-page-v4 .ui-table-card thead th {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--ui-muted);
+    border-bottom-color: var(--ui-border);
+    white-space: nowrap;
+}
+
+.contributions-dashboard-v4 .ui-table-card tbody td,
+.contributions-page-v4 .ui-table-card tbody td {
+    vertical-align: middle;
+}
+
+.contributions-dashboard-v4 .ui-status-pill,
+.contributions-page-v4 .ui-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .45rem .82rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.contributions-dashboard-v4 .ui-status-approved,
+.contributions-page-v4 .ui-status-approved,
+.contributions-dashboard-v4 .ui-status-active,
+.contributions-page-v4 .ui-status-active,
+.contributions-dashboard-v4 .ui-status-verified,
+.contributions-page-v4 .ui-status-verified {
+    color: #166534;
+    background: rgba(34,197,94,.12);
+    border-color: rgba(34,197,94,.22);
+}
+
+.contributions-dashboard-v4 .ui-status-pending,
+.contributions-page-v4 .ui-status-pending {
+    color: #92400e;
+    background: rgba(245,158,11,.14);
+    border-color: rgba(245,158,11,.24);
+}
+
+.contributions-dashboard-v4 .ui-status-rejected,
+.contributions-page-v4 .ui-status-rejected,
+.contributions-dashboard-v4 .ui-status-inactive,
+.contributions-page-v4 .ui-status-inactive {
+    color: #b91c1c;
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.22);
+}
+
+.contributions-dashboard-v4 .ui-amount,
+.contributions-page-v4 .ui-amount {
+    font-weight: 800;
+    color: var(--ui-secondary);
+}
+
+.contributions-dashboard-v4 .ui-member-block,
+.contributions-page-v4 .ui-member-block,
+.contributions-dashboard-v4 .ui-type-block,
+.contributions-page-v4 .ui-type-block {
+    display: flex;
+    flex-direction: column;
+    gap: .18rem;
+}
+
+.contributions-dashboard-v4 .ui-member-meta,
+.contributions-page-v4 .ui-member-meta,
+.contributions-dashboard-v4 .ui-type-meta,
+.contributions-page-v4 .ui-type-meta {
+    color: var(--ui-muted);
+    font-size: .78rem;
+}
+
+.contributions-dashboard-v4 .ui-rank-badge,
+.contributions-page-v4 .ui-rank-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--ui-primary);
+    background: rgba(124,58,237,.1);
+}
+
+.contributions-page-v4 .ui-filter-actions {
+    display: flex;
+    gap: .75rem;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.contributions-page-v4 .ui-modal-card .modal-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--ui-border);
+    background: linear-gradient(180deg, #fff, #f8fafc);
+}
+
+.contributions-page-v4 .ui-modal-card .modal-body {
+    padding: 1.25rem;
+}
+
+.contributions-page-v4 .ui-modal-card .modal-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--ui-border);
+    background: #fff;
+}
+
+.contributions-page-v4 .ui-data-highlight {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: .85rem;
+}
+
+.contributions-page-v4 .ui-data-highlight .ui-mini-card,
+.contributions-dashboard-v4 .ui-data-highlight .ui-mini-card {
+    padding: 1rem;
+}
+
+.contributions-page-v4 .dataTables_wrapper .dataTables_filter input,
+.contributions-page-v4 .dataTables_wrapper .dataTables_length select,
+.contributions-dashboard-v4 .dataTables_wrapper .dataTables_filter input,
+.contributions-dashboard-v4 .dataTables_wrapper .dataTables_length select {
+    border: 1px solid var(--ui-border);
+    border-radius: 12px;
+    padding: .45rem .75rem;
+    margin-left: .4rem;
+}
+
+.contributions-page-v4 .dataTables_wrapper .dataTables_paginate .paginate_button,
+.contributions-dashboard-v4 .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 10px !important;
+    margin: 0 .15rem;
+}
+
+@media (max-width: 991.98px) {
+    .contributions-dashboard-v4 .ui-chart-shell,
+    .contributions-page-v4 .ui-chart-shell {
+        min-height: 280px;
+    }
+}
+
+/* ==========================================================
+   THEME OVERRIDE: CONTRIBUTIONS V4
+   Safe scope only: contribution pages
+   ========================================================== */
+.admin-theme-light .contributions-dashboard-v4 .ui-empty-state,
+.admin-theme-light .contributions-page-v4 .ui-empty-state,
+.admin-theme-light .contributions-dashboard-v4 .ui-chart-shell,
+.admin-theme-light .contributions-page-v4 .ui-chart-shell,
+.admin-theme-light .contributions-page-v4 .ui-modal-card .modal-header,
+.admin-theme-light .contributions-page-v4 .ui-modal-card .modal-footer,
+html[data-admin-theme="light"] .contributions-dashboard-v4 .ui-empty-state,
+html[data-admin-theme="light"] .contributions-page-v4 .ui-empty-state,
+html[data-admin-theme="light"] .contributions-dashboard-v4 .ui-chart-shell,
+html[data-admin-theme="light"] .contributions-page-v4 .ui-chart-shell,
+html[data-admin-theme="light"] .contributions-page-v4 .ui-modal-card .modal-header,
+html[data-admin-theme="light"] .contributions-page-v4 .ui-modal-card .modal-footer {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+    color: #020617 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.admin-theme-dark .contributions-dashboard-v4 .ui-empty-state,
+.admin-theme-dark .contributions-page-v4 .ui-empty-state,
+.admin-theme-dark .contributions-dashboard-v4 .ui-chart-shell,
+.admin-theme-dark .contributions-page-v4 .ui-chart-shell,
+.admin-theme-dark .contributions-page-v4 .ui-modal-card .modal-header,
+.admin-theme-dark .contributions-page-v4 .ui-modal-card .modal-footer,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-empty-state,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-empty-state,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-chart-shell,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-chart-shell,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-modal-card .modal-header,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-modal-card .modal-footer {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .contributions-dashboard-v4 .ui-table-card thead th,
+.admin-theme-dark .contributions-page-v4 .ui-table-card thead th,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-table-card thead th,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-table-card thead th {
+    background: #111827 !important;
+    color: #cbd5e1 !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .contributions-dashboard-v4 .ui-table-card tbody td,
+.admin-theme-dark .contributions-page-v4 .ui-table-card tbody td,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-table-card tbody td,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-table-card tbody td {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.admin-theme-dark .contributions-dashboard-v4 .ui-amount,
+.admin-theme-dark .contributions-page-v4 .ui-amount,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-amount,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-amount {
+    color: #f8fafc !important;
+}
+
+.admin-theme-dark .contributions-dashboard-v4 .ui-kpi-note,
+.admin-theme-dark .contributions-page-v4 .ui-kpi-note,
+.admin-theme-dark .contributions-dashboard-v4 .ui-member-meta,
+.admin-theme-dark .contributions-page-v4 .ui-member-meta,
+.admin-theme-dark .contributions-dashboard-v4 .ui-type-meta,
+.admin-theme-dark .contributions-page-v4 .ui-type-meta,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-kpi-note,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-kpi-note,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-member-meta,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-member-meta,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .ui-type-meta,
+html[data-admin-theme="dark"] .contributions-page-v4 .ui-type-meta {
+    color: #cbd5e1 !important;
+}
+
+.admin-theme-dark .contributions-page-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .contributions-page-v4 .dataTables_wrapper .dataTables_length select,
+.admin-theme-dark .contributions-dashboard-v4 .dataTables_wrapper .dataTables_filter input,
+.admin-theme-dark .contributions-dashboard-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .contributions-page-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .contributions-page-v4 .dataTables_wrapper .dataTables_length select,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .dataTables_wrapper .dataTables_filter input,
+html[data-admin-theme="dark"] .contributions-dashboard-v4 .dataTables_wrapper .dataTables_length select {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    border-color: #475569 !important;
+}

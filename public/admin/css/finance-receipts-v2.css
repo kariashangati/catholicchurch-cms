@@ -1,0 +1,80 @@
+.finance-receipt-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.finance-receipt-card {
+    grid-column: span 12;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 14px 38px rgba(15, 23, 42, 0.06);
+}
+
+.finance-receipt-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.finance-receipt-card__body {
+    padding: 1.25rem;
+}
+
+.finance-receipt-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: center;
+}
+
+.finance-receipt-kpi {
+    padding: 1rem;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(248,250,252,1) 0%, rgba(255,255,255,1) 100%);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.finance-receipt-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    padding: .35rem .65rem;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.finance-receipt-badge--issued { background: rgba(37,99,235,.12); color: #1d4ed8; }
+.finance-receipt-badge--printed { background: rgba(22,163,74,.12); color: #15803d; }
+.finance-receipt-badge--reprinted { background: rgba(217,119,6,.12); color: #b45309; }
+.finance-receipt-badge--voided { background: rgba(220,38,38,.12); color: #b91c1c; }
+
+.finance-receipt-table .table th {
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #64748b;
+}
+
+.finance-receipt-table .table td {
+    vertical-align: middle;
+}
+
+.finance-receipt-empty {
+    border: 1px dashed rgba(100, 116, 139, .4);
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+    background: rgba(248, 250, 252, .7);
+}
+
+@media (min-width: 992px) {
+    .finance-receipt-card--half { grid-column: span 6; }
+    .finance-receipt-card--third { grid-column: span 4; }
+}
