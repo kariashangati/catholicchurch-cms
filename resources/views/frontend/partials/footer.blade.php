@@ -2,9 +2,23 @@
     $settings = $settings ?? [];
     $church = $church ?? null;
 
-    $churchName = db_trans('site.name');
-    if ($churchName === 'Site.Name') {
-        $churchName = optional($church)->centre_name ?: ($settings['site.name'] ?? 'ECCLESIA');
+    /*
+    |--------------------------------------------------------------------------
+    | Site / Church Name
+    |--------------------------------------------------------------------------
+    | Prefer the configured site name first, so the footer does not keep
+    | showing a translated/default value like "Parish" everywhere.
+    */
+    $translatedSiteName = db_trans('site.name');
+
+    $churchName = $settings['site.name']
+        ?? optional($church)->centre_name
+        ?? null;
+
+    if (empty($churchName)) {
+        $churchName = ($translatedSiteName && $translatedSiteName !== 'Site.Name')
+            ? $translatedSiteName
+            : 'ECCLESIA';
     }
 
     $churchTagline = db_trans('site.tagline');
